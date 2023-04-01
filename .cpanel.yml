@@ -1,0 +1,13 @@
+version: 2
+applications:
+  - name: my-app
+    source:
+      type: git
+      url: https://github.com/Bkrap/argo.git
+      branch: main
+    destination:
+      path: /argo.staging/argo/wp-content/themes/argo
+    webhook:
+      url: https://my-webhook-url.com
+      events:
+        - push
