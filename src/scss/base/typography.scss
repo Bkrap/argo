@@ -1,5 +1,12 @@
 body{
 	font-family: $font-family;	
 	font-size: 22px;
+	line-height: 0.85;
+	color: $dark-blue;
+}
 
+h1, .h1{
+	font-size: 56px;
+	font-weight: 400;
+	font-style: italic;
 }

@@ -1,8 +1,10 @@
 .btn{
     padding: 15px 40px;
     border-radius: 30px;
+    font-size: 22px;
     border: none;
     font-weight: 700;
+    font-style: italic;
     transition: $transition;
     &-primary{
         background: linear-gradient(83.43deg, $teal 0.34%, $coral 126.08%);
