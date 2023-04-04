@@ -5,7 +5,11 @@
     border: none;
     font-weight: 700;
     font-style: italic;
+    color: #ffffff;
     transition: $transition;
+    &:hover{
+        color: #ffffff;
+    }
     &-primary{
         background: linear-gradient(83.43deg, $teal 0.34%, $coral 126.08%);
         &:hover{

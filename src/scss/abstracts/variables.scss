@@ -9,11 +9,21 @@ $dark-blue: #263546;
 $blue: #008A9A;
 $orange: #CA7346;
 
+// $secondary: red;
+
 $transition: .3s ease-in-out;
 
 $font-family: 'Nunito Sans';
 
 
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1160px,
+  xxl: 1160px
+);
 // $secondary: yellow;
 // $secondary-400: #FFD700;
 // $secondary-500: #FCC200;
