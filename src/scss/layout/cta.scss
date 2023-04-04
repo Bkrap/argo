@@ -1,0 +1,17 @@
+.cta{
+    padding-top: 100px;
+    background: linear-gradient(90deg, #DDDDDD 0%, #F1F1F2 100%);
+    .images-wrapper{
+        position: relative;
+        .logo{
+            position: absolute;
+            left: -30%;
+            z-index: 1;
+        }
+        .person{
+            margin-top: -120px;
+            position: relative;
+            z-index: 5;
+        }
+    }
+}
