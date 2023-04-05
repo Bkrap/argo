@@ -68,6 +68,7 @@
                 
             </div>
         </header>
+        <!-- Bijela verzija headera, dodaš samo klasu white-header -->
         <header id="header" class="white-header" role="banner">
             <div class="container header-wrapper d-flex justify-content-between">
                 <div class="logo">

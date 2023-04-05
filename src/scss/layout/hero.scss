@@ -7,9 +7,6 @@
         padding-top: 120px;
         .heading{
             padding-bottom: 30px;
-            .bold-text{
-                font-weight: 700;
-            }
         }
         .description{
             padding-bottom: 30px;
@@ -41,7 +38,7 @@
               bottom: 10%;
             }
             &-gradient{
-                bottom: 0;
+                bottom: -8%;
                 left: 25%;
                 background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #208999;;
             }
