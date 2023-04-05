@@ -16,4 +16,13 @@
             background: linear-gradient(83.43deg, $coral 0.34%, $teal 126.08%);
         }
     }
+    &-secondary{
+
+    }
+    &-white{
+        background: $white;
+        span{
+            color: $teal;
+        }
+    }
 }
