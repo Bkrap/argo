@@ -42,10 +42,10 @@
     <div id="wrapper" class="hfeed">
         <header id="header" role="banner">
             <div class="container header-wrapper d-flex justify-content-between">
-                <div class="logo">
+                <a href="<?php echo get_home_url(); ?>" class="logo">
                     <img class="logo-black" src="<?php echo get_template_directory_uri(); ?>\images\logo.svg" alt="">
                     <img class="logo-white" src="<?php echo get_template_directory_uri(); ?>\images\logo-white.svg" alt="">
-                </div>
+                </a>
                 <div class="navigation d-flex align-items-center">
                     <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                         <?php wp_nav_menu(array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' )); ?>
@@ -71,10 +71,10 @@
         <!-- Bijela verzija headera, dodaš samo klasu white-header -->
         <header id="header" class="white-header" role="banner">
             <div class="container header-wrapper d-flex justify-content-between">
-                <div class="logo">
+                <a href="<?php echo get_home_url(); ?>" class="logo">
                     <img class="logo-black" src="<?php echo get_template_directory_uri(); ?>\images\logo.svg" alt="">
                     <img class="logo-white" src="<?php echo get_template_directory_uri(); ?>\images\logo-white.svg" alt="">
-                </div>
+                </a>
                 <div class="navigation d-flex align-items-center">
                     <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                         <?php wp_nav_menu(array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' )); ?>
