@@ -21,8 +21,16 @@
     }
     &-white{
         background: $white;
-        span{
-            color: $teal;
-        }
+        color: $teal;
+    }
+}
+
+.arrow-link{
+    text-decoration: none;
+    .link-text{
+        color: $white;
+        font-size: 15px;
+        margin-right: 5px;
+        font-weight: 600;
     }
 }

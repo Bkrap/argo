@@ -7,7 +7,7 @@
                     <p class="mb-0 small-text">Join the Movement</p>
                 </div>
                     <h2 class="title">Do you feel helpless and unable to see realistic change?</h2>
-                <a href="" class="btn btn-white"><span>Join the Movement<span></a>
+                <a href="" class="btn btn-white">Join the Movement</a>
             </div>
         </div>
     </div>
