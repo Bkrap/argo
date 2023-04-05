@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 text-wrapper">
-                <h2>The Argo News Hub</h2>
+                <h2 class="title">The Argo News Hub</h2>
                 <p class="description">We support the advocacy, knowledge, and discussions for a realistic, moderate change in protecting sensible gun rights and ownership.</p>
             </div>
         </div>
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-wrapper d-flex align-items-center justify-content-between">
-                <h2>The Argo News Hub</h2>
+                <h2 class="title">The Argo News Hub</h2>
                 <a class="arrow-link" href="">
                     <span class="link-text">See all news</span>
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
