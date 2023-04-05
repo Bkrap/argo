@@ -27,6 +27,10 @@
         position: relative;
         border: none;
         border-radius: 0;
+        img{
+            height: 320px;
+            object-fit: cover;
+        }
         .category-pill{
             position: absolute;
             top: 20px;

@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <p class="small-text mb-0">Latest News</p>
+                <p class="small-text">Latest News</p>
                 <h1 class="title">Gun safety is not aboutguns, <span class="bold-text">it's about people</span></h1>
                 <div class="info">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center mb-3">
                         <span>Published</span>
                         <span class="date">February 22, 2023</span>
                         <span class="author">By Tim Napier</span>
@@ -22,7 +22,7 @@
 <section class="post-content">
     <div class="container">
         <div class="row">
-            <div class="offset-lg-1 col-lg-6">
+            <div class="offset-lg-1 col-lg-6 content">
                 <h1>Subtitle ipsum dolor sit amet, consectetur adipiscing elit. </h1>
                 <p>Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis, ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
@@ -42,10 +42,28 @@
             <div class="offset-lg-2 col-lg-3 sidebar">
                 <p class="related">Related Articles</p>
                 <?php include 'small_card.php'; ?>
+                <?php include 'small_card.php'; ?>
+                <?php include 'small_card.php'; ?>
             </div>
         </div>
     </div>
 </section>
-<section class="cta">
-
+<section class="cta cta-yt">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-5 text-wrapper">
+                <div class="d-flex">
+                    <div class="circle"></div>
+                    <p class="mb-0 small-text italic">ARGO on Youtube</p>
+                </div>
+                <h2 class="title">Watch  <span class="bold-text">now!</span></h2>
+                <p class="description italic">Become a member to support the necessary advocacy, knowledge, and discussions for a realistic, moderate change in protecting </p>
+                <a href="" class="btn btn-primary">See more Videos</a>
+            </div>
+            <div class="col-lg-7 images-wrapper">
+                <img class="logo" src="<?php echo get_template_directory_uri(); ?>\images\R.svg" alt="">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U0TXIXTzJEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 </section>
