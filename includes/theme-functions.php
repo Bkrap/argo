@@ -25,7 +25,7 @@ function get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
 function setFeaturedImage() {
 	$q = new WP_Query([
 		'post_type' => array('post', 'page', 'quiz-statements'),
-		'posts_per_page' => -1,
+		'posts_per_pagessssss' => -1,
 	]);
 
 	if ($q->found_posts > 0) {
