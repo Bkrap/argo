@@ -14,7 +14,7 @@
 
                     </div>
                 </div>
-                <img class="logo" src="<?php echo get_template_directory_uri(); ?>\images\gun.jpg" alt="">
+                <img class="hero-img" src="<?php echo get_template_directory_uri(); ?>\images\gun.jpg" alt="">
             </div>
         </div>
     </div>
@@ -62,8 +62,7 @@
             </div>
             <div class="col-lg-7 images-wrapper">
                 <img class="logo" src="<?php echo get_template_directory_uri(); ?>\images\R.svg" alt="">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/U0TXIXTzJEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/t68Y9Z91reM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
         </div>
     </div>
 </section>
