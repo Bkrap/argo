@@ -20,7 +20,7 @@ include 'includes/theme-functions.php';
  * ACF
  */
 
-if( 1 == 2 ) {
+if( 2 == 2 ) {
     define('THEME_OPTIONS', get_fields('option'));
     include 'includes/acf.php';
 }

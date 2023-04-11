@@ -8,7 +8,7 @@
 	<a 
        href="<?php echo $function; ?>" 
        target="<?php echo ($button['function'] == 'external' ? '_blank' : ''); ?>" 
-       class="btn" <?php echo ($button['function'] == 'document' && $button['document']['download'] == 1 ? 'download' : ''); ?>
+       class="btn btn-<?php echo $button['style']['color']; ?>" <?php echo ($button['function'] == 'document' && $button['document']['download'] == 1 ? 'download' : ''); ?>
     >
 		<span><?php echo $button['label']; ?></span>
 	</a>
