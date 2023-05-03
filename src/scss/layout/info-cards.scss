@@ -1,0 +1,48 @@
+.info-cards{
+    // padding-top: 140px;
+    // padding-bottom: 80px;
+    @include fluid('padding-top', 60, 140);
+    @include fluid('padding-bottom', 60, 80);
+    // @include fluid('margin-bottom', 40, 40);
+
+    .small-title{
+        color: $secondary-1;
+        margin-bottom: 24px;
+    }
+    .big-description{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .small-card{
+        flex: 1;
+        @include media-breakpoint-down(lg){
+            flex: auto;
+            width: 100%;
+            margin-bottom: 20px;
+            &:first-child{
+                margin-top: 30px;
+            }
+        }
+       .background{
+            padding: 20px 24px;
+            color: $white;
+            border-radius: 6px;
+            height: 100%;
+            .text{
+                flex-grow: 1;
+            }
+            .number{
+                font-weight: 700;
+                font-size: 14px;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            .title{
+                margin-bottom: 12px;
+            }
+            .description{
+                margin-bottom: 0;
+            }
+       }
+    }
+}
