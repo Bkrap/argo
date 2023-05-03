@@ -1,10 +1,13 @@
 #header{
     padding-top: 20px;
     padding-bottom: 20px;
-    position: absolute;
+    // position: absolute;
+    background: white;
     width: 100%;
-    z-index: 99;
+    // z-index: 99;
     .header-wrapper{
+        padding-left: 34px;
+        padding-right: 34px;
 
         .navigation{
             ul{
@@ -17,11 +20,11 @@
                         font-size: 18px;
                         font-weight: 700;
                         text-decoration: none;
-                        color: $dark-blue;
+                        color: $black;
                     }
                     &+li{
                         a{
-                           padding-left: 60px;
+                           padding-left: 24px;
                         }
                     }
                 }
@@ -32,9 +35,9 @@
             padding-left: 24px;
             border-left: 1px solid #B7CED3;
             &-btn{
-                font-size: 18px;
+                font-size: 14px;
                 padding: 10px 40px;
-                margin-left: 24px;
+                margin-left: 28px;
             }
         }
         .logo-white{
@@ -67,11 +70,6 @@
                 path{
                     fill: $white;
                 }
-            }
-           
-            &-btn{
-               background: $white;
-               color: $teal;
             }
         }
     }
