@@ -5,11 +5,34 @@
  * @since 1.0.0.
  *
  */
+
 define('BK_STARTER_THEME_PATH', get_template_directory_uri());
+define('THEME_DIR', get_stylesheet_directory());
+define('THEME_URL', get_stylesheet_directory_uri());
+define('SITE_URL', get_site_url("/"));
 
 /************** */
 
 include 'includes/enqueue.php';
+include 'includes/theme-functions.php';
+
+/**
+ * ACF
+ */
+
+if( 2 == 2 ) {
+    define('THEME_OPTIONS', get_fields('option'));
+    include 'includes/acf.php';
+}
+
+
+/************** */
+
+
+// CPTs
+// include 'includes/CPT/';
+
+/********************************************************************************************************************************************* */
 
 add_action('after_setup_theme', 'generic_setup');
 function generic_setup()
