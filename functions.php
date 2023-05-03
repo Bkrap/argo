@@ -21,7 +21,7 @@ include 'includes/theme-functions.php';
  */
 
 if( 2 == 2 ) {
-    define('THEME_OPTIONS', get_fields('option'));
+    define('THEME_OPTIONS', get_fields('option')['global_options']);
     include 'includes/acf.php';
 }
 
