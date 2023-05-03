@@ -50,6 +50,7 @@ module.exports = {
     "styles": './src/scss/main.scss',
     // Will create "main.js" in "build" dir.
     "main": glob.sync('./src/js/**/*.js'),
+    "bootstrap": glob.sync('./src/vendor/bootstrap/dist/js/**/*.js'),
 
   },
 
