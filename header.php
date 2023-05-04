@@ -48,62 +48,121 @@
                     <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
                 </a>
                 <div class="navigation d-flex align-items-center">
-                    <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                        <div class="menu">
-                            <ul>
-                                <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
-                                    <?php if( $v_nav['cta'] ) { break; } ?>
-                                    <li class="page_item page_item_<?php echo $k; ?>">
-                                        <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
-                                            <span itemprop="name">
-                                                <?php echo $v_nav['page_link']['title']; ?>
-                                            </span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
+                    <div class="d-lg-flex d-none align-items-center">
+                        <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                            <div class="menu">
+                                <ul>
+                                    <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                                        <?php if( $v_nav['cta'] ) { break; } ?>
+                                        <li class="page_item page_item_<?php echo $k; ?>">
+                                            <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
+                                                <span itemprop="name">
+                                                    <?php echo $v_nav['page_link']['title']; ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                            <span class="looper after" tabindex="0"></span>
+                        </nav>
+                        <div class="membership">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_139_1427)">
+                                <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V17C20 14.34 14.67 13 12 13Z" fill="#263546"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_139_1427">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <button class="search">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_590_1941)">
+                                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_590_1941">
+                                            <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                                <?php if( $v_nav['cta'] ) { ?>
+                                    <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
+                                <?php } ?>
+                            <?php endforeach; ?>
                         </div>
-                        <span class="looper after" tabindex="0"></span>
-                    </nav>
-                    <div class="membership">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_139_1427)">
-                            <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V17C20 14.34 14.67 13 12 13Z" fill="#263546"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_139_1427">
-                            <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                            </defs>
-                        </svg>
-                        <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
-                            <?php if( $v_nav['cta'] ) { ?>
-                                <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
-                             <?php } ?>
-                        <?php endforeach; ?>
                     </div>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        Button with data-bs-target
+                    <button id="hamburger" class="d-lg-none d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                     </button>
                 </div>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas offcanvas-start d-lg-none d-flex" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                        </div>
-                        <div class="dropdown mt-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                            Dropdown button
+                        <a href="<?php echo get_home_url(); ?>" class="logo d-flex align-items-center">
+                            <img class="logo-black d-none d-md-block" src="<?php echo THEME_OPTIONS['header']['logo']['desktop']['url']; ?>" alt="logo">
+                            <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
+                        </a>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <span></span>
+                            <span></span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    </div>
+                    <div class="offcanvas-body  d-flex flex-column align-items-center justify-content-center">
+                        <div class="mobile-navigation">
+                            <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                <div class="menu">
+                                    <ul>
+                                        <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                                            <?php if( $v_nav['cta'] ) { break; } ?>
+                                            <li class="page_item page_item_<?php echo $k; ?>">
+                                                <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
+                                                    <span itemprop="name">
+                                                        <?php echo $v_nav['page_link']['title']; ?>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                                <span class="looper after" tabindex="0"></span>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="offcanvas-footer d-flex justify-content-center">
+                        <div class="membership">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_139_1427)">
+                                <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V17C20 14.34 14.67 13 12 13Z" fill="#263546"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_139_1427">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <button class="search">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_590_1941)">
+                                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_590_1941">
+                                            <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                                <?php if( $v_nav['cta'] ) { ?>
+                                    <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
+                                <?php } ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>

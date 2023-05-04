@@ -8,69 +8,117 @@
     .header-wrapper{
         padding-left: 34px;
         padding-right: 34px;
-
-        .navigation{
-            ul{
-                display: flex;
-                padding-left: 0;
-                list-style-type: none;
-                margin-bottom: 0;
-                li{
-                    a{
-                        font-size: 18px;
-                        font-weight: 700;
-                        text-decoration: none;
-                        color: $black;
-                    }
-                    &+li{
-                        a{
-                           padding-left: 24px;
-                        }
-                    }
-                }
-            }
-        }
-        .membership{
-            margin-left: 24px;
-            padding-left: 24px;
-            border-left: 1px solid #B7CED3;
-            &-btn{
-                font-size: 14px;
-                padding: 10px 40px;
-                margin-left: 28px;
-            }
-        }
-        .logo-white{
-            display: none;
-        }
-        .logo-black{
-            display: block;
+        @include media-breakpoint-down(lg){
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
-    &.white-header{
-        .logo-white{
-            display: block;
-        }
-        .logo-black{
-            display: none;
-        }
-        .navigation{
-            ul{
-                li{
+    .search{
+        margin-left: 20px;
+        padding: 0;
+    }
+    .navigation, .mobile-navigation{
+        ul{
+            display: flex;
+            padding-left: 0;
+            list-style-type: none;
+            margin-bottom: 0;
+            li{
+                a{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: $black;
+                }
+                &+li{
                     a{
-                       
-                        color: $white;
+                       padding-left: 24px;
                     }
-                  
                 }
             }
         }
-        .membership{
-            svg{
-                path{
-                    fill: $white;
+    }
+    .mobile-navigation{
+        ul{
+            display: block;
+            padding-left: 0;
+            list-style-type: none;
+            margin-bottom: 0;
+            li{
+                padding: 14px;
+              
+                &+li{
+                    a{
+                       padding-left: 14px;
+                    }
+                }  
+                a{
+                    padding: 14px;
+                    font-size: 22px;
                 }
             }
+        }
+    }
+    .membership{
+        margin-left: 24px;
+        padding-left: 24px;
+        border-left: 1px solid #B7CED3;
+        &-btn{
+            font-size: 14px;
+            padding: 10px 40px;
+            margin-left: 28px;
+        }
+        @include media-breakpoint-down(lg){
+            margin-left: 0;
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+
+    #hamburger{
+        width: 30px;
+        height: 22px;
+        transition: $transition;
+        border: none;
+        background: transparent;
+        padding: 0;
+        justify-content: space-between;
+        flex-direction: column;
+        span{
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: $primary;
+        }
+    }
+
+    .offcanvas{
+        width: 100%;
+        .offcanvas-header{
+            padding: 20px;
+            .btn-close{
+                width: 30px;
+                height: 22px;
+                transition: $transition;
+                background: transparent;
+                padding: 0;
+                opacity: 1;
+                position: relative;
+                span{
+                    position: absolute;
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    background-color: $primary;
+                    transform: rotateZ(135deg);
+                    &:nth-child(1){
+                        transform: rotateZ(45deg);
+                    }
+                }
+            }
+        }
+        .offcanvas-footer{
+            padding: 40px 15px;
         }
     }
 

@@ -1,46 +1,66 @@
 .news-hub{
-    background: linear-gradient(83.49deg, $dark-green -43.74%, $coral 149.71%);
-    padding-top: 80px;
-    padding-bottom: 60px;
-    &.bordered{
-        position: relative;
-        z-index: 9;
-        border-radius: 30px 30px 0 0;
-        margin-top: -30px;
-    }
-    .text-wrapper{
-        color: $white;
-    }
+    background: $grey-light;
+    padding-top: 60px;
+    padding-bottom: 70px;
+
     .description{
-        margin-bottom: 30px;
+        margin-bottom: 24px;
     }
     .title{
-        margin-bottom: 30px;
+        margin-bottom: 24px;
     }
-    .filters{
-        margin-bottom: 30px;
+    .text-wrapper{
+        margin-bottom: 40px;
     }
     .card-column{
         margin-bottom: 30px;
+    }
+    .full-width-card{
+        .card{
+            flex-direction: row;
+            .image-wrapper{
+                width: 50%;
+                .category-pill{
+                    right: 16px;
+                }
+            }
+            .text-column{
+                width: 50%;
+            }
+        }
     }
     .card{
         position: relative;
         border: none;
         border-radius: 0;
-        img{
-            height: 320px;
-            object-fit: cover;
+        &:hover{
+            .image-wrapper{
+                img{
+                    transform: scale(1.2);
+                }
+            }
         }
-        .category-pill{
-            position: absolute;
-            top: 20px;
-            right: 16px;
-            background-color: $teal;
-            padding: 7px 10px;
-            color: $white;
-            border-radius: 8px;
-            font-size: 14px;
+        
+        .image-wrapper{
+            position: relative;
+            overflow: hidden;
+            img{
+                height: 320px;
+                object-fit: cover;
+                transition: $transition;
+            }
+            .category-pill{
+                position: absolute;
+                top: 20px;
+                right: 16px;
+                background-color: $teal;
+                padding: 7px 10px;
+                color: $white;
+                border-radius: 8px;
+                font-size: 14px;
+            }
         }
+       
         .card-body{
             .date{
                 padding-bottom: 10px;
@@ -66,5 +86,8 @@
                 font-weight: 600;
             }
         }
+    }
+    .button-wrapper{
+        padding-top: 20px;
     }
 }

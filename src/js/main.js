@@ -13,3 +13,7 @@ window.addEventListener('resize', function() {
     // Your code here
     
 });
+
+// document.getElementById('hamburger').addEventListener("click", function(){
+//     this.classList.toggle('active');
+// });
