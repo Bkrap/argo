@@ -1,0 +1,17 @@
+.counter{
+    padding-top: 60px;
+    padding-bottom: 80px;
+    .quote{
+        background-color: $grey-light;
+        padding: 24px;
+        .quotation{
+            font-size: 50px;
+        }
+    }
+
+    .countup{
+        opacity: 0; 
+        transition: opacity 1s ease-in-out; 
+    }
+
+}

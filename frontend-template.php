@@ -10,6 +10,7 @@ include 'frontend/info_cards.php';
 // include 'frontend/color_cards.php';
 // include 'frontend/cta_background.php';
 include 'frontend/news_hub.php';
+include 'frontend/counter.php';
 include 'frontend/cta.php';
 include 'frontend/single_post.php';
 // include 'frontend/hero.php';
