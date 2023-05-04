@@ -3,6 +3,12 @@
     padding-bottom: 100px;
     position: relative;
     background-size: cover;
+    .swiper-nav{
+        margin-top: 30px;
+        .swiper-button-prev-hero{
+            margin-right: 42px;
+        }
+    }
     .overlay{
         position: absolute;
         top: 0;

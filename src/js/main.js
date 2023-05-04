@@ -18,6 +18,27 @@ window.addEventListener('resize', function() {
 //     this.classList.toggle('active');
 // });
 
+var swiper = new Swiper(".cta-swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    loop: true,
+});
+
+var swiper = new Swiper(".hero-swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next-hero",
+      prevEl: ".swiper-button-prev-hero",
+    },
+    autoplay: {
+        delay: 4000,
+    },
+    loop: true,
+});
 
 
 const countupElements = document.querySelectorAll(".countup");
