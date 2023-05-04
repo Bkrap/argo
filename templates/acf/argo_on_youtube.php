@@ -1,6 +1,16 @@
 <?php 
 // debug($params); 
 $button = $params['button_group']['button'];
+
+/** IZMJENE
+ * Promjenjeni fontovi
+ * Maknuti logo iza videa
+ * 
+ */
+
+ /** NAPRAVITI
+  * naked wyswig na title sa samo BOLD opcijom
+  */
 ?>
 
 <section class="cta cta-yt">

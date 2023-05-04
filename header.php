@@ -40,14 +40,29 @@
 <body <?php body_class(); ?>>
     <?php //wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
+        <?php //debug(THEME_OPTIONS['header']); ?>
         <header id="header" role="banner">
             <div class="container-fluid header-wrapper d-flex justify-content-between">
                 <a href="<?php echo get_home_url(); ?>" class="logo d-flex align-items-center">
-                    <img class="logo-black" src="<?php echo get_template_directory_uri(); ?>\images\logo.svg" alt="">
+                    <img class="logo-black d-none d-md-block" src="<?php echo THEME_OPTIONS['header']['logo']['desktop']['url']; ?>" alt="logo">
+                    <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
                 </a>
                 <div class="navigation d-flex align-items-center">
                     <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                        <?php wp_nav_menu(array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' )); ?>
+                        <div class="menu">
+                            <ul>
+                                <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                                    <?php if( $v_nav['cta'] ) { break; } ?>
+                                    <li class="page_item page_item_<?php echo $k; ?>">
+                                        <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
+                                            <span itemprop="name">
+                                                <?php echo $v_nav['page_link']['title']; ?>
+                                            </span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                         <span class="looper after" tabindex="0"></span>
                     </nav>
                     <div class="membership">
@@ -61,7 +76,11 @@
                             </clipPath>
                             </defs>
                         </svg>
-                        <a href="" class="btn btn-primary membership-btn">JOIN ARGO</a>
+                        <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
+                            <?php if( $v_nav['cta'] ) { ?>
+                                <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
+                             <?php } ?>
+                        <?php endforeach; ?>
                     </div>
                     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         Button with data-bs-target
