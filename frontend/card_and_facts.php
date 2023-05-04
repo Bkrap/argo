@@ -1,3 +1,6 @@
+<!-- Mozda za novi modul ce trebat -->
+
+
 <section class="card-and-facts"  style="background-image: url('http://localhost/argo/wp-content/themes/argo/images/america-bg.png')">
     <div class="container">
         <div class="row">

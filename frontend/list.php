@@ -1,3 +1,5 @@
+<!-- ne koristi se -->
+
 <section class="list">
     <div class="container">
         <div class="row">

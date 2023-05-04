@@ -1,4 +1,4 @@
-<section class="news-hub bordered">
+<section class="news-hub">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 text-wrapper">

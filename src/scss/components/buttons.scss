@@ -8,7 +8,7 @@
     text-transform: uppercase;
     color: #ffffff;
     transition: $transition;
-    &:hover{
+    &:hover, &:target, &:focus-visible{
         color: #ffffff;
     }
     &-primary{

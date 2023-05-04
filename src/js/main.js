@@ -62,7 +62,6 @@ const countupElements = document.querySelectorAll(".countup");
                 const elementsToAnimate = container.querySelectorAll(".countup");
                 elementsToAnimate.forEach(element => {
                     countUp(2000, parseInt(element.dataset.finalValue), element);
-                    element.style.opacity = 1;
                 });
             }
         });

@@ -1,3 +1,5 @@
+<!-- ne koristi se -->
+
 <section class="cta-background" style="background-image: url('http://localhost/argo/wp-content/themes/argo/images/backgroundimg.png')">
     <div class="container">
         <div class="row">

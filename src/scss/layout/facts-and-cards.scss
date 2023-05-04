@@ -1,0 +1,60 @@
+.facts-and-cards{
+    padding-top: 60px;
+    background-size: cover;
+    min-height: 855px;
+    margin-bottom: 300px;
+    .small-title{
+        margin-top: 120px;
+        margin-bottom: 24px;
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+}
+.factss{
+    position: relative;
+    .cards-container{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: -475px;
+    }
+   
+    .cards-row{
+        // margin-top: -175px;
+        .card{
+            box-shadow: 0px 15px 30px 3px #CACACA;
+            border-radius: 15px;
+            border: none;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            min-height: 350px;
+            color: $white;
+            .card-footer{
+                border: none;
+                background: none;
+                padding-bottom: 0;
+            }
+            &-coral{
+                background-color: $coral;
+                .card-body{
+                    svg{
+                        path{
+                            fill: $coral;
+                        }
+                    }
+                }
+            }
+            &-teal{
+                background-color: $teal;
+                .card-body{
+                    svg{
+                        path{
+                            fill: $teal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
