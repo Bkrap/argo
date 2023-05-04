@@ -35,8 +35,8 @@
         ul{
             @include media-breakpoint-down(lg){
                 width: 100%;
+                flex-direction: column;
             }
-            flex-direction: column;
             li{
                 &+li{
                     margin-left: 24px;

@@ -2,38 +2,94 @@
     padding-top: 60px;
     background-size: cover;
     min-height: 855px;
-    margin-bottom: 300px;
+    margin-bottom: 350px;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+    @include media-breakpoint-down(lg){
+        margin-bottom: 0;
+        min-height: unset;
+    }
     .small-title{
-        margin-top: 120px;
+        @include fluid('margin-top', 60, 120);
         margin-bottom: 24px;
     }
     .title{
         margin-bottom: 40px;
     }
+    .white-card-wrap{
+        @include media-breakpoint-down(lg){
+            margin-bottom: 30px;
+        }
+    }
+    .white-card{
+        padding: 30px 24px;
+        border: none;
+        border-radius: 8px;
+        .card-body{
+            padding: 0;
+            h4{
+                color: $secondary-1;
+                margin-bottom: 16px;
+            }
+        }
+        .card-footer{
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            img{
+                border-radius: 50%;
+                height: 53px;
+                width: 53px;
+                object-fit: cover;
+                margin-right: 16px;
+            }
+            p{
+                margin: 0;
+                &.title{
+                    font-weight: 700;
+                    color: $secondary-1;
+                }
+            }
+        }
+    }
 }
 .factss{
     position: relative;
+    @include media-breakpoint-down(lg){
+        padding-bottom: 60px;
+    }
     .cards-container{
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
         top: -475px;
+        @include media-breakpoint-down(lg){
+            position: static;
+            transform: none;
+        }
     }
    
     .cards-row{
         // margin-top: -175px;
+        .big-card{
+            margin-bottom: 30px;
+        }
         .card{
             box-shadow: 0px 15px 30px 3px #CACACA;
-            border-radius: 15px;
+            border-radius: 8px;
             border: none;
-            padding-top: 20px;
-            padding-bottom: 40px;
+            padding: 50px 30px;
             min-height: 350px;
             color: $white;
             .card-footer{
                 border: none;
                 background: none;
-                padding-bottom: 0;
+                padding: 0;
+
+            }
+            .card-body{
+                padding: 0;
             }
             &-coral{
                 background-color: $coral;
