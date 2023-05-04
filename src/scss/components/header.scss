@@ -55,6 +55,7 @@
                 a{
                     padding: 14px;
                     font-size: 22px;
+                    color: $white;
                 }
             }
         }
@@ -94,6 +95,7 @@
 
     .offcanvas{
         width: 100%;
+        background: linear-gradient(90deg, $teal 0%, $secondary 100%);
         .offcanvas-header{
             padding: 20px;
             .btn-close{

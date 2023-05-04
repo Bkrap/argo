@@ -27,17 +27,40 @@
     .footer-body{
         padding-top: 66px;
         padding-bottom: 66px;
+        @include media-breakpoint-down(lg){
+            flex-wrap: wrap;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
         ul{
+            @include media-breakpoint-down(lg){
+                width: 100%;
+            }
             flex-direction: column;
             li{
                 &+li{
                     margin-left: 24px;
+                    @include media-breakpoint-down(lg){
+                        margin-left: 0;
+                    }
+                    
                 }
+            }
+        }
+        .first-menu{
+            @include media-breakpoint-down(lg){
+                width: 50%;
             }
         }
         .second-menu{
             display: flex;
             align-items: center;
+            @include media-breakpoint-down(lg){
+                width: 50%;
+                ul{
+                    align-items: flex-end;
+                }
+            }
             .other-items{
                 padding-left: 28px;
                 margin-left: 28px;
@@ -47,12 +70,19 @@
                 }
             }
         }
+        .btn-wrap{
+            margin-top: 20px;
+            .btn{
+                margin-right: 20px;
+            }
+        }
     }
     .footer-footer{
         .copyright{
             color: $white;
             text-transform: uppercase;
             font-size: 12px;
+            margin-top: 8px;
         }
         .gdpr{
             ul{
