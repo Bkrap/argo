@@ -45,7 +45,8 @@
             position: relative;
             overflow: hidden;
             img{
-                height: 320px;
+                // height: 320px;
+                aspect-ratio: 365/228;
                 object-fit: cover;
                 transition: $transition;
             }
