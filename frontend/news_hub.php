@@ -26,7 +26,7 @@
                     <div class="image-wrapper">
                         <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
                         <div class="category-pill">
-                            <p class="mb-0 italic bold-text">Category</p>
+                            <p class="mb-0 bold-text">Category</p>
                         </div>
                     </div>
                     <div class="text-column d-flex flex-column">

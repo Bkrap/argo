@@ -1,0 +1,83 @@
+
+.link-cards{
+    @include fluid('padding-top', 30, 90);
+    @include fluid('padding-bottom', 30, 80);
+    .big-card{
+        margin-bottom: 30px;
+    }
+   
+    .card{
+        box-shadow: 0px 15px 30px 3px #CACACA;
+        border-radius: 8px;
+        border: none;
+        padding: 50px 30px;
+        min-height: 350px;
+        color: $white;
+        position: relative;
+        &:hover{
+            .overlay{
+                opacity: 0;
+            }
+            .read-more{
+                margin-top: 14px !important;
+                max-height: 100% !important;
+            }
+        }
+        .overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: $secondary;
+            transition: $transition;
+        }
+        .card-footer{
+            border: none;
+            background: none;
+            padding: 0;
+            position: relative;
+            z-index: 2;
+            transition: $transition;
+            .read-more{
+                font-size: 12px;
+                color: $white;
+                margin-top: 0;
+                overflow: hidden;
+                max-height: 0;
+                display: block;
+                transition: $transition;
+            }
+        }
+        .card-body{
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .stretched-link::after{
+            z-index: 4;
+        }
+      
+        &-coral{
+            background-color: $coral;
+            .card-body{
+                svg{
+                    path{
+                        fill: $coral;
+                    }
+                }
+            }
+        }
+        &-teal{
+            background-color: $teal;
+            .card-body{
+                svg{
+                    path{
+                        fill: $teal;
+                    }
+                }
+            }
+        }
+    }
+}

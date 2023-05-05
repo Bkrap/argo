@@ -95,7 +95,7 @@
 
     .offcanvas{
         width: 100%;
-        background: linear-gradient(90deg, $teal 0%, $secondary 100%);
+        background: $gradient;
         .offcanvas-header{
             padding: 20px;
             .btn-close{
@@ -123,5 +123,72 @@
             padding: 40px 15px;
         }
     }
+}
 
+.secondary-nav{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg){
+        flex-direction: column;
+        ul{
+           overflow-x: scroll;
+           flex-wrap: nowrap;
+           width: 100%;
+            li{
+                display: inline-block !important;
+                white-space: nowrap;
+                flex: 0 0 auto;
+                margin-left: 24px;
+            }
+        }
+    }
+    .title-pill{
+        background: $gradient;
+        margin-right: 34px;
+        padding: 12px 95px 12px 34px;
+        height: 100%;
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            margin-right: 0;
+        }
+        p{
+            text-transform: uppercase;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        margin-bottom: 0;
+        li{
+            display: block;
+
+            &+li{
+                margin-left: 24px;
+            }
+            &.active{
+                a{
+                    color: $secondary;
+                }
+            }
+            a{
+                font-size: 14px;
+                padding: 12px 0;
+                display: block;
+                color: $black;
+                text-decoration: none;
+                transition: $transition;
+                font-weight: 700;
+                &:hover{
+                    color: $secondary-1;
+                }
+            }
+        }
+    }
 }

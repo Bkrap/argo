@@ -1,9 +1,10 @@
 <div class="card">
     <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
     <div class="category-pill">
-        <p class="mb-0 italic bold-text">Category</p>
+        <p class="mb-0 bold-text">Category</p>
     </div>
     <div class="card-body">
+        <p class="date">5 March 2022</p>
         <h5 class="card-title bold-text">'Gun safety lorem ipsum dolor sit amet </h5>
     </div>
     <div class="card-footer d-flex align-items-center">

@@ -5,7 +5,7 @@
     border: none;
     font-weight: 700;
     font-style: italic;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: #ffffff;
     transition: $transition;
     &:hover, &:target, &:focus-visible{
@@ -14,14 +14,13 @@
     &-primary{
         background: $primary;
         &:hover{
-            background: #c38667;
-
+            background: rgba(202, 115, 70, 0.8);
         }
     }
     &-secondary{
         background: linear-gradient(90deg, $teal 0%, $secondary 100%);
         &:hover{
-            
+           background: linear-gradient(90deg, rgba(38, 85, 74, 0.6) 0%, rgba(42, 128, 127, 0.6) 100%);
         }
     }
     &-white{
@@ -37,5 +36,16 @@
         font-size: 14px;
         margin-right: 5px;
         font-weight: 700;
+        transition: $transition;
+    }
+    &:hover{
+        .link-text{
+            color: $secondary-1;
+            svg{
+                path{
+                    fill: $secondary-1;
+                }
+            }
+        }
     }
 }

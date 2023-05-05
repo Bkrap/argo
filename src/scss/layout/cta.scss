@@ -1,6 +1,6 @@
 .cta{
     padding-top: 50px;
-    background: linear-gradient(90deg, #26554A 0%, #2A807F 100%);    
+    background: $gradient;    
     position: relative;
     z-index: 9;
     margin-top: -30px;
@@ -53,11 +53,15 @@
         }
     }
     &-yt{
-        padding-bottom: 170px;
-        .images-wrapper{
-            .logo{
-                left: -10%;
-                top: -10px;
+        @include fluid('padding-bottom', 60, 170);
+        @include fluid('padding-top', 60, 140);
+        background: $grey-light;
+        .text-wrapper{
+            @include media-breakpoint-down(lg){
+                margin-bottom: 30px;
+            }
+            p, h1, h2, h3, h4{
+                color: $black !important;
             }
         }
     }
