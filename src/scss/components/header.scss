@@ -29,6 +29,15 @@
                     font-weight: 700;
                     text-decoration: none;
                     color: $black;
+                    transition: $transition;
+                    &:hover{
+                        color: $secondary-1;
+                    }
+                }
+                &.active{
+                    a{
+                        color: $secondary;
+                    }
                 }
                 &+li{
                     a{
