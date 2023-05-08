@@ -1502,9 +1502,9 @@
                                                     "choices": {
                                                         "primary": "Greenish Blue",
                                                         "secondary": "Orange Salmon",
-                                                        "link_primary": "Greenish blue text, no background color"
+                                                        "arrow-link": "Greenish blue text, no background color"
                                                     },
-                                                    "default_value": "link_primary",
+                                                    "default_value": "arrow-link",
                                                     "return_format": "value",
                                                     "allow_null": 0,
                                                     "other_choice": 0,
@@ -1995,7 +1995,7 @@
                                     "name": "card_background_color",
                                     "aria-label": "",
                                     "type": "select",
-                                    "instructions": "Pick overlay effect which applies to the image.",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -3868,9 +3868,9 @@
                                             "choices": {
                                                 "primary": "Greenish Blue",
                                                 "secondary": "Orange Salmon",
-                                                "link_primary": "Greenish blue text, no background color"
+                                                "arrow-link": "Greenish blue text, no background color"
                                             },
-                                            "default_value": "link_primary",
+                                            "default_value": "arrow-link",
                                             "return_format": "",
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -4052,9 +4052,9 @@
                                             "choices": {
                                                 "primary": "Greenish Blue",
                                                 "secondary": "Orange Salmon",
-                                                "link_primary": "Greenish blue text, no background color"
+                                                "arrow-link": "Greenish blue text, no background color"
                                             },
-                                            "default_value": "link_primary",
+                                            "default_value": "arrow-link",
                                             "return_format": "value",
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -4170,5 +4170,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1683413922
+    "modified": 1683414015
 }

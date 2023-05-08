@@ -27,23 +27,24 @@
         background: $white;
         color: $teal;
     }
-}
 
-.arrow-link{
-    text-decoration: none;
-    .link-text{
-        color: $secondary;
-        font-size: 14px;
-        margin-right: 5px;
-        font-weight: 700;
-        transition: $transition;
-    }
-    &:hover{
-        .link-text{
-            color: $secondary-1;
-            svg{
-                path{
-                    fill: $secondary-1;
+    &-arrow-link {
+        text-decoration: none;
+        span{
+            color: $secondary;
+            font-size: 14px;
+            margin-right: 5px;
+            font-style: unset !important;
+            padding: unset !important;
+            border-radius: unset !important;
+        }
+        &:hover{
+            span{
+                color: $secondary-1;
+                svg{
+                    path{
+                        fill: $secondary-1;
+                    }
                 }
             }
         }
