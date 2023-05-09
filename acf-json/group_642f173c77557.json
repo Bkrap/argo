@@ -1502,9 +1502,9 @@
                                                     "choices": {
                                                         "primary": "Greenish Blue",
                                                         "secondary": "Orange Salmon",
-                                                        "arrow-link": "Greenish blue text, no background color"
+                                                        "link_primary": "Greenish blue text, no background color"
                                                     },
-                                                    "default_value": "arrow-link",
+                                                    "default_value": "link_primary",
                                                     "return_format": "value",
                                                     "allow_null": 0,
                                                     "other_choice": 0,
@@ -2553,7 +2553,7 @@
                         {
                             "key": "field_645692f4df995",
                             "label": "Cards",
-                            "name": "cards",
+                            "name": "cards_users",
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
@@ -2805,7 +2805,7 @@
                         {
                             "key": "field_6456952fdf9a4",
                             "label": "Cards",
-                            "name": "cards",
+                            "name": "cards_cta",
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
@@ -3011,7 +3011,7 @@
                                     "required_message": "{label} is required field! (Info Cards -> Cards -> Title)",
                                     "default_value": "",
                                     "acfe_textarea_code": 0,
-                                    "maxlength": 120,
+                                    "maxlength": 200,
                                     "rows": 4,
                                     "placeholder": "",
                                     "new_lines": "br",
@@ -3868,9 +3868,9 @@
                                             "choices": {
                                                 "primary": "Greenish Blue",
                                                 "secondary": "Orange Salmon",
-                                                "arrow-link": "Greenish blue text, no background color"
+                                                "link_primary": "Greenish blue text, no background color"
                                             },
-                                            "default_value": "arrow-link",
+                                            "default_value": "link_primary",
                                             "return_format": "",
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -4052,9 +4052,9 @@
                                             "choices": {
                                                 "primary": "Greenish Blue",
                                                 "secondary": "Orange Salmon",
-                                                "arrow-link": "Greenish blue text, no background color"
+                                                "link_primary": "Greenish blue text, no background color"
                                             },
-                                            "default_value": "arrow-link",
+                                            "default_value": "link_primary",
                                             "return_format": "value",
                                             "allow_null": 0,
                                             "other_choice": 0,
@@ -4170,5 +4170,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1683414015
+    "modified": 1683668908
 }
