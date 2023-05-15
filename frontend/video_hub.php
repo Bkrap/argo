@@ -1,6 +1,6 @@
 <nav class="secondary-nav">
     <div class="title-pill">
-        <p>News Hub</p>
+        <p>Video Hub Hub</p>
     </div>
     <ul>
         <li class="active">
@@ -24,7 +24,7 @@
     </ul>
 </nav>
 
-<section class="news-hub">
+<section class="news-hub video-hub">
     <div class="container">
         <div class="filter-sort d-flex justify-content-end">
             <select name="cars" id="cars">
@@ -39,10 +39,7 @@
             <div class="col-lg-12 full-width-card card-column d-none d-lg-block">
                 <div class="card h-100">
                     <div class="image-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
-                        <div class="category-pill">
-                            <p class="mb-0 bold-text">Category</p>
-                        </div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/t68Y9Z91reM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="text-column d-flex flex-column">
                         <div class="card-body">
@@ -51,7 +48,7 @@
                             <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur. Sed sapien vulputate id neque urna ut. Ut quis volutpat eget quis id et mollis tristique sapien.</p>
                         </div>
                         <div class="card-footer d-flex align-items-center">
-                            <p class="link-text mb-0">Read more</p>
+                            <span>Read more</span>
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_204_1799)">
                                 <path d="M7.99984 3.16669L7.05984 4.10669L10.7798 7.83335H2.6665V9.16669H10.7798L7.05984 12.8934L7.99984 13.8334L13.3332 8.50002L7.99984 3.16669Z" fill="#2A807F"/>
@@ -64,19 +61,15 @@
                             </svg>
                         </div>
                     </div>
-                    <a href="" class="stretched-link"></a>
                 </div>
             </div>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
            <div class="col-lg-12 full-width-card card-column d-none d-lg-block">
                 <div class="card h-100">
                     <div class="image-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
-                        <div class="category-pill">
-                            <p class="mb-0 bold-text">Category</p>
-                        </div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/t68Y9Z91reM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="text-column d-flex flex-column">
                         <div class="card-body">
@@ -85,7 +78,7 @@
                             <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur. Sed sapien vulputate id neque urna ut. Ut quis volutpat eget quis id et mollis tristique sapien.</p>
                         </div>
                         <div class="card-footer d-flex align-items-center">
-                            <p class="link-text mb-0">Read more</p>
+                            <span>Read more</span>
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_204_1799)">
                                 <path d="M7.99984 3.16669L7.05984 4.10669L10.7798 7.83335H2.6665V9.16669H10.7798L7.05984 12.8934L7.99984 13.8334L13.3332 8.50002L7.99984 3.16669Z" fill="#2A807F"/>
@@ -101,12 +94,12 @@
                     <a href="" class="stretched-link"></a>
                 </div>
             </div>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
-           <?php include 'card.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
+           <?php include 'card_yt.php'; ?>
         </div>
         <div class="button-wrapper d-flex justify-content-end">
             <a id="load-more" class="arrow-link btn btn-arrow-link" href="">

@@ -8,6 +8,37 @@
         margin-top: 0;
         padding-bottom: 50px;
     }
+    .no-slider{
+        margin-top: -80px;
+        form{
+            display: flex;
+            flex-direction: column;
+            input{
+                width: 60%;
+                font-size: 16px;
+                padding: 12px 16px;
+                color: $white;
+                margin-bottom: 30px;
+                border: 1px solid #BCBDBF;
+                background: transparent;
+                &::placeholder{
+                    color: $white;
+                }
+            }
+            button{
+                width: fit-content;
+            }
+        }
+    }
+    .discount-pill{
+        font-size: 12px;
+        color: $primary;
+        padding: 6px 8px;
+        background: $white;
+        margin-right: 12px;
+        font-weight: 700;
+        border-radius: 8px;
+    }
     .cta-swiper{
         overflow-y: auto !important;
         margin-top: -80px;

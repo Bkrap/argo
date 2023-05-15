@@ -1,0 +1,43 @@
+.cards-row{
+    // margin-top: -175px;
+    .big-card{
+        margin-bottom: 30px;
+    }
+    .card{
+        box-shadow: 0px 15px 30px 3px #CACACA;
+        border-radius: 8px;
+        border: none;
+        padding: 50px 30px;
+        min-height: 350px;
+        color: $white;
+        .card-footer{
+            border: none;
+            background: none;
+            padding: 0;
+
+        }
+        .card-body{
+            padding: 0;
+        }
+        &-coral{
+            background-color: $coral;
+            .card-body{
+                svg{
+                    path{
+                        fill: $coral;
+                    }
+                }
+            }
+        }
+        &-teal{
+            background-color: $teal;
+            .card-body{
+                svg{
+                    path{
+                        fill: $teal;
+                    }
+                }
+            }
+        }
+    }
+}

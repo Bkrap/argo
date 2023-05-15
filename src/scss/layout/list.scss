@@ -1,18 +1,41 @@
 .list{
-    background: #ecf1f3;
-    padding-bottom: 65px;
-    .title{
-        padding-bottom: 24px;
+    // background: #ecf1f3;
+    @include fluid('padding-top', 60, 80);
+    @include fluid('padding-bottom', 60, 80);
+    .main-title{
+        margin-bottom: 40px;
+    }
+    .main-description{
+        @include media-breakpoint-down(lg){
+            padding-bottom: 30px;
+        }
     }
     .list-item{
-        padding-bottom: 30px;
-        border-bottom: 1px dashed $coral;
-        margin-bottom: 30px;
-        .description{
-            margin-top: 12px;
+        margin-bottom: 80px;
+        border-radius: 6px;
+        &.grey-bg{
+            background: $grey-light;
+            padding: 24px 20px;
+            margin-bottom: 40px;
         }
+        &.gradient{
+            background: $gradient;
+            color: white;
+            padding: 24px 20px;
+             margin-bottom: 40px;
+        }
+        @include media-breakpoint-down(lg){
+            margin-bottom: 30px;
+        }
+        .title{
+            margin-top: 18px;
+        }
+        .description{
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
         &:last-child{
-            padding-bottom: 0;
             border-bottom: none;
             margin-bottom: 0;
         }

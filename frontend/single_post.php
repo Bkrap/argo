@@ -25,10 +25,17 @@
 </nav>
 
 <section class="post-hero">
+
+<!-- ovdje je gumb za triggerat modal, maknut cemo ga sam kad mi javis kak ce se triggerat taj membership i to -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#closedContentModal">
+  Launch demo modal
+</button>
+
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <a class="arrow-link" href="">
+                <a class="btn-arrow-link" href="">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_615_2378)">
                         <path d="M13.3332 7.33341H5.21984L8.9465 3.60675L7.99984 2.66675L2.6665 8.00008L7.99984 13.3334L8.93984 12.3934L5.21984 8.66675H13.3332V7.33341Z" fill="#2A807F"/>
@@ -112,6 +119,28 @@
                     <p>Hans Schmidt, CEO of Anycompany</p>
                 </div>
                 <p>Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+            </div>
+            <div class="modal fade" id="closedContentModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="closedContentModalLabel" aria-hidden="true">
+                <div class="modal-dialog container">
+                    <div class="row align-items-center no-slider">
+                        <div class="col-lg-7 text-wrapper">
+                            <div class="d-flex align-items-center">
+                                <div class="circle"></div>
+                                <div class="discount-pill">-100% OFF</div>
+                                <p class="mb-0 small-text italic">Join the Movement</p>
+                            </div>
+                            <h2 class="title">Claim your <span class="bold-text">free membership</span></h2>
+                            <p class="description">This article is reserved only for Argo members. Claim your free membership lorem ispum dolor sit amet.</p>
+                            <form action="">
+                                <input type="email" name="email" placeholder="youremail@email.com" required id="">
+                                <button type="submit" class="btn btn-primary">Join Argo</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 images-wrapper d-none d-lg-block">
+                            <img class="person" src="<?php echo get_template_directory_uri(); ?>\images\person.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="offset-lg-2 col-lg-3 sidebar">
                 <p class="related">Related Articles</p>

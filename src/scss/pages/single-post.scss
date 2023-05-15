@@ -44,6 +44,7 @@
 }
 .post-content{
     @include fluid('padding-bottom', 40, 120);
+    position: relative;
     .content{
         padding-top: 60px;
         h1, h2, h3, h4, h5, h6{

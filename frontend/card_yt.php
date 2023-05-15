@@ -1,10 +1,7 @@
 <div class="col-lg-4 card-column">
     <div class="card h-100">
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
-            <div class="category-pill">
-                <p class="mb-0 bold-text">Category</p>
-            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/t68Y9Z91reM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="card-body">
             <p class="date mb-0">5 March 2023</p>
@@ -24,6 +21,5 @@
                 </defs>
             </svg>
         </div>
-        <a href="" class="stretched-link"></a>
     </div>
 </div>
