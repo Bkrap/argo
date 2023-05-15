@@ -19,6 +19,7 @@
         .card{
             flex-direction: row;
             .image-wrapper{
+                height: 348px;
                 width: 50%;
                 .category-pill{
                     right: 16px;
@@ -27,6 +28,11 @@
             .text-column{
                 width: 50%;
             }
+        }
+    }
+    .grid-card {
+        .image-wrapper {
+            height: 228px;
         }
     }
     .card{

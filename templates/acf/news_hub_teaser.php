@@ -10,16 +10,16 @@
                  * init button
                  */
                 $button = array( 
+                    "show_button"   => true,
                     "button" => array(
-                        "show_button"       => true,
                         "function"          => "internal",
-                        "internal"          => "arhiva",
+                        "internal"          => THEME_OPTIONS['news']['globals']['news_index_page'],
                         "label"             => $params['button']['label'],
-                        "style"             => $params['button']['style']['color'],
-                    )
+                        "style"             => array( "color" => 'link_primary' ),
+                    ),
                 );
                 ?>
-                <?php echo get_btn( $button, true ); ?>
+                <?php get_btn( $button, true ); ?>
             </div>
         </div>
         <div class="row">
@@ -56,16 +56,16 @@
                  * init button
                  */
                 $button = array( 
+                    "show_button"       => true,
                     "button" => array(
-                        "show_button"       => true,
                         "function"          => "internal",
-                        "internal"          => "arhiva",
+                        "internal"          => THEME_OPTIONS['news']['globals']['news_index_page'],
                         "label"             => $params['button']['label'],
-                        "style"             => $params['button']['style']['color'],
+                        "style"             => array( "color" => $params['button']['style']['color'] ),
                     )
                 );
                 ?>
-                <?php echo get_btn( $button, true ); ?>
+                <?php echo get_btn( $button, false ); ?>
         </div>
     </div>
 </section>

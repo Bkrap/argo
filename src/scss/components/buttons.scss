@@ -51,4 +51,9 @@
             }
         }
     }
+
+}
+
+.link-text {
+    @extend .btn-link_primary;
 }
