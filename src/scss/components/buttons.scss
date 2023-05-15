@@ -28,8 +28,10 @@
         color: $teal;
     }
 
-    &-arrow-link {
+    &-link_primary {
         text-decoration: none;
+        font-style: normal !important;
+        padding: 0 !important;
         span{
             color: $secondary;
             font-size: 14px;
