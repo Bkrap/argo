@@ -7,10 +7,68 @@ function debug( $s ) {
 	echo "</pre>";
 }
 
+// Removes from admin menu
+add_action( 'admin_menu', 'my_remove_admin_menus' );
+function my_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+
+
+/**
+ * Returns a string with all HTML tags stripped except <strong>.
+ *
+ * @param mixed $param The input string or array of strings to be stripped.
+ * @return string The stripped string.
+ */
 function wyswig_raw( $param ) {
 	return strip_tags( $param, "<strong>" );
 }
 
+/********************************************************************************** */ 
+
+
+/**
+ * Generates an inline CSS style string for an image with the specified ID and focus position.
+ *
+ * @param int $img_id The ID of the image.
+ * @param int $left The horizontal percentage of the focus position.
+ * @param int $top The vertical percentage of the focus position.
+ * @return string The inline CSS style string
+ * */
+function wp_get_img_focus_inline_style( $img_id = 0, $left = 0, $top = 0 ) {
+    return "background-image: url(". wp_get_attachment_image_src( $img_id, 'full' ) ."); background-position: {$left}% {$top}%;";
+}
+
+/********************************************************************************** */ 
+
+/**
+ * Returns an HTML img element with a specific position and class to focus on a certain area.
+ *
+ * @param int $img_id The ID of the image attachment.
+ * @param int $left The position of the image on the x-axis.
+ * @param int $top The position of the image on the y-axis.
+ * @param string $class The CSS class to apply to the element.
+ * @return string The HTML img element with the specified position and class.
+ */
+function wp_get_img_focus_element( $img_id = 0, $left = 0, $top = 0, $class = "" ) {
+    return wp_get_attachment_image( $img_id, 'full', false, array(
+        "class" => $class,
+        "style" => "{$left}% {$top}%"
+    ));
+}
+
+/********************************************************************************** */ 
+
+/**
+ * Returns a button with optional icon if the button should be shown.
+ *
+ * @param array $button_group An associative array containing a 'show_button' key
+ *                            and a 'button' key. The 'show_button' key should be
+ *                            a boolean indicating whether the button should be shown.
+ *                            The 'button' key should be an array containing the button
+ *                            attributes.
+ * @param bool $icon Optional. Whether to include an icon with the button. Defaults to false.
+ */
 function get_btn( $button_group, $icon = false ) {
 
 	if( $button_group['show_button'] ) {
@@ -35,6 +93,17 @@ function get_btn( $button_group, $icon = false ) {
 }
 
 /********************************************************************************* */
+
+/**
+ * Retrieves a post object by the post title and post type.
+ *
+ * @param string $page_title The title of the post to retrieve.
+ * @param string $post_type The type of post to retrieve. Default is 'post'.
+ * @param string $output The output type. Accepts OBJECT, ARRAY_A, ARRAY_N. Default is OBJECT.
+ * @throws None
+ * @return WP_Post|null WP_Post on success or null on failure.
+ */
+
 function get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
     global $wpdb;
         $post = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $page_title, $post_type));

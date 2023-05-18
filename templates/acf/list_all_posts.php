@@ -31,7 +31,7 @@
                 // } elseif( $k == 0 ) {
                 //     get_partial('card-full');
                 // }
-                get_partial('card');
+                get_partial('card', (array)$v);
             } ?>
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
 

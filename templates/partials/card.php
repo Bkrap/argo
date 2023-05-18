@@ -1,4 +1,4 @@
-<?php //debug($params); ?>
+<?php debug($params); ?>
 <div class="col-lg-4 card-column grid-card">
     <div class="card h-100">
         <div class="image-wrapper">
