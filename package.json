@@ -24,6 +24,7 @@
     "babel-loader": "^9.1.2",
     "babel-preset-env": "^1.7.0",
     "breakpoint-sass": "^2.7.1",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "cssnano": "^4.0.5",

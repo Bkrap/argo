@@ -5,10 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const glob = require('glob');
 // const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 // const sass = require('node-sass');
 
 // Hard code this to production but can be adapted to accept args to change env.
-const mode = 'production';
+const mode = 'development';
 
 // const copyPlugin = new CopyPlugin({
 //   patterns: [
@@ -35,6 +36,9 @@ module.exports = {
         extractComments: false,
       }),
     ],
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 
   resolve: {
@@ -80,6 +84,19 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
+    }),
+    // Define the filename pattern for CSS.
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['build'] },
+      files: ['build/**/*'],
+      injectChanges: true,
+      notify: false,
     }),
     // copyPlugin,
   ]

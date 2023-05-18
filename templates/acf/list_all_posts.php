@@ -5,8 +5,8 @@
 
  $args = array(
     'post_type'         => 'post',
-    'posts_per_page'    => 11,
-    'post_status'       => 'published',
+    'posts_per_page'    => get_option('posts_per_page'),
+    'post_status'       => 'publish',
  );
  $query = new WP_Query( $args );
 
@@ -31,6 +31,7 @@
                 // } elseif( $k == 0 ) {
                 //     get_partial('card-full');
                 // }
+                $v->primary_category = get_the_category( $v->ID )[0]->name;
                 get_partial('card', (array)$v);
             } ?>
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->

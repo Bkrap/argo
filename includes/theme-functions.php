@@ -115,6 +115,25 @@ function get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
 /********************************************************************************* */
 
 /**
+ * Checks if the post excerpt is empty and returns the post content trimmed to 20 words and three dots if it is.
+ *
+ * @param int $post_id The ID of the post to check.
+ * @return string The post excerpt if it is not empty, or the post content trimmed to 20 words and three dots if it is.
+ */
+
+function check_post_excerpt($post_id) {
+    $post = get_post($post_id);
+    if (empty($post->post_excerpt)) {
+        $content = wp_strip_all_tags($post->post_content);
+        $words = wp_trim_words($content, 20, '...');
+        return $words;
+    }
+    return $post->post_excerpt;
+}
+
+/********************************************************************************* */
+
+/**
  * TAKE EACH FEATURED IMAGE AND INSERT IT INTO FIELD -> POST_FEATURED_IMAGE | Uncomment setFeaturedImage(), run it only once
  */
 

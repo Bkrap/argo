@@ -33,6 +33,10 @@
     .grid-card {
         .image-wrapper {
             height: 228px;
+
+            img {
+                height: inherit;
+            }
         }
     }
     .card{

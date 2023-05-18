@@ -2,24 +2,16 @@
     <div class="title-pill">
         <p>News Hub</p>
     </div>
-    <ul>
+    <ul class="secondary-nav-categories">
         <li class="active">
             <a href="">All</a>
         </li>
-        <li>
-            <a href="">Topic 1</a>
-        </li>
-        <li>
-            <a href="">Topic 1</a>
-        </li>
-        <li>
-            <a href="">Topic 1</a>
-        </li>
-        <li>
-            <a href="">Topic 1</a>
-        </li>
-        <li>
-            <a href="">Topic 1</a>
-        </li>
+
+        <?php foreach( get_categories() as $k => $v ) { ?>
+            <li class="secondary-nav-category-term" data-cat-id="<?php echo $v->term_id; ?>">
+                <a href=""><?php echo $v->name ?></a>
+            </li>
+        <?php } ?>
+
     </ul>
 </nav>
