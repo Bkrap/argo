@@ -113,11 +113,11 @@
                 border-radius: 4px;
                 font-size: 12px;
                 color: $white;
-                background-color: $secondary;
+                background-color: $primary;
                 text-decoration: none;
                 transition: $transition;
                 &:hover{
-                    background: $secondary-1;
+                    background: $druga;
                 }
                 &+.category-pill{
                     margin-left: 12px;
@@ -152,7 +152,7 @@
                 }
                 .date{
                     margin-bottom: 12px;
-                    color: $secondary;
+                    color: $primary;
                     font-size: 14px;
                     font-weight: 700;
                 }
