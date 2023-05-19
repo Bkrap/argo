@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("js worksas");
+    console.log("js 12");
     /**************************************************************************************************/
 
 function img2svg(obj) {
@@ -44,7 +44,6 @@ function img2svg(obj) {
 img2svg('img[src$=".svg"]');
 
 
-console.log("hiii");
 jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
 
     e.preventDefault();
@@ -82,9 +81,9 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
 
         // return data;
         error: function(request, status, error) {
-        //   console.log(res);
+          console.log(request);
           alert(request.responseText);
-        //   console.log(data);
+          console.log(error);
         }
 
       });

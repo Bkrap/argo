@@ -30,7 +30,7 @@ module.exports = {
   },
 
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [
       new TerserPlugin({
         extractComments: false,
@@ -90,14 +90,14 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      server: { baseDir: ['build'] },
-      files: ['build/**/*'],
-      injectChanges: true,
-      notify: false,
-    }),
+    // new BrowserSyncPlugin({
+    //   host: 'localhost',
+    //   port: 3000,
+    //   server: { baseDir: ['build'] },
+    //   files: ['build/**/*'],
+    //   injectChanges: true,
+    //   notify: false,
+    // }),
     // copyPlugin,
   ]
 }
