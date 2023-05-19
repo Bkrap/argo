@@ -12,15 +12,15 @@
         color: #ffffff;
     }
     &-primary{
-        background: $secondary;
-        &:hover{
-            background: rgba(202, 115, 70, 0.8);
-        }
-    }
-    &-secondary{
         background: linear-gradient(90deg, $teal 0%, $primary 100%);
         &:hover{
            background: linear-gradient(90deg, rgba(38, 85, 74, 0.6) 0%, rgba(42, 128, 127, 0.6) 100%);
+        }
+    }
+    &-secondary{
+        background: $secondary;
+        &:hover{
+            background: rgba(202, 115, 70, 0.8);
         }
     }
     &-white{

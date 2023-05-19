@@ -12148,16 +12148,16 @@ button {
   color: #ffffff;
 }
 .btn-primary {
-  background: #CA7346;
-}
-.btn-primary:hover {
-  background: rgba(202, 115, 70, 0.8);
-}
-.btn-secondary {
   background: linear-gradient(90deg, #26554A 0%, #2A807F 100%);
 }
-.btn-secondary:hover {
+.btn-primary:hover {
   background: linear-gradient(90deg, rgba(38, 85, 74, 0.6) 0%, rgba(42, 128, 127, 0.6) 100%);
+}
+.btn-secondary {
+  background: #CA7346;
+}
+.btn-secondary:hover {
+  background: rgba(202, 115, 70, 0.8);
 }
 .btn-white {
   background: #ffffff;
