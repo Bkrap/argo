@@ -45,7 +45,7 @@
 
         </div>
         <div class="button-wrapper d-flex justify-content-end">
-            <a id="load-more" class="arrow-link btn btn-link_primary" href="#">
+            <a id="load-more" class="arrow-link btn btn-link_primary load-more-btn" href="#">
                 <span class="link-text">Load More</span>
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_204_1799)">

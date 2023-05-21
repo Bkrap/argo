@@ -47,24 +47,35 @@ img2svg('img[src$=".svg"]');
 
 /**
  * Filter posts
+ * Action is hooking on filter and sorting posts
  */
 
-jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+jQuery('.secondary-nav-category-term, #sort-posts').on("click change", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
 
     e.preventDefault();
+    var clickedElem = jQuery(this);
 
-    jQuery(".secondary-nav-category-term").removeClass("active");
+    /**
+     * Check if clicked element is a filter, in that case toggle active class
+     */
+    if( clickedElem.hasClass("secondary-nav-category-term") ) {
+        jQuery(".secondary-nav-category-term").removeClass("active");
+    
+        jQuery(this).addClass("active");
+    }
 
-    jQuery(this).addClass("active");
+    var navCatID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
 
-    var navCatID = jQuery(this).attr("data-cat-id");
+    var postOrder = jQuery('#sort-posts').val();
+    console.log(postOrder);
 
     // Cookies.set('userToken', userTokenVar, { expires: 1 }); // docs: https://github.com/js-cookie/js-cookie
 
     var formData = {
-      action: 'filter_posts',
-      page_id: generic_ajax_object.curr_post_id,
-      category_id: navCatID,
+      action        : 'filter_posts',
+      page_id       : generic_ajax_object.curr_post_id,
+      category_id   : navCatID,
+      order         : postOrder,
     };
 
     jQuery.ajax({
@@ -104,15 +115,18 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
 
 /**
  * Load more
+ * Action is hooking on filter and sorting posts
  */
 var offset = 0;
 var maxNumPagesCounter = 1;
- jQuery('#load-more').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+ jQuery('#load-more, #sort-posts').on("click change", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
 
     e.preventDefault();
 
-    maxNumPagesCounter++;
-    offset += 11;
+    if( jQuery(this).hasClass("load-more-btn") ) {
+        maxNumPagesCounter++;
+        offset += 11;
+    }
 
     /**
      * Clicking on filter item again requires offset, maxNumPagesCounter to be reseted and load more button to be shown again.
@@ -130,6 +144,8 @@ var maxNumPagesCounter = 1;
         jQuery("#load-more").hide();
     }
 
+    var postOrder = jQuery('#sort-posts').val();
+
     /**
      * Load more posts but only within filter scope
      */
@@ -139,7 +155,8 @@ var maxNumPagesCounter = 1;
       action    : 'load_more_posts',
       page_id   : generic_ajax_object.curr_post_id,
       activeID  : activeID,
-      offset    : offset
+      offset    : offset,
+      order     : postOrder,
     };
 
     jQuery.ajax({

@@ -19,6 +19,8 @@ function filter_posts() {
         'posts_per_page'    => get_option('posts_per_page'),
         'category__in'      => $_POST['category_id'],
         'post_status'       => 'publish',
+        'orderby'           => 'date',
+        'order'             => $_POST['order'],
     );
     $query = new WP_Query( $args );
 
@@ -98,3 +100,5 @@ function load_more_posts() {
 
 
 }
+
+/**************************************************************************************************/
