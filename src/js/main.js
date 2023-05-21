@@ -68,10 +68,10 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
     };
 
     jQuery.ajax({
-      type: 'POST',
-      url:  generic_ajax_object.ajax_url,
-      dataType: 'html',
-      data: formData,
+      type      : 'POST',
+      url       :  generic_ajax_object.ajax_url,
+      dataType  : 'html',
+      data      : formData,
       success: function(data) {
 
         jQuery('.posts-ajax-cards-row').html(data);
@@ -81,11 +81,11 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
           jQuery(document)
             .ajaxStart(function () {
                //ajax request went so show the loading image
-                loadingWheel.show();
+                // loadingWheel.show();
             })
           .ajaxStop(function () {
               //got response so hide the loading image
-               loadingWheel.hide();
+            //    loadingWheel.hide();
            });
 
         },
@@ -105,16 +105,41 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
 /**
  * Load more
  */
-
+var offset = 0;
+var maxNumPagesCounter = 1;
  jQuery('#load-more').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
 
     e.preventDefault();
+
+    maxNumPagesCounter++;
+    offset += 11;
+
+    /**
+     * Clicking on filter item again requires offset, maxNumPagesCounter to be reseted and load more button to be shown again.
+     */
+    jQuery('.secondary-nav-category-term').on("click", function(e) {
+        jQuery("#load-more").show();
+        offset = 0;
+        maxNumPagesCounter = 1;
+    });
+
+    /**
+     * Hide load more button if all posts are loaded
+     */
+    if( maxNumPagesCounter == jQuery("#news-hub-wrap").attr("data-max-num-pages") ) {
+        jQuery("#load-more").hide();
+    }
+
+    /**
+     * Load more posts but only within filter scope
+     */
     var activeID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
 
     var formData = {
-      action: 'filter_posts',
-      page_id: generic_ajax_object.curr_post_id,
-      activeID: navCatID,
+      action    : 'load_more_posts',
+      page_id   : generic_ajax_object.curr_post_id,
+      activeID  : activeID,
+      offset    : offset
     };
 
     jQuery.ajax({
@@ -127,16 +152,16 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
 
         jQuery(data).appendTo('.posts-ajax-cards-row');
 
-          var loadingWheel = jQuery('#loading-wheel').hide();
+        //   var loadingWheel = jQuery('#loading-wheel').hide();
           //Attach the event handler to any element
           jQuery(document)
             .ajaxStart(function () {
                //ajax request went so show the loading image
-                loadingWheel.show();
+                // loadingWheel.show();
             })
           .ajaxStop(function () {
               //got response so hide the loading image
-               loadingWheel.hide();
+            //    loadingWheel.hide();
            });
 
         },

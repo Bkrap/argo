@@ -7,13 +7,15 @@
     'post_type'         => 'post',
     'posts_per_page'    => get_option('posts_per_page'),
     'post_status'       => 'publish',
+    'offset'            => 0
  );
  $query = new WP_Query( $args );
 
+//  debug($query);
 ?>
 <?php get_partial('news_filter'); ?>
 
-<section class="news-hub">
+<section class="news-hub" id="news-hub-wrap" data-max-num-pages="<?php echo $query->max_num_pages; ?>" data-posts-per-page="<?php echo get_option('posts_per_page'); ?>">
     <div class="container">
         <?php get_partial('news_sort'); ?>
         <div class="row posts-ajax-cards-row">

@@ -66,7 +66,11 @@ function load_more_posts() {
         'posts_per_page'    => get_option('posts_per_page'),
         'category__in'      => $_POST['activeID'],
         'post_status'       => 'publish',
+        'offset'            => $_POST['offset'],
     );
+    
+    // debug($args);
+    
     $query = new WP_Query( $args );
 
     $counter = 0; 
