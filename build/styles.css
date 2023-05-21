@@ -11582,6 +11582,9 @@ button {
   height: 348px;
   width: 50%;
 }
+.news-hub .full-width-card .card .image-wrapper img {
+  height: inherit;
+}
 .news-hub .full-width-card .card .image-wrapper .category-pill {
   right: 16px;
 }

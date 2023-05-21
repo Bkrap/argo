@@ -24,19 +24,22 @@
             $iteration = 1;
             ?>
             <?php foreach( $query->posts as $k => $v ) {
-                $c = $k + 1;
-                // if( $iteration == 1 &&  ) {
-                //     get_partial('card');
-                //     $iteration = 2;
-                // } elseif( $iteration == 2 ) {
-                //     $iteration = 1;
-                // } elseif( $k == 0 ) {
-                //     get_partial('card-full');
-                // }
                 $v->primary_category = get_the_category( $v->ID )[0]->name;
                 $v->category_id      = get_the_category( $v->ID )[0]->term_id;
+                
+                $c = $k + 1;
+                if( $counter == 13 ) {
+                    $counter = 0;
+                }
+                $counter++;
 
-                get_partial('card', (array)$v);
+
+                if( $counter == 1 || $counter == 5 || $counter == 12 ) {
+                    get_partial('card-full', (array)$v);
+                } else {
+                    get_partial('card', (array)$v);
+                }
+
             } ?>
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
 

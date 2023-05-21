@@ -26,19 +26,20 @@ function filter_posts() {
     $iteration = 1;
     foreach( $query->posts as $k => $v ) {
         $c = $k + 1;
-        // if( $iteration == 1 &&  ) {
-        //     get_partial('card');
-        //     $iteration = 2;
-        // } elseif( $iteration == 2 ) {
-        //     $iteration = 1;
-        // } elseif( $k == 0 ) {
-        //     get_partial('card-full');
-        // }
+        if( $counter == 13 ) {
+            $counter = 0;
+        }
+        $counter++;
+
         $v->primary_category = get_the_category( $v->ID )[0]->name;
         $v->category_id      = get_the_category( $v->ID )[0]->term_id;
 
-        get_partial('card', (array)$v);
-        
+        if( $counter == 1 || $counter == 5 || $counter == 12 ) {
+            get_partial('card-full', (array)$v);
+        } else {
+            get_partial('card', (array)$v);
+        }
+
     }
 
     die;
@@ -68,7 +69,7 @@ function load_more_posts() {
         'post_status'       => 'publish',
         'offset'            => $_POST['offset'],
     );
-    
+
     // debug($args);
     
     $query = new WP_Query( $args );
@@ -77,19 +78,20 @@ function load_more_posts() {
     $iteration = 1;
     foreach( $query->posts as $k => $v ) {
         $c = $k + 1;
-        // if( $iteration == 1 &&  ) {
-        //     get_partial('card');
-        //     $iteration = 2;
-        // } elseif( $iteration == 2 ) {
-        //     $iteration = 1;
-        // } elseif( $k == 0 ) {
-        //     get_partial('card-full');
-        // }
+        if( $counter == 13 ) {
+            $counter = 0;
+        }
+        $counter++;
+
         $v->primary_category = get_the_category( $v->ID )[0]->name;
         $v->category_id      = get_the_category( $v->ID )[0]->term_id;
 
-        get_partial('card', (array)$v);
-        
+        if( $counter == 1 || $counter == 5 || $counter == 12 ) {
+            get_partial('card-full', (array)$v);
+        } else {
+            get_partial('card', (array)$v);
+        }
+
     }
 
     die;

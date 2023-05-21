@@ -53,7 +53,7 @@ function wp_get_img_focus_inline_style( $img_id = 0, $left = 0, $top = 0 ) {
 function wp_get_img_focus_element( $img_id = 0, $left = 0, $top = 0, $class = "" ) {
     return wp_get_attachment_image( $img_id, 'full', false, array(
         "class" => $class,
-        "style" => "{$left}% {$top}%"
+        "style" => "background-position: {$left}% {$top}%"
     ));
 }
 

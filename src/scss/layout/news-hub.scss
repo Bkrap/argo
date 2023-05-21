@@ -21,6 +21,11 @@
             .image-wrapper{
                 height: 348px;
                 width: 50%;
+
+                img {
+                    height: inherit;
+                }
+
                 .category-pill{
                     right: 16px;
                 }
