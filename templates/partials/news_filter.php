@@ -3,7 +3,7 @@
         <p>News Hub</p>
     </div>
     <ul class="secondary-nav-categories">
-        <li class="active">
+        <li class="active secondary-nav-category-term" data-cat-id="0">
             <a href="">All</a>
         </li>
 

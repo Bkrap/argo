@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("js 1ewfed2");
+    console.log("js 1ewfedd2");
     /**************************************************************************************************/
 
 function img2svg(obj) {
@@ -43,10 +43,20 @@ function img2svg(obj) {
 
 img2svg('img[src$=".svg"]');
 
+/****************************************************************************** */
+
+/**
+ * Filter posts
+ */
 
 jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
 
     e.preventDefault();
+
+    jQuery(".secondary-nav-category-term").removeClass("active");
+
+    jQuery(this).addClass("active");
+
     var navCatID = jQuery(this).attr("data-cat-id");
 
     // Cookies.set('userToken', userTokenVar, { expires: 1 }); // docs: https://github.com/js-cookie/js-cookie
@@ -55,6 +65,56 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
       action: 'filter_posts',
       page_id: generic_ajax_object.curr_post_id,
       category_id: navCatID,
+    };
+
+    jQuery.ajax({
+      type: 'POST',
+      url:  generic_ajax_object.ajax_url,
+      dataType: 'html',
+      data: formData,
+      success: function(data) {
+
+        jQuery('.posts-ajax-cards-row').html(data);
+
+          var loadingWheel = jQuery('#loading-wheel').hide();
+          //Attach the event handler to any element
+          jQuery(document)
+            .ajaxStart(function () {
+               //ajax request went so show the loading image
+                loadingWheel.show();
+            })
+          .ajaxStop(function () {
+              //got response so hide the loading image
+               loadingWheel.hide();
+           });
+
+        },
+
+        // return data;
+        error: function(request, status, error) {
+          console.log(request);
+          alert(request.responseText);
+          console.log(error);
+        }
+
+      });
+});
+
+/****************************************************************** */
+
+/**
+ * Load more
+ */
+
+ jQuery('#load-more').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+
+    e.preventDefault();
+    var activeID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
+
+    var formData = {
+      action: 'filter_posts',
+      page_id: generic_ajax_object.curr_post_id,
+      activeID: navCatID,
     };
 
     jQuery.ajax({
@@ -90,6 +150,8 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
 
       });
 });
+
+/****************************************************************** */
 
 
 });
