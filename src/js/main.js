@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("js 12");
+    console.log("js 1ewfed2");
     /**************************************************************************************************/
 
 function img2svg(obj) {
@@ -64,6 +64,8 @@ jQuery('.secondary-nav-category-term').on("click", function(e){ // class of root
       data: formData,
       success: function(data) {
         console.log(data);
+
+        jQuery(data).appendTo('.posts-ajax-cards-row');
 
           var loadingWheel = jQuery('#loading-wheel').hide();
           //Attach the event handler to any element

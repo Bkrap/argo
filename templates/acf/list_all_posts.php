@@ -16,7 +16,7 @@
 <section class="news-hub">
     <div class="container">
         <?php get_partial('news_sort'); ?>
-        <div class="row">
+        <div class="row posts-ajax-cards-row">
             <?php 
             $counter = 0; 
             $iteration = 1;
@@ -32,6 +32,8 @@
                 //     get_partial('card-full');
                 // }
                 $v->primary_category = get_the_category( $v->ID )[0]->name;
+                $v->category_id      = get_the_category( $v->ID )[0]->term_id;
+
                 get_partial('card', (array)$v);
             } ?>
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->

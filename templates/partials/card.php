@@ -1,5 +1,5 @@
 <?php //debug($params); ?>
-<div class="col-lg-4 card-column grid-card" data-cat-id="<?php echo $params['primary_category']; ?> ?>">
+<div class="col-lg-4 card-column grid-card" data-cat-id="<?php echo $params['category_id']; ?>">
     <div class="card h-100">
         <div class="image-wrapper">
             <?php echo wp_get_img_focus_element( get_post_thumbnail_id( $params['ID'] ), 0, 0, 'card-img-top' ); ?>
