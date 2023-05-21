@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const glob = require('glob');
 // const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 // const sass = require('node-sass');
 
 // Hard code this to production but can be adapted to accept args to change env.
