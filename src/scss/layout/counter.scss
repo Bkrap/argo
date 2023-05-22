@@ -7,10 +7,10 @@
         @include media-breakpoint-down(lg){
             margin-top: 29px;
         }
-        svg{
+        .quotations{
             width: 50px;
         }
-        div{
+        .content{
             width: calc( 100% - 80px );
             margin-left: 30px;
         }

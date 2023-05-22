@@ -121,7 +121,17 @@
         select{
             width: 200px;
             font-size: 14px;
+            color: #666666;
+            font-weight: 700;
             padding: 13px 0px 13px 16px;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: $white url('data:image/svg+xml,<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="%23666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+            border: 1px solid #F1F1F2;
+            background-position: right 26px top 50%;
+
+            border-radius: 4px;
             @include media-breakpoint-down(lg){
                 width: 100%;
             }

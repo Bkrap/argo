@@ -11174,6 +11174,7 @@ button {
 .cta .images-wrapper .person {
   position: relative;
   z-index: 5;
+  aspect-ratio: 518/715;
 }
 .cta .images-wrapper iframe {
   width: 100%;
@@ -11666,7 +11667,16 @@ button {
 .news-hub .filter-sort select {
   width: 200px;
   font-size: 14px;
+  color: #666666;
+  font-weight: 700;
   padding: 13px 0px 13px 16px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ffffff url('data:image/svg+xml,<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="%23666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+  border: 1px solid #F1F1F2;
+  background-position: right 26px top 50%;
+  border-radius: 4px;
 }
 @media (max-width: 991.98px) {
   .news-hub .filter-sort select {
@@ -11842,10 +11852,10 @@ button {
     margin-top: 29px;
   }
 }
-.counter .quote svg {
+.counter .quote .quotations {
   width: 50px;
 }
-.counter .quote div {
+.counter .quote .content {
   width: calc(100% - 80px);
   margin-left: 30px;
 }
@@ -11979,13 +11989,17 @@ button {
   margin-bottom: 350px;
   position: relative;
   overflow: hidden;
-  background-attachment: fixed;
 }
 @media (max-width: 991.98px) {
   .facts-and-cards {
     margin-bottom: 0;
     min-height: unset;
   }
+}
+.facts-and-cards .parallax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .facts-and-cards .small-title {
   margin-top: 60px;
@@ -12060,6 +12074,25 @@ button {
     position: static;
     transform: none;
   }
+}
+.factss .circle-number {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  position: relative;
+  flex-shrink: 0;
+}
+.factss .circle-number .number {
+  position: absolute;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1;
+  font-weight: 700;
+  color: #2A807F;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .facts-two-columns {
@@ -12143,7 +12176,6 @@ button {
   font-size: 16px;
   border: none;
   font-weight: 700;
-  font-style: italic;
   color: #ffffff;
   transition: 0.3s ease-in-out;
 }
@@ -12226,7 +12258,17 @@ button {
   color: #2A807F;
 }
 #header .navigation ul li + li a, #header .mobile-navigation ul li + li a {
-  padding-left: 24px;
+  padding-left: 6px;
+}
+@media (min-width: 576px) {
+  #header .navigation ul li + li a, #header .mobile-navigation ul li + li a {
+    padding-left: calc((2.8846153846vw + -10.6153846154px) * 1);
+  }
+}
+@media (min-width: 1200px) {
+  #header .navigation ul li + li a, #header .mobile-navigation ul li + li a {
+    padding-left: 24px;
+  }
 }
 #header .mobile-navigation ul {
   display: block;

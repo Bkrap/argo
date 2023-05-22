@@ -41,7 +41,7 @@
                 }
                 &+li{
                     a{
-                       padding-left: 24px;
+                       @include fluid('padding-left', 6, 24);
                     }
                 }
             }

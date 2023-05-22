@@ -272,5 +272,6 @@ const countupElements = document.querySelectorAll(".countup");
     });
 
 
-    const parallaxBg = document.querySelector(".parallax-bg");
 
+    var image = document.getElementsByClassName('parallax');
+    new simpleParallax(image);
