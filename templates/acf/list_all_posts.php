@@ -26,7 +26,7 @@
                 // if( $iteration == 1 &&  ) {
                 //     get_partial('card');
                 //     $iteration = 2;
-                // } elseif( $iteration == 2 ) {
+                // } elseif( $iteration ==f 2 ) {
                 //     $iteration = 1;
                 // } elseif( $k == 0 ) {
                 //     get_partial('card-full');
