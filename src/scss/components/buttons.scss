@@ -4,7 +4,7 @@
     font-size: 16px;
     border: none;
     font-weight: 700;
-    font-style: italic;
+    // font-style: italic;
     // text-transform: uppercase;
     color: #ffffff;
     transition: $transition;
@@ -12,15 +12,15 @@
         color: #ffffff;
     }
     &-primary{
-        background: $primary;
+        background: linear-gradient(90deg, $teal 0%, $primary 100%);
         &:hover{
-            background: rgba(202, 115, 70, 0.8);
+           background: linear-gradient(90deg, rgba(38, 85, 74, 0.6) 0%, rgba(42, 128, 127, 0.6) 100%);
         }
     }
     &-secondary{
-        background: linear-gradient(90deg, $teal 0%, $secondary 100%);
+        background: $secondary;
         &:hover{
-           background: linear-gradient(90deg, rgba(38, 85, 74, 0.6) 0%, rgba(42, 128, 127, 0.6) 100%);
+            background: rgba(202, 115, 70, 0.8);
         }
     }
     &-white{
@@ -33,7 +33,7 @@
         font-style: normal !important;
         padding: 0 !important;
         span{
-            color: $secondary;
+            color: $primary;
             font-size: 14px;
             margin-right: 5px;
             font-style: unset !important;
@@ -42,10 +42,10 @@
         }
         &:hover{
             span{
-                color: $secondary-1;
+                color: $druga;
                 svg{
                     path{
-                        fill: $secondary-1;
+                        fill: $druga;
                     }
                 }
             }

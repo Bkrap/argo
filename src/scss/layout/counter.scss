@@ -7,10 +7,10 @@
         @include media-breakpoint-down(lg){
             margin-top: 29px;
         }
-        svg{
+        .quotations{
             width: 50px;
         }
-        div{
+        .content{
             width: calc( 100% - 80px );
             margin-left: 30px;
         }
@@ -37,12 +37,12 @@
     }
 
     .single{
-        border-top: 2px solid $secondary-1;
+        border-top: 2px solid $druga;
         padding-top: 16px;
 
         span{
             font-size: 56px;
-            color: $secondary-1;
+            color: $druga;
             font-weight: 700;
             &.text{
                 font-size: 20px;

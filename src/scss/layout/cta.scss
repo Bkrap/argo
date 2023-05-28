@@ -32,7 +32,7 @@
     }
     .discount-pill{
         font-size: 12px;
-        color: $primary;
+        color: $secondary;
         padding: 6px 8px;
         background: $white;
         margin-right: 12px;
@@ -54,6 +54,7 @@
         .person{
             position: relative;
             z-index: 5;
+            aspect-ratio: 518/715;
         }
         iframe{
             width: 100%;

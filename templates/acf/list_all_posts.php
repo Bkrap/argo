@@ -5,39 +5,47 @@
 
  $args = array(
     'post_type'         => 'post',
-    'posts_per_page'    => 11,
-    'post_status'       => 'published',
+    'posts_per_page'    => get_option('posts_per_page'),
+    'post_status'       => 'publish',
+    'offset'            => 0
  );
  $query = new WP_Query( $args );
 
+//  debug($query);
 ?>
 <?php get_partial('news_filter'); ?>
 
-<section class="news-hub">
+<section class="news-hub" id="news-hub-wrap" data-max-num-pages="<?php echo $query->max_num_pages; ?>" data-posts-per-page="<?php echo get_option('posts_per_page'); ?>">
     <div class="container">
         <?php get_partial('news_sort'); ?>
-        <div class="row">
+        <div class="row posts-ajax-cards-row">
             <?php 
             $counter = 0; 
             $iteration = 1;
             ?>
             <?php foreach( $query->posts as $k => $v ) {
+                $v->primary_category = get_the_category( $v->ID )[0]->name;
+                $v->category_id      = get_the_category( $v->ID )[0]->term_id;
+                
                 $c = $k + 1;
-                // if( $iteration == 1 &&  ) {
-                //     get_partial('card');
-                //     $iteration = 2;
-                // } elseif( $iteration ==f 2 ) {
-                //     $iteration = 1;
-                // } elseif( $k == 0 ) {
-                //     get_partial('card-full');
-                // }
-                get_partial('card');
+                if( $counter == 13 ) {
+                    $counter = 0;
+                }
+                $counter++;
+
+
+                if( $counter == 1 || $counter == 5 || $counter == 12 ) {
+                    get_partial('card-full', (array)$v);
+                } else {
+                    get_partial('card', (array)$v);
+                }
+
             } ?>
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
 
         </div>
         <div class="button-wrapper d-flex justify-content-end">
-            <a id="load-more" class="arrow-link btn btn-link_primary" href="#">
+            <a id="load-more" class="arrow-link btn btn-link_primary load-more-btn" href="#">
                 <span class="link-text">Load More</span>
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_204_1799)">

@@ -34,10 +34,13 @@
             $query = new WP_Query( $args );
             ?>
             <?php foreach( $query->posts as $k => $v ) { 
+                echo "halo?";
+                debug($v->ID );
                 $card_arr = array(
                     'title'                 => $v->post_title,
                     'text'                  => $v->post_excerpt,
                     'category_name'         => get_the_category( $v->ID )[0]->name,
+                    'category_id'           => get_the_category( $v->ID )[0]->term_id,
                     'image'                 => get_the_post_thumbnail( $v->ID, "", array( "class" => "card-img-top" ) ),
                     'url'                   => get_permalink( $v->ID ),
                     'date'                  => get_the_date( 'd M Y', $v->ID ),

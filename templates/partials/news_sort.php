@@ -1,8 +1,7 @@
 <div class="filter-sort d-flex justify-content-end">
-    <select name="cars" id="cars">
+    <select name="sort-posts" id="sort-posts">
         <option class="d-none" disabled selected value="date">Sort by</option>
-        <option value="date">date</option>
-        <option value="date">date</option>
-        <option value="date">date</option>
+        <option value="DESC">Latest</option>
+        <option value="ASC">Oldest</option>
     </select>
 </div>
