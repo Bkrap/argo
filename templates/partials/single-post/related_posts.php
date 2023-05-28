@@ -1,3 +1,4 @@
+<?php //debug($params); ?> 
 <div class="offset-lg-2 col-lg-3 sidebar">
     <p class="related">Related Articles</p>
     <?php
@@ -11,8 +12,9 @@
     <p class="related related-categories">More on this</p>
 
     <div class="category-pills">
-        <a href="" class="category-pill">Category</a>
-        <a href="" class="category-pill">Category</a>
+        <?php foreach( $params['categories'] as $k_cat => $v_cat ) { //debug($v_cat); ?>
+            <a href="" class="category-pill"><?php echo $v_cat->name; ?></a>
+        <?php } ?>
     </div>
 
     <p class="related related-social">More on this</p>

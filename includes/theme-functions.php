@@ -105,8 +105,8 @@ function wp_get_img_focus_inline_style( $img_id = 0, $left = 0, $top = 0 ) {
  * @param string $class The CSS class to apply to the element.
  * @return string The HTML img element with the specified position and class.
  */
-function wp_get_img_focus_element( $img_id = 0, $left = 0, $top = 0, $class = "" ) {
-    return wp_get_attachment_image( $img_id, 'full', false, array(
+function wp_get_img_focus_element( $img_id = 0, $left = 0, $top = 0, $class = "", $size = 'full' ) {
+    return wp_get_attachment_image( $img_id, $size, false, array(
         "class" => $class,
         "style" => "background-position: {$left}% {$top}%"
     ));

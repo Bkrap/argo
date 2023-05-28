@@ -2,7 +2,7 @@
 <div class="col-lg-4 card-column grid-card" data-cat-id="<?php echo $params['category_id']; ?>">
     <div class="card h-100">
         <div class="image-wrapper">
-            <?php echo wp_get_img_focus_element( get_post_thumbnail_id( $params['ID'] ), 0, 0, 'card-img-top' ); ?>
+            <?php echo wp_get_img_focus_element( get_post_thumbnail_id( $params['ID'] ), 0, 0, 'card-img-top', 'thumbnail' ); ?>
 
             <div class="category-pill">
                 <p class="mb-0 bold-text"><?php echo $params['primary_category']; ?></p>
