@@ -2,12 +2,25 @@
 .link-cards{
     @include fluid('padding-top', 30, 90);
     @include fluid('padding-bottom', 30, 80);
+    overflow: hidden;
     .big-card{
         margin-bottom: 30px;
     }
+    .title{
+        margin-bottom: 40px;
+    }
+    .link-card-swiper{
+        overflow: visible;
+        .swiper-slide{
+            width: calc( 33.3% - 16px );
+            @include media-breakpoint-down(lg){
+                width: 100%;
+            }
+        }
+    }
    
     .card{
-        box-shadow: 0px 15px 30px 3px #CACACA;
+        // box-shadow: 0px 15px 30px 3px #CACACA;
         border-radius: 8px;
         border: none;
         padding: 50px 30px;

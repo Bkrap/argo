@@ -34,7 +34,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <a class="btn-arrow-link" href="">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_615_2378)">
@@ -50,6 +50,10 @@
                 </a>
                 <p class="small-text mt-4">Latest News</p>
                 <h1 class="title bold-text italic">Gun safety is not aboutguns, it's about people</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="info mb-3 d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
                         <span>Published</span>
@@ -95,7 +99,7 @@
                         </a>
                     </div>
                 </div>
-                <img class="hero-img" src="<?php echo get_template_directory_uri(); ?>\images\gun.jpg" alt="">
+                <img class="hero-img w-100" src="<?php echo get_template_directory_uri(); ?>\images\gun.jpg" alt="">
             </div>
         </div>
     </div>

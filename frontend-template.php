@@ -9,6 +9,7 @@ get_header(); // Load the header
 
 // include 'frontend/cta.php';
 // include 'frontend/hero.php';
+// include 'frontend/hero3.php';
 // include 'frontend/hero2.php';
 // include 'frontend/list.php';
 // include 'frontend/info_cards_title.php';
@@ -18,6 +19,7 @@ get_header(); // Load the header
 // include 'frontend/facts_and_cards.php';
 // include 'frontend/facts_two_columns.php';
 // include 'frontend/cta.php';
+// include 'frontend/link_cards.php';
 
 // include 'frontend/news_hub_archive.php';
 // include 'frontend/video_hub.php';

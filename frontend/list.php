@@ -33,12 +33,15 @@
 </section>
 
 
-<section class="list">
+<section class="list" style="background-image: url('http://localhost/argo/wp-content/themes/argo/images/America_map.png')">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
         	    <h2 class="main-title">The Argo <span class="bold-text">Vision</span></h2>
                 <p class="main-description">ARGO will provide the necessary authority and resources to enact change and knowledge within the community of responsible gun owners. </p>
+                <div class="btn-wrapper">
+                    <a href="" class="btn btn-secondary">JOIN ARGO</a>
+                </div>
             </div>
             <div class="offset-lg-1 col-lg-5">
                 <div class="list-item gradient">

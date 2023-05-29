@@ -124,3 +124,79 @@
         </div>
     </div>
 </section>
+
+
+
+<!--  no bg variation -->
+
+<section class="facts-and-cards no-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="title">We are <span class="bold-text">Responsible</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 white-card-wrap">
+                <div class="card white-card h-100">
+                    <div class="card-body">
+                        <h4>I am Responsible</h4>
+                        <p class="description">To get there, we conduct original research to better understand the concerns and priorities of all </p>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>\images\will.png" alt="">
+                        <div class="text">
+                            <p>Will Simone</p>
+                            <p class="title">Gun Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 white-card-wrap">
+                <div class="card white-card h-100">
+                    <div class="card-body">
+                        <h4>I am Responsible</h4>
+                        <p class="description"> To get there To get there To get there To get there, we conduct original research to better understand the concerns and priorities of all </p>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>\images\will.png" alt="">
+                        <div class="text">
+                            <p>Will Simone</p>
+                            <p class="title">Gun Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 white-card-wrap">
+                <div class="card white-card h-100">
+                    <div class="card-body">
+                        <h4>I am Responsible</h4>
+                        <p class="description">To get there, we conduct original research to better understand the concerns and priorities of all </p>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>\images\will.png" alt="">
+                        <div class="text">
+                            <p>Will Simone</p>
+                            <p class="title">Gun Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 white-card-wrap">
+                <div class="card white-card h-100">
+                    <div class="card-body">
+                        <h4>I am Responsible</h4>
+                        <p class="description">To get there, we conduct original research to better understand the concerns and priorities of all </p>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>\images\will.png" alt="">
+                        <div class="text">
+                            <p>Will Simone</p>
+                            <p class="title">Gun Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -10,11 +10,14 @@
             padding-bottom: 30px;
         }
     }
+    .btn-wrapper{
+        margin-top: 40px;
+    }
     .list-item{
         margin-bottom: 80px;
         border-radius: 6px;
         &.grey-bg{
-            background: $grey-light;
+            background: $white;
             padding: 24px 20px;
             margin-bottom: 40px;
         }

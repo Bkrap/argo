@@ -234,6 +234,17 @@ var swiper = new Swiper(".hero-swiper", {
     loop: true,
 });
 
+var swiper = new Swiper(".link-card-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 32,
+    navigation: {
+      nextEl: ".swiper-button-next-cards",
+      prevEl: ".swiper-button-prev-cards",
+    },
+
+});
+
+
 
 const countupElements = document.querySelectorAll(".countup");
 

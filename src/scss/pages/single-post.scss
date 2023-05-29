@@ -12,6 +12,7 @@
     .hero-img{
         height: 400px;
         object-fit: cover;
+        padding-bottom: 60px;
     }
     .info{
         @include media-breakpoint-down(lg){
@@ -46,7 +47,6 @@
     @include fluid('padding-bottom', 40, 120);
     position: relative;
     .content{
-        padding-top: 60px;
         h1, h2, h3, h4, h5, h6{
             font-weight: 700;
             font-style: normal;
