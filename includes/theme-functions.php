@@ -68,7 +68,7 @@ add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
 			),
 			array(  
 				'title' => 'Quote Box',  
-				'block' => 'span',  
+				'block' => 'div',  
 				'classes' => 'quote',
 				'wrapper' => true,
 			),

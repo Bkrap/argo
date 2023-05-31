@@ -12895,3 +12895,7 @@ button {
   margin-right: 5px;
   font-weight: 600;
 }
+
+.social-icon i {
+  color: #666666;
+}

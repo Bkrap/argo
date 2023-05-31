@@ -31,6 +31,8 @@ if( 2 == 2 ) {
 
 // CPTs
 include 'includes/CPT/partners.php';
+include 'includes/CPT/video_hub.php';
+include 'includes/TAX/video_category.php';
 include 'includes/ajax.php';
 
 /********************************************************************************************************************************************* */

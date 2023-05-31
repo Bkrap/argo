@@ -881,14 +881,121 @@
                                     },
                                     "acfe_field_group_condition": 0,
                                     "acfe_repeater_stylised_button": 0,
-                                    "layout": "table",
+                                    "layout": "block",
                                     "pagination": 0,
                                     "min": 0,
                                     "max": 0,
                                     "collapsed": "",
-                                    "button_label": "Add Row",
+                                    "button_label": "Add Social Media",
                                     "rows_per_page": 20,
-                                    "sub_fields": []
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_647788ad84194",
+                                            "label": "Icon",
+                                            "name": "icon",
+                                            "aria-label": "",
+                                            "type": "font-awesome",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "icon_sets": [
+                                                "solid",
+                                                "regular",
+                                                "brands"
+                                            ],
+                                            "custom_icon_set": "",
+                                            "default_label": "",
+                                            "default_value": "",
+                                            "save_format": "element",
+                                            "allow_null": 0,
+                                            "show_preview": 1,
+                                            "enqueue_fa": 0,
+                                            "fa_live_preview": "",
+                                            "choices": [],
+                                            "parent_repeater": "field_64626c4e2d819"
+                                        },
+                                        {
+                                            "key": "field_647788ce84195",
+                                            "label": "Platform",
+                                            "name": "platform",
+                                            "aria-label": "",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "choices": {
+                                                "facebook": "Facebook",
+                                                "instagram": "Instagram",
+                                                "twitter": "Twitter",
+                                                "linkedin": "Linkedin"
+                                            },
+                                            "default_value": "",
+                                            "return_format": "value",
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "layout": "vertical",
+                                            "save_other_choice": 0,
+                                            "parent_repeater": "field_64626c4e2d819"
+                                        },
+                                        {
+                                            "key": "field_647788f684196",
+                                            "label": "Profile URL",
+                                            "name": "profile_url",
+                                            "aria-label": "",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "parent_repeater": "field_64626c4e2d819"
+                                        },
+                                        {
+                                            "key": "field_6477890384197",
+                                            "label": "Share URL",
+                                            "name": "share_url",
+                                            "aria-label": "",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_647788ce84195",
+                                                        "operator": "!=",
+                                                        "value": "instagram"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "parent_repeater": "field_64626c4e2d819"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -1020,6 +1127,170 @@
                                     "append": ""
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_647791d886284",
+                            "label": "Video block",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_field_group_condition": 0,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0
+                        },
+                        {
+                            "key": "field_6477921c86285",
+                            "label": "Video block",
+                            "name": "video_block",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_field_group_condition": 0,
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6477922386286",
+                                    "label": "Button Group",
+                                    "name": "button_group",
+                                    "aria-label": "",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6477923186287",
+                                            "label": "Button",
+                                            "name": "button",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "This button is shown on video block on single post page.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "layout": "block",
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_6477923686288",
+                                                    "label": "Label",
+                                                    "name": "label",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 1,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "required_message": "",
+                                                    "default_value": "",
+                                                    "maxlength": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
+                                                    "key": "field_647792718628a",
+                                                    "label": "Style",
+                                                    "name": "style",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6477927a8628b",
+                                                            "label": "Color",
+                                                            "name": "color",
+                                                            "aria-label": "",
+                                                            "type": "radio",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "acfe_field_group_condition": 0,
+                                                            "choices": {
+                                                                "primary": "Greenish Blue",
+                                                                "secondary": "Orange Salmon",
+                                                                "link_primary": "Greenish blue text, no background color"
+                                                            },
+                                                            "default_value": "primary",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "other_choice": 0,
+                                                            "layout": "vertical",
+                                                            "save_other_choice": 0
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                }
+                                            ],
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large"
+                                        }
+                                    ],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
                         }
                     ]
                 },
@@ -1297,7 +1568,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "options"
+                "value": "global-options"
             }
         ]
     ],
@@ -1310,12 +1581,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
     "acfe_form": 0,
+    "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1684736509
+    "modified": 1685557939
 }

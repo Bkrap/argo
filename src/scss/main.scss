@@ -9,3 +9,9 @@
 @import 'components/all';
 @import 'pages/all';
 @import 'themes/all';
+
+.social-icon {
+    i {
+        color: $accent;
+    }
+}
