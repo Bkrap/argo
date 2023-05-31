@@ -47,16 +47,26 @@ $video_block = get_field( 'post_info', get_the_ID() )['video_block'];
 
 $top_label      = get_the_terms( $video_block['video_hub'][0]->ID, "video-category" )[0]->name;
 $text           = $video_block['video_hub'][0]->post_title; 
-$button         = "";
-$image          = "";
+
+$button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
+
+$image          = wp_get_img_focus_element( get_post_thumbnail_id( $video_block['video_hub'][0]->ID ), 0, 0, 'logo' );
 $video          = "";
 
 $video_args = array(
     "top_label"     => $top_label,
     "text"          => $text,
-    "button"        => $button,
+    "button_group"  => array( 'button' => $button ),
     "image"         => $image,
 );
+$video_args['button_group']['button']['function'] = 'url';
+
+/**
+ * NASTAVIT:
+ * youtube ako je video hub mora voditi na video hub index page i playati video direkt na stranici toj
+ * nastavi postavljati btn za video hub
+ */
+// debug( $video_block );
 // debug( $video_args );
 
 get_component_template( 'argo_on_youtube', (array)$video_args );

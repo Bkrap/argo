@@ -27,6 +27,7 @@ $button = $params['button_group']['button'];
             </div>
             <div class="col-lg-7 images-wrapper">
                 <!-- <img class="logo" src="<?php // echo get_template_directory_uri(); ?>\images\R.svg" alt=""> -->
+                <?php echo $params['image']; ?>
                 <?php echo $params['video']; ?>          
             </div>
         </div>
