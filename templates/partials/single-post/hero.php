@@ -1,11 +1,5 @@
 <section class="post-hero">
 
-<!-- ovdje je gumb za triggerat modal, maknut cemo ga sam kad mi javis kak ce se triggerat taj membership i to -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#closedContentModal">
-  Launch demo modal
-</button>
-
-
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

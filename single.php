@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <?php 
+$post_info = get_field( 'post_info', get_the_ID() ); 
+
 $filter_args = array(
     "class"     => "go-to-news-index"
 );
@@ -91,5 +93,32 @@ $video_args = array(
 
 get_component_template( 'argo_on_youtube', (array)$video_args );
 ?>
+
+<?php if( $post_info['subscription'] !== 'free' ) { 
+$membership_group = THEME_OPTIONS['globals']['membership']['modal']; 
+?>
+    <div class="modal fade" id="closedContentModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="closedContentModalLabel" aria-hidden="false">
+        <div class="modal-dialog container">
+            <div class="row align-items-center no-slider">
+                <div class="col-lg-7 text-wrapper">
+                    <div class="d-flex align-items-center">
+                        <div class="circle"></div>
+                        <div class="discount-pill">-100% OFF</div>
+                        <p class="mb-0 small-text italic"><?php echo $membership_group['content']['top_label']; ?></p>
+                    </div>
+                    <h2 class="title"><?php echo wyswig_raw( $membership_group['content']['title'] ); ?></h2>
+                    <p class="description"><?php echo $membership_group['content']['description']; ?></p>
+                    <form action="">
+                        <input type="email" name="email" placeholder="youremail@email.com" required id="">
+                        <button type="submit" class="btn btn-primary">Join Argo</button>
+                    </form>
+                </div>
+                <div class="col-lg-5 images-wrapper d-none d-lg-block">
+                    <?php echo wp_get_img_focus_element( $membership_group['image']['id'], 0, 0, 'person' ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 	
 <?php get_footer(); ?>

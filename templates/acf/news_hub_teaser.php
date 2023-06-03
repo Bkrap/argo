@@ -34,17 +34,19 @@
             $query = new WP_Query( $args );
             ?>
             <?php foreach( $query->posts as $k => $v ) { 
-                echo "halo?";
-                debug($v->ID );
+                // echo "halo?";
+                // debug($v->ID );
                 $card_arr = array(
-                    'title'                 => $v->post_title,
+                    'ID'                    => $v->ID,
+                    'post_title'            => $v->post_title,
                     'text'                  => $v->post_excerpt,
-                    'category_name'         => get_the_category( $v->ID )[0]->name,
+                    'primary_category'      => get_the_category( $v->ID )[0]->name,
                     'category_id'           => get_the_category( $v->ID )[0]->term_id,
                     'image'                 => get_the_post_thumbnail( $v->ID, "", array( "class" => "card-img-top" ) ),
                     'url'                   => get_permalink( $v->ID ),
                     'date'                  => get_the_date( 'd M Y', $v->ID ),
                 );    
+
             ?>
                 <?php if( $k == 0 ) {
                     get_partial( 'card-full', $card_arr );

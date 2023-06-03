@@ -1,4 +1,4 @@
-<?php debug($params) ?>
+<?php //debug($params) ?>
 
 <nav class="secondary-nav">
     <div class="title-pill">

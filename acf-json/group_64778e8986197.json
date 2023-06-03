@@ -22,6 +22,32 @@
             "acfe_field_group_condition": 0,
             "sub_fields": [
                 {
+                    "key": "field_647b4514fd288",
+                    "label": "Subscription",
+                    "name": "subscription",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "free": "Free",
+                        "basic": "Basic paid post"
+                    },
+                    "default_value": "free",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "acfe_field_group_condition": 0,
+                    "save_other_choice": 0
+                },
+                {
                     "key": "field_64778e95251f6",
                     "label": "Video block",
                     "name": "video_block",
@@ -430,7 +456,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon",
+                                                                "secondary": "Yellow",
                                                                 "link_primary": "Greenish blue text, no background color"
                                                             },
                                                             "default_value": "primary",
@@ -523,5 +549,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1685782942
+    "modified": 1685800264
 }

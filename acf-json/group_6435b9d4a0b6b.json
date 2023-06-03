@@ -61,7 +61,257 @@
                     "acfe_seamless_style": 0,
                     "acfe_group_modal": 0,
                     "acfe_field_group_condition": 0,
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_647b4ce075023",
+                            "label": "Membership",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_field_group_condition": 0,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0
+                        },
+                        {
+                            "key": "field_647b4cd675022",
+                            "label": "Membership",
+                            "name": "membership",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_field_group_condition": 0,
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_647b4cea75024",
+                                    "label": "Modal",
+                                    "name": "modal",
+                                    "aria-label": "",
+                                    "type": "group",
+                                    "instructions": "Modal warning for locked post content.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_647b53187502b",
+                                            "label": "Content",
+                                            "name": "content",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "75",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "layout": "block",
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_647b4d6775025",
+                                                    "label": "Top label",
+                                                    "name": "top_label",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 1,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "required_message": "",
+                                                    "default_value": "JOIN THE MOVEMENT",
+                                                    "maxlength": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
+                                                    "key": "field_647b4ed075027",
+                                                    "label": "Title",
+                                                    "name": "title",
+                                                    "aria-label": "",
+                                                    "type": "wysiwyg",
+                                                    "instructions": "",
+                                                    "required": 1,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "required_message": "",
+                                                    "default_value": "Claim your \r\n\u2028Free Membership",
+                                                    "acfe_wysiwyg_auto_init": 0,
+                                                    "acfe_wysiwyg_min_height": 50,
+                                                    "acfe_wysiwyg_max_height": "",
+                                                    "acfe_wysiwyg_valid_elements": "",
+                                                    "acfe_wysiwyg_custom_style": "",
+                                                    "acfe_wysiwyg_disable_wp_style": 1,
+                                                    "acfe_wysiwyg_autoresize": 1,
+                                                    "acfe_wysiwyg_disable_resize": 0,
+                                                    "acfe_wysiwyg_remove_path": 0,
+                                                    "acfe_wysiwyg_menubar": 0,
+                                                    "acfe_wysiwyg_transparent": 0,
+                                                    "acfe_wysiwyg_merge_toolbar": 0,
+                                                    "acfe_wysiwyg_custom_toolbar": 1,
+                                                    "acfe_wysiwyg_toolbar_buttons": {
+                                                        "acfe_wysiwyg_toolbar_1": {
+                                                            "647afe3521e1a": {
+                                                                "acfe_wysiwyg_toolbar_row": "bold"
+                                                            },
+                                                            "647afe3621e1b": {
+                                                                "acfe_wysiwyg_toolbar_row": "spellchecker"
+                                                            }
+                                                        },
+                                                        "acfe_wysiwyg_toolbar_2": {
+                                                            "647afe1d21e19": {
+                                                                "acfe_wysiwyg_toolbar_row": "pastetext"
+                                                            },
+                                                            "647afe3e21e1c": {
+                                                                "acfe_wysiwyg_toolbar_row": "undo"
+                                                            },
+                                                            "647afe4021e1e": {
+                                                                "acfe_wysiwyg_toolbar_row": "redo"
+                                                            },
+                                                            "647afe3f21e1d": {
+                                                                "acfe_wysiwyg_toolbar_row": "wp_help"
+                                                            }
+                                                        },
+                                                        "acfe_wysiwyg_toolbar_3": "",
+                                                        "acfe_wysiwyg_toolbar_4": ""
+                                                    },
+                                                    "tabs": "visual",
+                                                    "toolbar": "basic",
+                                                    "media_upload": 0,
+                                                    "delay": 1,
+                                                    "acfe_wysiwyg_height": 300
+                                                },
+                                                {
+                                                    "key": "field_647b4ee875028",
+                                                    "label": "Description",
+                                                    "name": "description",
+                                                    "aria-label": "",
+                                                    "type": "textarea",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "default_value": "",
+                                                    "acfe_textarea_code": 0,
+                                                    "maxlength": "",
+                                                    "rows": "",
+                                                    "placeholder": "",
+                                                    "new_lines": "br"
+                                                }
+                                            ],
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large"
+                                        },
+                                        {
+                                            "key": "field_647b4f3075029",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "aria-label": "",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "25",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "uploader": "",
+                                            "acfe_thumbnail": 0,
+                                            "return_format": "array",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "preview_size": "medium",
+                                            "library": "all"
+                                        }
+                                    ],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large"
+                                },
+                                {
+                                    "key": "field_647b53a4a7bfb",
+                                    "label": "Types",
+                                    "name": "types",
+                                    "aria-label": "",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        }
+                    ],
                     "acfe_group_modal_close": 0,
                     "acfe_group_modal_button": "",
                     "acfe_group_modal_size": "large"
@@ -1327,7 +1577,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon",
+                                                                "secondary": "Yellow",
                                                                 "link_primary": "Greenish blue text, no background color"
                                                             },
                                                             "default_value": "primary",
@@ -1709,5 +1959,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1685785219
+    "modified": 1685804399
 }
