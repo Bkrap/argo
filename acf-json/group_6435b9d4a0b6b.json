@@ -795,7 +795,9 @@
                                         "id": ""
                                     },
                                     "acfe_field_group_condition": 0,
-                                    "post_type": "",
+                                    "post_type": [
+                                        "page"
+                                    ],
                                     "taxonomy": "",
                                     "allow_archives": 1,
                                     "multiple": 0,
@@ -1153,7 +1155,7 @@
                             "name": "video_block",
                             "aria-label": "",
                             "type": "group",
-                            "instructions": "",
+                            "instructions": "This block provides flexibility for video block on single post page.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1162,10 +1164,73 @@
                                 "id": ""
                             },
                             "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "layout": "block",
                             "acfe_seamless_style": 0,
                             "acfe_group_modal": 0,
                             "sub_fields": [
+                                {
+                                    "key": "field_647afc9d8e444",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "required_message": "",
+                                    "default_value": "Watch Now!",
+                                    "acfe_wysiwyg_auto_init": 0,
+                                    "acfe_wysiwyg_min_height": 50,
+                                    "acfe_wysiwyg_max_height": "",
+                                    "acfe_wysiwyg_valid_elements": "",
+                                    "acfe_wysiwyg_custom_style": "",
+                                    "acfe_wysiwyg_disable_wp_style": 1,
+                                    "acfe_wysiwyg_autoresize": 1,
+                                    "acfe_wysiwyg_disable_resize": 0,
+                                    "acfe_wysiwyg_remove_path": 0,
+                                    "acfe_wysiwyg_menubar": 0,
+                                    "acfe_wysiwyg_transparent": 0,
+                                    "acfe_wysiwyg_merge_toolbar": 0,
+                                    "acfe_wysiwyg_custom_toolbar": 1,
+                                    "acfe_wysiwyg_toolbar_buttons": {
+                                        "acfe_wysiwyg_toolbar_1": {
+                                            "647afe3521e1a": {
+                                                "acfe_wysiwyg_toolbar_row": "bold"
+                                            },
+                                            "647afe3621e1b": {
+                                                "acfe_wysiwyg_toolbar_row": "spellchecker"
+                                            }
+                                        },
+                                        "acfe_wysiwyg_toolbar_2": {
+                                            "647afe1d21e19": {
+                                                "acfe_wysiwyg_toolbar_row": "pastetext"
+                                            },
+                                            "647afe3e21e1c": {
+                                                "acfe_wysiwyg_toolbar_row": "undo"
+                                            },
+                                            "647afe4021e1e": {
+                                                "acfe_wysiwyg_toolbar_row": "redo"
+                                            },
+                                            "647afe3f21e1d": {
+                                                "acfe_wysiwyg_toolbar_row": "wp_help"
+                                            }
+                                        },
+                                        "acfe_wysiwyg_toolbar_3": "",
+                                        "acfe_wysiwyg_toolbar_4": ""
+                                    },
+                                    "tabs": "visual",
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "delay": 1,
+                                    "acfe_wysiwyg_height": 300
+                                },
                                 {
                                     "key": "field_6477922386286",
                                     "label": "Button Group",
@@ -1236,7 +1301,7 @@
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
-                                                        "width": "",
+                                                        "width": "50",
                                                         "class": "",
                                                         "id": ""
                                                     },
@@ -1276,6 +1341,62 @@
                                                     "acfe_group_modal_close": 0,
                                                     "acfe_group_modal_button": "",
                                                     "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_647af89493980",
+                                                    "label": "Function",
+                                                    "name": "function",
+                                                    "aria-label": "",
+                                                    "type": "radio",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "50",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "choices": {
+                                                        "internal": "Internal video hub"
+                                                    },
+                                                    "default_value": "",
+                                                    "return_format": "value",
+                                                    "allow_null": 0,
+                                                    "other_choice": 0,
+                                                    "layout": "vertical",
+                                                    "save_other_choice": 0
+                                                },
+                                                {
+                                                    "key": "field_647af8e293981",
+                                                    "label": "Internal",
+                                                    "name": "internal",
+                                                    "aria-label": "",
+                                                    "type": "page_link",
+                                                    "instructions": "Video hub index page.",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_647af89493980",
+                                                                "operator": "==",
+                                                                "value": "internal"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "post_type": [
+                                                        "page"
+                                                    ],
+                                                    "taxonomy": "",
+                                                    "allow_archives": 1,
+                                                    "multiple": 0,
+                                                    "allow_null": 0
                                                 }
                                             ],
                                             "acfe_group_modal_close": 0,
@@ -1588,5 +1709,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1685557939
+    "modified": 1685785219
 }

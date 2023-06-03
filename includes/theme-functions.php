@@ -54,23 +54,23 @@ add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
 	* Wrapper whether or not to add a new block-level element around any selected elements
 	*/
 			array(  
-				'title' => 'Content Block',  
-				'block' => 'span',  
-				'classes' => 'content-block',
-				'wrapper' => true,
+				'title' 	=> 'Content Block',  
+				'block' 	=> 'span',  
+				'classes' 	=> 'content-block',
+				'wrapper' 	=> true,
 				 
 			),  
 			array(  
-				'title' => 'Blue background wrapper',  
-				'block' => 'span',  
-				'classes' => 'blue-background',
-				'wrapper' => true,
+				'title' 	=> 'Blue background wrapper',  
+				'block' 	=> 'div',  
+				'classes' 	=> 'blue-background',
+				'wrapper' 	=> true,
 			),
 			array(  
-				'title' => 'Quote Box',  
-				'block' => 'div',  
-				'classes' => 'quote',
-				'wrapper' => true,
+				'title' 	=> 'Quote Box',  
+				'block' 	=> 'div',  
+				'classes' 	=> 'quote',
+				'wrapper' 	=> true,
 			),
 		);  
 		// Insert the array, JSON ENCODED, into 'style_formats'

@@ -12795,6 +12795,9 @@ button {
   background-color: #ECF4F8;
   padding: 12px;
 }
+.post-content .content .blue-background h1, .post-content .content .blue-background .h1, .post-content .content .blue-background h2, .post-content .content .blue-background .h2, .post-content .content .blue-background h3, .post-content .content .blue-background .h3, .post-content .content .blue-background h4, .post-content .content .blue-background .h4, .post-content .content .blue-background h5, .post-content .content .blue-background .h5, .post-content .content .blue-background h6, .post-content .content .blue-background .h6, .post-content .content .blue-background p {
+  margin-bottom: 0 !important;
+}
 .post-content .content .quote {
   padding-left: 70px;
   margin-top: 30px;

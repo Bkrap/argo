@@ -46,6 +46,39 @@ img2svg('img[src$=".svg"]');
 /****************************************************************************** */
 
 /**
+ * Filter posts from single post (go to news index page and trigger click for filter)
+ */
+ jQuery('.go-to-news-index').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+
+    e.preventDefault();
+    
+    let term = jQuery(this).attr("data-cat-id");
+    let newsIndexPage = generic_ajax_object.news_index;
+    
+    jQuery.cookie('clickedTerm', term, { path: '/' });
+
+    // Redirect to the desired page
+    window.location.href = newsIndexPage;
+
+
+ });
+
+ // Wait for the page to load and trigger the click event
+jQuery(window).on('load', function() {
+    if (!!jQuery.cookie('clickedTerm')) {
+        // have cookie
+        jQuery(".secondary-nav-category-term").each(function(btn) {
+            if (jQuery.cookie('clickedTerm') == jQuery(this).attr("data-cat-id")) {
+                jQuery(this).click();
+            }
+        })
+        jQuery.removeCookie('clickedTerm', { path: '/' });
+       }
+});
+
+/****************************************************************************** */
+
+/**
  * Filter posts
  * Action is hooking on filter and sorting posts
  */
@@ -54,7 +87,7 @@ jQuery('.secondary-nav-category-term, #sort-posts').on("click change", function(
 
     e.preventDefault();
     var clickedElem = jQuery(this);
-
+    console.log("clicked!")
     /**
      * Check if clicked element is a filter, in that case toggle active class
      */

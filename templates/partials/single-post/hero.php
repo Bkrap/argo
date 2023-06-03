@@ -36,9 +36,10 @@
                             if( $v['platform'] == 'instagram' ) {
                                 continue;
                             } 
+                            $share_url = str_replace( '[URL]' , get_permalink( $post->ID ), $v['share_url'] );
                                 // debug($v); 
                             ?>
-                        <a target="_blank" href="<?php echo $v['share_url']; ?>" class="social-icon">
+                        <a target="_blank" href="<?php echo $share_url; ?>" class="social-icon">
                             <?php echo $v['icon']; ?>
                         </a>
                         <?php } ?>

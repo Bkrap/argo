@@ -1,3 +1,5 @@
+<?php debug($params) ?>
+
 <nav class="secondary-nav">
     <div class="title-pill">
         <p>News Hub</p>
@@ -8,7 +10,7 @@
         </li>
 
         <?php foreach( get_categories() as $k => $v ) { ?>
-            <li class="secondary-nav-category-term" data-cat-id="<?php echo $v->term_id; ?>">
+            <li class="<?php echo isset( $params['class'] ) ? $params['class'] : 'secondary-nav-category-term'; ?>" data-cat-id="<?php echo $v->term_id; ?>">
                 <a href=""><?php echo $v->name ?></a>
             </li>
         <?php } ?>
