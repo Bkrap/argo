@@ -24,6 +24,7 @@ var __webpack_exports__ = {};
 //       success: function(data) {
 //         console.log(data);
 
+<<<<<<< HEAD
 //           var loadingWheel = jQuery('#loading-wheel').hide();
 //           //Attach the event handler to any element
 //           jQuery(document)
@@ -35,6 +36,9 @@ var __webpack_exports__ = {};
 //               //got response so hide the loading image
 //                loadingWheel.hide();
 //            });
+=======
+eval("/**\r\n * This is for the future to make this theme dynamic as it comes with naming on npm install theme!\r\n * @category - Under construction\r\n */\r\n\r\n// import inquirer from 'inquirer';\r\n// import StringReplaceWebpackPlugin from 'string-replace-webpack-plugin';\r\n\r\n\r\n// inquirer\r\n//   .prompt([\r\n//     {\r\n//       type: 'input',\r\n//       name: 'BK_STARTER_THEME_PATH',\r\n//       message: 'Enter the value to replace BK_STARTER_THEME_PATH:'\r\n//     }\r\n//   ])\r\n//   .then(answers => {\r\n//     const webpackConfig = {\r\n//       // ...\r\n//       plugins: [\r\n//         new StringReplaceWebpackPlugin({\r\n//           search: 'BK_STARTER_THEME_PATH',\r\n//           replace: answers.BK_STARTER_THEME_PATH\r\n//         })\r\n//       ]\r\n//     };\r\n\r\n//     // Run Webpack with the updated configuration\r\n//     // ...\r\n//   });\n\n//# sourceURL=webpack://webpack/./src/js/install-theme.js?");
+>>>>>>> a0eab9f23f6f354887ffe121b4891dc5387b60f5
 
 //         },
 

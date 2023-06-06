@@ -1,5 +1,6 @@
 .list{
     // background: #ecf1f3;
+    background-size: cover;
     @include fluid('padding-top', 60, 80);
     @include fluid('padding-bottom', 60, 80);
     .main-title{

@@ -39,6 +39,32 @@
             <div class="col-lg-5">
         	    <h2 class="main-title">The Argo <span class="bold-text">Vision</span></h2>
                 <p class="main-description">ARGO will provide the necessary authority and resources to enact change and knowledge within the community of responsible gun owners. </p>
+            </div>
+            <div class="offset-lg-1 col-lg-5">
+                <div class="list-item">
+                    <h4 class="title primary-color">Reduce <span class="bold-text">Gun Deaths</span></h4>
+                    <p class="description">2021 saw the highest number of gun-related deaths on record. With over 58% of adults saying that they or someone they care for have experienced gun violence, it is vital we engage in new ways to prevent more gun-related deaths.</p>
+                </div>
+                <div class="list-item">
+                    <h4 class="title primary-color">Reduce <span class="bold-text">Gun Deaths</span></h4>
+                    <p class="description">2021 saw the highest number of gun-related deaths on record. With over 58% of adults saying that they or someone they care for have experienced gun violence, it is vital we engage in new ways to prevent more gun-related deaths.</p>
+                </div>
+                <div class="list-item">
+                    <h4 class="title primary-color">Reduce <span class="bold-text">Gun Deaths</span></h4>
+                    <p class="description">2021 saw the highest number of gun-related deaths on record. With over 58% of adults saying that they or someone they care for have experienced gun violence, it is vital we engage in new ways to prevent more gun-related deaths.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="list" style="background-image: url('http://localhost/argo/wp-content/themes/argo/images/America_map.png')">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+        	    <h2 class="main-title">The Argo <span class="bold-text">Vision</span></h2>
+                <p class="main-description">ARGO will provide the necessary authority and resources to enact change and knowledge within the community of responsible gun owners. </p>
                 <div class="btn-wrapper">
                     <a href="" class="btn btn-secondary">JOIN ARGO</a>
                 </div>

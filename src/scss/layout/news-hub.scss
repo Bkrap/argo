@@ -139,3 +139,36 @@
     }
     
 }
+
+.video-hub{
+    padding-top: 20px;
+    @include fluid('padding-bottom', 40, 80);
+    .hub-section{
+        padding-top: 40px;
+        .title{
+            margin-bottom: 40px;
+        }
+        .description{
+            margin-bottom: 40px;
+        }
+        .card-column{
+            .card-body, .card-footer{
+                padding-left: 28px;
+                padding-right: 28px;
+            }
+            .card-body{
+                padding-top: 28px;
+            }
+        }
+        .full-width-card{
+            .card-body{
+                flex: unset;
+                padding: 28px;
+                padding-right: 100px;
+                @include media-breakpoint-down(lg){
+                    padding-right: 28px
+                }
+            }
+        }
+    }
+}
