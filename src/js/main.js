@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("js 1ewfeddses2");
+    console.log("js 1ewfeddssses2");
     /**************************************************************************************************/
 
 function img2svg(obj) {
@@ -228,6 +228,76 @@ var maxNumPagesCounter = 1;
 
 /****************************************************************** */
 
+/**
+ * Load more
+ * Action is hooking on filter and sorting posts
+ */
+ var offset = 0;
+ var maxNumPagesCounter = 1;
+  jQuery('#load-more-videos').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+ 
+     e.preventDefault();
+ 
+     if( jQuery(this).hasClass("load-more-btn") ) {
+         maxNumPagesCounter++;
+         offset += 5;
+     }
+
+ 
+     /**
+      * Hide load more button if all posts are loaded
+      */
+     if( maxNumPagesCounter == jQuery("#video-hub-section").attr("data-max-num-pages") ) {
+         jQuery("#load-more-videos").hide();
+     }
+ 
+     /**
+      * Load more posts but only within filter scope
+      */
+     var activeID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
+ 
+     var formData = {
+       action       : 'load_more_videos',
+       page_id      : generic_ajax_object.curr_post_id,
+       active_slug  : active_slug,
+       offset       : offset,
+     };
+ 
+     jQuery.ajax({
+       type: 'POST',
+       url:  generic_ajax_object.ajax_url,
+       dataType: 'html',
+       data: formData,
+       success: function(data) {
+         console.log(data);
+ 
+         jQuery(data).appendTo('.posts-ajax-cards-row');
+ 
+         //   var loadingWheel = jQuery('#loading-wheel').hide();
+           //Attach the event handler to any element
+           jQuery(document)
+             .ajaxStart(function () {
+                //ajax request went so show the loading image
+                 // loadingWheel.show();
+             })
+           .ajaxStop(function () {
+               //got response so hide the loading image
+             //    loadingWheel.hide();
+            });
+ 
+         },
+ 
+         // return data;
+         error: function(request, status, error) {
+           console.log(request);
+           alert(request.responseText);
+           console.log(error);
+         }
+ 
+       });
+ });
+ 
+/****************************************************************** */
 
 });
 

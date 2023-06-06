@@ -1766,17 +1766,17 @@
                 },
                 "layout_647b5f97f7769": {
                     "key": "layout_647b5f97f7769",
-                    "name": "list_all_video_hub_videos",
-                    "label": "List all video hub videos",
+                    "name": "list_video_hub",
+                    "label": "List video hub",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_647b5f97f776c",
-                            "label": "Info",
-                            "name": "",
+                            "key": "field_647fae6628d9a",
+                            "label": "Video hub categories",
+                            "name": "video_hub_categories",
                             "aria-label": "",
-                            "type": "message",
-                            "instructions": "",
+                            "type": "acfe_taxonomy_terms",
+                            "instructions": "Pick what categories to show and manipulate their order for showing in the front page.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1784,10 +1784,30 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "This module will list all videos from video hub with included category separation.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0,
-                            "acfe_field_group_condition": 0
+                            "taxonomy": [
+                                "video-category"
+                            ],
+                            "allow_terms": "",
+                            "allow_level": "",
+                            "field_type": "select",
+                            "min": "",
+                            "max": "",
+                            "default_value": [],
+                            "return_format": "object",
+                            "ui": 1,
+                            "allow_null": 0,
+                            "placeholder": "",
+                            "multiple": 1,
+                            "ajax": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "acfe_field_group_condition": 0,
+                            "choices": [],
+                            "search_placeholder": "",
+                            "layout": "",
+                            "toggle": 0,
+                            "allow_custom": 0,
+                            "other_choice": 0
                         }
                     ],
                     "min": "",
@@ -5298,5 +5318,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1685812159
+    "modified": 1686089430
 }

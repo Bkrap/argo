@@ -102,3 +102,53 @@ function load_more_posts() {
 }
 
 /**************************************************************************************************/
+
+/**************************************************************************************************/
+
+/**
+ * Load more
+ */
+
+add_action('wp_ajax_load_more_videos', 'load_more_videos');
+add_action('wp_ajax_nopriv_load_more_videos', 'load_more_videos');
+
+function load_more_videos() {
+
+    /**
+     * Video hub WP Query
+     */
+
+    $args = array(
+        'post_type'           => 'video-hub',
+        'posts_per_page'      => $_POST['offset'],
+        'tax_query' => array(
+              array(
+                  'taxonomy'              => 'video-category',
+                  'terms'                 => $_POST['active_slug'],
+                  'field'                 => 'slug',
+                  'include_children'      => true,
+                  'operator'              => 'IN'
+              )
+          ),
+      );
+
+    // debug($args);
+    
+    $query = new WP_Query( $args );
+
+     foreach( $videos->posts as $k_video => $v_video ) { 
+        $v_video->video_info = get_field('video_hub_info', $v_video->ID);
+        
+         if( $k_video == 0 ) { 
+            get_partial('video-hub/card-full', (array)$v_video);
+        } else {
+            get_partial('video-hub/card', (array)$v_video);
+         } 
+    }
+
+    die;
+
+
+}
+
+/**************************************************************************************************/

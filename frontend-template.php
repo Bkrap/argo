@@ -22,7 +22,7 @@ include 'frontend/list.php';
 // include 'frontend/link_cards.php';
 
 // include 'frontend/news_hub_archive.php';
-// include 'frontend/video_hub.php';
+include 'frontend/video_hub.php';
 
 // include 'frontend/single_post.php';
 
