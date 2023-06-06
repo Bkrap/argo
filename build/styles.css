@@ -11114,6 +11114,10 @@ button {
   background-color: transparent;
 }
 
+.primary-color {
+  color: #2A807F;
+}
+
 .cta {
   padding-top: 50px;
   background: linear-gradient(90deg, #26554A 0%, #2A807F 100%);
@@ -11699,7 +11703,49 @@ button {
   }
 }
 
+.video-hub {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media (min-width: 576px) {
+  .video-hub {
+    padding-bottom: calc((6.4102564103vw + 3.0769230769px) * 1);
+  }
+}
+@media (min-width: 1200px) {
+  .video-hub {
+    padding-bottom: 80px;
+  }
+}
+.video-hub .hub-section {
+  padding-top: 40px;
+}
+.video-hub .hub-section .title {
+  margin-bottom: 40px;
+}
+.video-hub .hub-section .description {
+  margin-bottom: 40px;
+}
+.video-hub .hub-section .card-column .card-body, .video-hub .hub-section .card-column .card-footer {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+.video-hub .hub-section .card-column .card-body {
+  padding-top: 28px;
+}
+.video-hub .hub-section .full-width-card .card-body {
+  flex: unset;
+  padding: 28px;
+  padding-right: 100px;
+}
+@media (max-width: 991.98px) {
+  .video-hub .hub-section .full-width-card .card-body {
+    padding-right: 28px;
+  }
+}
+
 .list {
+  background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -12359,7 +12405,7 @@ button {
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #FAFF03;
+  background-color: #2A807F;
 }
 #header .offcanvas {
   width: 100%;
