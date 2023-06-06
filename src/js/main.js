@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("js 1ewfedd2");
+    console.log("js 1ewfeddses2");
     /**************************************************************************************************/
 
 function img2svg(obj) {
