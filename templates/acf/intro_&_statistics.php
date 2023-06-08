@@ -7,7 +7,7 @@
                 <h2><?php echo wyswig_raw( $params['title'] ); ?></h2>
             </div>
             <div class="col-lg-5">
-                <div class="w-100 justify-content-end d-flex img-wrap">
+                <div class="justify-content-end d-flex img-wrap">
                     <?php echo wp_get_attachment_image( $params['intro_card']['logo']['ID'] ); ?>
                 </div>
             </div>
