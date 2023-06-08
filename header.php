@@ -55,7 +55,7 @@
                             <div class="menu">
                                 <ul>
                                     <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
-                                        <?php if( $v_nav['cta'] ) { continue; } ?>
+                                        <?php if( $v_nav['cta'] ) { continue; } //debug($v_nav) ?>
                                         <li class="page_item page_item_<?php echo $k; ?>">
                                             <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
                                                 <span itemprop="name">

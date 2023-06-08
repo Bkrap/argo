@@ -15,6 +15,7 @@ define('SITE_URL', get_site_url("/"));
 
 include 'includes/enqueue.php';
 include 'includes/theme-functions.php';
+include 'includes/admin_custom_login/admin_custom_login.php';
 
 /**
  * ACF

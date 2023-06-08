@@ -11395,6 +11395,9 @@ button {
     padding-bottom: 80px;
   }
 }
+.info-cards .card-row {
+  min-height: 279px;
+}
 .info-cards .small-title {
   color: #26554A;
   margin-bottom: 24px;
@@ -11433,6 +11436,7 @@ button {
 }
 .info-cards .small-card .background .title {
   margin-bottom: 12px;
+  font-style: normal;
 }
 .info-cards .small-card .background .description {
   margin-bottom: 0;

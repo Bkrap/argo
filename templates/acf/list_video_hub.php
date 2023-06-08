@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="row"> STAO SAM DA MORMA UBACIT NEGDJE TERM SLUG I ASSIGNAT GA U JS POD ACTIVE_SLUG
+                <div class="row">
                     <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
                     <?php foreach( $videos->posts as $k_video => $v_video ) { 
                         $v_video->video_info = get_field('video_hub_info', $v_video->ID);

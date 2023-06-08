@@ -4,6 +4,9 @@
     @include fluid('padding-top', 60, 140);
     @include fluid('padding-bottom', 60, 80);
     // @include fluid('margin-bottom', 40, 40);
+    .card-row {
+        min-height: 279px;
+    }
 
     .small-title{
         color: $druga;
@@ -39,6 +42,7 @@
             }
             .title{
                 margin-bottom: 12px;
+                font-style: normal;
             }
             .description{
                 margin-bottom: 0;
