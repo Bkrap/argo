@@ -21,6 +21,8 @@
             .image-wrapper{
                 height: 348px;
                 width: 50%;
+                border-radius: 8px 0 0 8px;
+                transition: $transition;
 
                 img {
                     height: inherit;
@@ -38,7 +40,6 @@
     .grid-card {
         .image-wrapper {
             height: 228px;
-
             img {
                 height: inherit;
             }
@@ -50,6 +51,8 @@
         border-radius: 8px;
         &:hover{
             .image-wrapper{
+                border-radius: 8px 8px 0 0;
+                transition: $transition;
                 img{
                     transform: scale(1.2);
                 }
@@ -159,8 +162,16 @@
             .card-body{
                 padding-top: 28px;
             }
+            .card{
+                iframe{
+                    border-radius: 8px 8px 0 0;
+                }
+            }
         }
         .full-width-card{
+            iframe{
+                border-radius: 8px 0 0 8px !important;
+            }
             .card-body{
                 flex: unset;
                 padding: 28px;

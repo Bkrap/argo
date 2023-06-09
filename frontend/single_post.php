@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <a class="btn-arrow-link" href="">
+                <a class="btn btn-link_primary" href="">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_615_2378)">
                         <path d="M13.3332 7.33341H5.21984L8.9465 3.60675L7.99984 2.66675L2.6665 8.00008L7.99984 13.3334L8.93984 12.3934L5.21984 8.66675H13.3332V7.33341Z" fill="#2A807F"/>
@@ -46,7 +46,7 @@
                         </clipPath>
                         </defs>
                     </svg>
-                    <span class="link-text">Go back</span>
+                    <span>Go back</span>
                 </a>
                 <p class="small-text mt-4">Latest News</p>
                 <h1 class="title bold-text italic">Gun safety is not aboutguns, it's about people</h1>
@@ -219,7 +219,7 @@
                     <p class="mb-0 small-text italic">ARGO on Youtube</p>
                 </div>
                 <h2 class="title">Watch  <span class="bold-text">now!</span></h2>
-                <p class="description italic">Become a member to support the necessary advocacy, knowledge, and discussions for a realistic, moderate change in protecting </p>
+                <p class="description">Become a member to support the necessary advocacy, knowledge, and discussions for a realistic, moderate change in protecting </p>
                 <a href="" class="btn btn-secondary">See more Videos</a>
             </div>
             <div class="col-lg-7 images-wrapper">
