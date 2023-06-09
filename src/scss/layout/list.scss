@@ -27,6 +27,11 @@
             color: white;
             padding: 24px 20px;
              margin-bottom: 40px;
+             svg{
+                path{
+                    stroke: $white;
+                }
+             }
         }
         @include media-breakpoint-down(lg){
             margin-bottom: 30px;

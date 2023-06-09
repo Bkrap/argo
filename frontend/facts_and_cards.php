@@ -1,6 +1,6 @@
 <section class="facts-and-cards">
     <img class="parallax" src="http://localhost/argo/wp-content/themes/argo/images/america-bg.png" alt="">
-    <div class="container">
+    <div class="container position-relative">
         <div class="row">
             <div class="col-lg-6">
                 <h2 class="title">We are <span class="bold-text">Responsible</span></h2>
