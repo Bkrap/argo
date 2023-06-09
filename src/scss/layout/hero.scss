@@ -3,14 +3,14 @@
     padding-bottom: 100px;
     position: relative;
     background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
     .swiper-nav{
         margin-top: 30px;
         .swiper-button-prev-hero{
             margin-right: 42px;
         }
-    }
-    .swiper-slide{
-        height: 650px;
     }
     .overlay{
         position: absolute;
