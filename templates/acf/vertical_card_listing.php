@@ -11,10 +11,15 @@
                 </div>
             </div>
             <div class="offset-lg-1 col-lg-5">
-            <?php foreach( $params['cards'] as $k => $v ) { ?>
+            <?php foreach( $params['cards'] as $k => $v ) { 
+                // debug($v);
+                $is_transparent = $v['color_card'] == 'transparent' ? true : false;
+                ?>
                 <div class="list-item <?php echo $v['color_card']; ?>">
-                    <img src="<?php echo $v['icon']['url']; ?>" alt="icon">
-                    <h4 class="title"><?php echo $v['title']; ?></h4>
+                    <?php if( $v['icon'] ) { ?>
+                        <img src="<?php echo $v['icon']['url']; ?>" alt="icon">
+                    <?php } ?>
+                    <h4 class="title <?php echo $is_transparent ? 'primary-color' : ''; ?>"><?php echo $v['title']; ?></h4>
                     <p class="description"><?php echo $v['text']; ?></p>
                 </div>
             <?php } ?>
