@@ -54,6 +54,7 @@ module.exports = {
     "styles": './src/scss/main.scss',
     // Will create "main.js" in "build" dir.
     "main": glob.sync('./src/js/**/*.js'),
+    "easy-auth": glob.sync('./src/js/easy-auth/**/*.js'),
     "bootstrap": glob.sync('./src/vendor/bootstrap/dist/js/**/*.js'),
     "swiper": glob.sync('./src/vendor/swiper/swiper-bundle.min.js'),
 

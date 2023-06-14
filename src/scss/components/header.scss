@@ -14,7 +14,7 @@
         }
     }
     .search{
-        margin-left: 20px;
+        // margin-left: 20px;
         padding: 0;
     }
     .navigation, .mobile-navigation{
@@ -70,9 +70,20 @@
         }
     }
     .membership{
+        display: flex;
         margin-left: 24px;
         padding-left: 24px;
         border-left: 1px solid #B7CED3;
+
+        #membership-login {
+            margin: auto;
+            display: flex;
+
+            .login-btn {
+                padding-left: 20px;
+            }
+        }
+
         &-btn{
             font-size: 14px;
             padding: 10px 40px;

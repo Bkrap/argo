@@ -5,6 +5,10 @@
  * @since 1.0.0.
  *
  */
+// without this AJAX LOGIN won't work because headers has been already sent
+add_filter('template_redirect', function () {
+    ob_start(null, 0, 0);
+  });
 
 define('BK_STARTER_THEME_PATH', get_template_directory_uri());
 define('THEME_DIR', get_stylesheet_directory());
@@ -35,6 +39,8 @@ include 'includes/CPT/partners.php';
 include 'includes/CPT/video_hub.php';
 include 'includes/TAX/video_category.php';
 include 'includes/ajax.php';
+include 'includes/easy-auth/ajax.php';
+// include 'includes/stripe/stripe.php';
 
 /********************************************************************************************************************************************* */
 

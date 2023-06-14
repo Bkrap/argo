@@ -42,6 +42,7 @@
 <body <?php body_class(); ?>>
     <?php //wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
+
         <?php //debug(THEME_OPTIONS['header']); ?>
         <header id="header" role="banner">
             <div class="container-fluid header-wrapper d-flex justify-content-between">
@@ -56,7 +57,7 @@
                                 <ul>
                                     <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                         <?php if( $v_nav['cta'] ) { continue; } //debug($v_nav) ?>
-                                        <li class="page_item page_item_<?php echo $k; ?>">
+                                        <li class="page_item page_item_<?php echo $k_nav; ?>">
                                             <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
                                                 <span itemprop="name">
                                                     <?php echo $v_nav['page_link']['title']; ?>
@@ -69,30 +70,33 @@
                             <span class="looper after" tabindex="0"></span>
                         </nav>
                         <div class="membership">
-                            <div id="#membership-login">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_139_1427)">
-                                    <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V17C20 14.34 14.67 13 12 13Z" fill="#263546"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_139_1427">
-                                    <rect width="24" height="24" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <button class="search">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_590_1941)">
-                                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="black"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_590_1941">
-                                            <rect width="24" height="24" fill="white"/>
+                            <div id="membership-login">
+                                <button class="search">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_590_1941)">
+                                        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_590_1941">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="login-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_139_1427)">
+                                        <path d="M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V19C4 19.55 4.45 20 5 20H19C19.55 20 20 19.55 20 19V17C20 14.34 14.67 13 12 13Z" fill="#263546"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_139_1427">
+                                        <rect width="24" height="24" fill="white"/>
                                         </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
                             <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                 <?php if( $v_nav['cta'] ) { ?>
                                     <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
@@ -123,7 +127,7 @@
                                     <ul>
                                         <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                             <?php if( $v_nav['cta'] ) { break; } ?>
-                                            <li class="page_item page_item_<?php echo $k; ?>">
+                                            <li class="page_item page_item_<?php echo $k_nav; ?>">
                                                 <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
                                                     <span itemprop="name">
                                                         <?php echo $v_nav['page_link']['title']; ?>
