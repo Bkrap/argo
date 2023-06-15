@@ -87,7 +87,7 @@
         &-btn{
             font-size: 14px;
             padding: 10px 40px;
-            margin-left: 28px;
+            // margin-left: 28px;
         }
         @include media-breakpoint-down(lg){
             margin-left: 0;
@@ -135,6 +135,16 @@
                     transform: rotateZ(135deg);
                     &:nth-child(1){
                         transform: rotateZ(45deg);
+                    }
+                }
+            }
+        }
+        .offcanvas-body{
+            ul{
+                text-align: center;
+                li{
+                    a:hover{
+                        color: $secondary;
                     }
                 }
             }

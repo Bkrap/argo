@@ -1,5 +1,5 @@
 <div class="card">
-    <img src="<?php echo get_template_directory_uri(); ?>\images\card-img.jpg" class="card-img-top" alt="...">
+    <img src="<?php echo get_template_directory_uri(); ?>\images\america-bg.png" class="card-img-top" alt="...">
     <div class="category-pill">
         <p class="mb-0 bold-text">Category</p>
     </div>

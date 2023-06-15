@@ -400,3 +400,4 @@ const countupElements = document.querySelectorAll(".countup");
 
     var image = document.getElementsByClassName('parallax');
     new simpleParallax(image);
+

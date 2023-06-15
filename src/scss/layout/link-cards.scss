@@ -18,6 +18,9 @@
             }
         }
     }
+    .swiper-button-disabled{
+        opacity: .6;
+    }
    
     .card{
         // box-shadow: 0px 15px 30px 3px #CACACA;
@@ -32,8 +35,11 @@
                 opacity: 0;
             }
             .read-more{
-                margin-top: 14px !important;
                 max-height: 100% !important;
+                opacity: 1 !important;
+            }
+            .card-text{
+                transform: translate(0, -10px) !important;
             }
         }
         .overlay{
@@ -43,6 +49,7 @@
             top: 0;
             left: 0;
             z-index: 1;
+            border-radius: 8px;
             background-color: $primary;
             transition: $transition;
         }
@@ -56,11 +63,17 @@
             .read-more{
                 font-size: 12px;
                 color: $white;
-                margin-top: 0;
+                margin-top: 14px;
                 overflow: hidden;
-                max-height: 0;
+                // max-height: 0;
                 display: block;
-                transition: $transition;
+                transition: .5s ease-in-out;
+                opacity: 0;
+            }
+            .card-text{
+                transition: .5s ease-in-out;
+                transform: translate(0, 20px);
+
             }
         }
         .card-body{
