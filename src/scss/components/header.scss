@@ -8,7 +8,7 @@
     .header-wrapper{
         padding-left: 34px;
         padding-right: 34px;
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(xl){
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -25,7 +25,7 @@
             margin-bottom: 0;
             li{
                 a{
-                    font-size: 18px;
+                    font-size: 14px;
                     font-weight: 700;
                     text-decoration: none;
                     color: $black;
@@ -89,7 +89,7 @@
             padding: 10px 40px;
             // margin-left: 28px;
         }
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(xl){
             margin-left: 0;
             padding-left: 0;
             border-left: none;
@@ -160,7 +160,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(xl){
         flex-direction: column;
         ul{
            overflow-x: scroll;
@@ -179,7 +179,7 @@
         margin-right: 34px;
         padding: 12px 95px 12px 34px;
         height: 100%;
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(xl){
             width: 100%;
             margin-right: 0;
         }

@@ -51,7 +51,7 @@
                     <!-- <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo"> -->
                 </a>
                 <div class="navigation d-flex align-items-center">
-                    <div class="d-lg-flex d-none align-items-center">
+                    <div class="d-xl-flex d-none align-items-center">
                         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                             <div class="menu">
                                 <ul>
@@ -104,13 +104,13 @@
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <button id="hamburger" class="d-lg-none d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <button id="hamburger" class="d-xl-none d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                             <span></span>
                             <span></span>
                             <span></span>
                     </button>
                 </div>
-                <div class="offcanvas offcanvas-start d-lg-none d-flex" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas offcanvas-start d-xl-none d-flex" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <a href="<?php echo get_home_url(); ?>" class="logo d-flex align-items-center">
                             <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
