@@ -99,7 +99,7 @@
                             </div>
                             <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                 <?php if( $v_nav['cta'] ) { ?>
-                                    <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-primary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
+                                    <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>" class="btn btn-secondary membership-btn"><?php echo $v_nav['page_link']['title']; ?></a>
                                 <?php } ?>
                             <?php endforeach; ?>
                         </div>

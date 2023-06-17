@@ -66,4 +66,4 @@
     </div>
 </section>
 
-<?php include 'link_cards.php'; ?>
+<?php //include 'link_cards.php'; ?>

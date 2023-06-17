@@ -21,7 +21,7 @@ function my_remove_admin_menus() {
  * @return string The stripped string.
  */
 function wyswig_raw( $param ) {
-	return strip_tags( $param, "<strong>" );
+	return strip_tags( $param, "<strong>, <br>" );
 }
 
 /********************************************************************************** */ 

@@ -10,7 +10,7 @@
                         <div class="big-card swiper-slide">
                             <div class="card h-100" style="background: linear-gradient(0deg, rgba(42, 128, 127, 0.8), rgba(42, 128, 127, 0.8)), url('<?php echo wp_get_attachment_image_url( $v['background_image']['id'], 'full' ); ?>'); ; background-position: <?php echo $v['background_image']['left'] . "% " . $v['background_image']['top'] . "%"; ?>">
                                 <div class="card-body d-flex justify-content-between">
-                                    <h3 class="card-title"><?php echo $v['title']; ?></h3>
+                                    <h3 class="card-title"><?php echo wyswig_raw( $v['title'] ); ?></h3>
                                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="44" height="44" rx="22" fill="white"/>
                                         <g clip-path="url(#clip0_615_2373)">

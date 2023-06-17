@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <a class="btn-arrow-link" href="">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-5px">
                         <g clip-path="url(#clip0_615_2378)">
                         <path d="M13.3332 7.33341H5.21984L8.9465 3.60675L7.99984 2.66675L2.6665 8.00008L7.99984 13.3334L8.93984 12.3934L5.21984 8.66675H13.3332V7.33341Z" fill="#2A807F"/>
                         </g>

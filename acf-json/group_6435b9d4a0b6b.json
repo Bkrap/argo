@@ -733,30 +733,47 @@
                                     "label": "Icon",
                                     "name": "icon",
                                     "aria-label": "",
-                                    "type": "font-awesome",
+                                    "type": "image",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
                                     "acfe_field_group_condition": 0,
-                                    "icon_sets": [
-                                        "solid",
-                                        "regular",
-                                        "brands"
-                                    ],
-                                    "custom_icon_set": "",
-                                    "default_label": "",
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "array",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "svg",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "parent_repeater": "field_6456d66853d73"
+                                },
+                                {
+                                    "key": "field_648b135c72e0e",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
                                     "default_value": "",
-                                    "save_format": "element",
-                                    "allow_null": 0,
-                                    "show_preview": 1,
-                                    "enqueue_fa": 0,
-                                    "fa_live_preview": "",
-                                    "choices": [],
+                                    "placeholder": "",
                                     "parent_repeater": "field_6456d66853d73"
                                 }
                             ]
@@ -802,6 +819,76 @@
                             "acfe_group_modal_button": "",
                             "acfe_group_modal_size": "large",
                             "sub_fields": [
+                                {
+                                    "key": "field_6456d886555ae",
+                                    "label": "Navigation items secondary (left)",
+                                    "name": "navigation_items_secondary_left",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "acfe_repeater_stylised_button": 0,
+                                    "layout": "table",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 6,
+                                    "collapsed": "",
+                                    "button_label": "Add Navigation Item",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6456d886555af",
+                                            "label": "Page link",
+                                            "name": "page_link",
+                                            "aria-label": "",
+                                            "type": "acfe_advanced_link",
+                                            "instructions": "Click here for a menu. <br>\r\n*<i>Notice<\/i>: \"Post\" also refers to a <b>page<\/b>.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "post_type": "",
+                                            "taxonomy": "",
+                                            "parent_repeater": "field_6456d886555ae"
+                                        },
+                                        {
+                                            "key": "field_6456d886555b0",
+                                            "label": "CTA",
+                                            "name": "cta",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "Should this navigation item be \"call to action\" type of button?<br>\r\n*<i>Note<\/i>: It is recommended to have only <b>1<\/b> CTA navigation item.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "message": "",
+                                            "default_value": 0,
+                                            "style": "",
+                                            "ui_on_text": "Yes",
+                                            "ui_off_text": "No",
+                                            "ui": 1,
+                                            "parent_repeater": "field_6456d886555ae"
+                                        }
+                                    ]
+                                },
                                 {
                                     "key": "field_6456d860555ab",
                                     "label": "Navigation items primary (right)",
@@ -873,16 +960,16 @@
                                     ]
                                 },
                                 {
-                                    "key": "field_6456d886555ae",
-                                    "label": "Navigation items secondary (left)",
-                                    "name": "navigation_items_secondary_left",
+                                    "key": "field_648b125f2c7e4",
+                                    "label": "Third level navigation (privacy policy.. bottom right)",
+                                    "name": "third_level_navigation",
                                     "aria-label": "",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "",
                                         "class": "",
                                         "id": ""
                                     },
@@ -897,7 +984,7 @@
                                     "rows_per_page": 20,
                                     "sub_fields": [
                                         {
-                                            "key": "field_6456d886555af",
+                                            "key": "field_648b125f2c7e5",
                                             "label": "Page link",
                                             "name": "page_link",
                                             "aria-label": "",
@@ -906,39 +993,14 @@
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": "50",
+                                                "width": "",
                                                 "class": "",
                                                 "id": ""
                                             },
                                             "acfe_field_group_condition": 0,
-                                            "required_message": "",
                                             "post_type": "",
                                             "taxonomy": "",
-                                            "parent_repeater": "field_6456d886555ae"
-                                        },
-                                        {
-                                            "key": "field_6456d886555b0",
-                                            "label": "CTA",
-                                            "name": "cta",
-                                            "aria-label": "",
-                                            "type": "true_false",
-                                            "instructions": "Should this navigation item be \"call to action\" type of button?<br>\r\n*<i>Note<\/i>: It is recommended to have only <b>1<\/b> CTA navigation item.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "50",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "acfe_field_group_condition": 0,
-                                            "required_message": "",
-                                            "message": "",
-                                            "default_value": 0,
-                                            "style": "",
-                                            "ui_on_text": "Yes",
-                                            "ui_off_text": "No",
-                                            "ui": 1,
-                                            "parent_repeater": "field_6456d886555ae"
+                                            "parent_repeater": "field_648b125f2c7e4"
                                         }
                                     ]
                                 }
@@ -1577,7 +1639,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow",
+                                                                "secondary": "Orange Salmon",
                                                                 "link_primary": "Greenish blue text, no background color"
                                                             },
                                                             "default_value": "primary",
@@ -1959,5 +2021,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1685804399
+    "modified": 1686836340
 }

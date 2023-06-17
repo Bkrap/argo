@@ -51,10 +51,11 @@
     }
     .images-wrapper{
         position: relative;
-        .person{
+        .person, img{
             position: relative;
             z-index: 5;
             aspect-ratio: 518/715;
+            object-fit: cover;
         }
         iframe{
             width: 100%;

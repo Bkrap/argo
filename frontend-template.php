@@ -12,7 +12,7 @@ get_header(); // Load the header
 // include 'frontend/list.php';
 include 'frontend/info_cards_title.php';
 // include 'frontend/info_cards.php';
-// include 'frontend/news_hub.php';
+include 'frontend/news_hub.php';
 // include 'frontend/counter.php';
 // include 'frontend/facts_and_cards.php';
 // include 'frontend/facts_two_columns.php';

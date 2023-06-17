@@ -17,6 +17,12 @@
 
 <section class="news-hub" id="news-hub-wrap" data-max-num-pages="<?php echo $query->max_num_pages; ?>" data-posts-per-page="<?php echo get_option('posts_per_page'); ?>">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="title"><?php echo wyswig_raw( $params['title'] ); ?></h2>
+                <p class="description"><?php echo $params['text']; ?></p>
+            </div>
+        </div>
         <?php get_partial('news_sort'); ?>
         <div class="row posts-ajax-cards-row">
             <?php 

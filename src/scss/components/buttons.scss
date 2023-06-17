@@ -50,6 +50,7 @@
     }
 
     &-link_primary {
+        font-weight: 700;
         text-decoration: none;
         font-style: normal !important;
         padding: 0 !important;
@@ -75,6 +76,19 @@
 
 }
 
-.link-text {
+.link-text, .arrow-link {
     @extend .btn-link_primary;
+    display: flex;
+    color: $primary;
+    font-size: 14px;
+    margin-right: 5px;
+    font-style: unset !important;
+    padding: unset !important;
+    border-radius: unset !important;
+}
+
+.btn-arrow-link {
+    display: flex;
+    align-items: center;
+    @extend .btn-link_primary
 }

@@ -14,8 +14,7 @@
                         <p class="description"><?php echo $v['text']; ?></p>
                     </div>
                     <div class="card-footer d-flex align-items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>\images\will.png" alt="">
-                        <?php echo wp_get_attachment_image( $v['image']['id'], 'thumbnail' ); ?>
+                        <?php echo wp_get_attachment_image( $v['user_avatar']['id'], 'thumbnail' ); ?>
                         <div class="text">
                             <p><?php echo $v['name']; ?></p>
                             <p class="title"><?php echo $v['user_role']; ?></p>
