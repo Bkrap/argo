@@ -80,3 +80,31 @@
     //     }
     // }
 }
+
+.hero-module.video{
+    .hero{
+        padding: 0;
+        position: relative;
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .content-wrapper{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: 99;
+            // height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            .video-title{
+                color: $white;
+                // font-size: 90px;
+                @include fluid('font-size', 60, 90);
+            }
+        }
+
+    }
+}

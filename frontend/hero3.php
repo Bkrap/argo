@@ -31,4 +31,20 @@
 </section>
 
 
+<section class="hero-module video">
+    <div class="hero">
+        <video width="320" height="240"autoplay loop muted playsinline>
+            <source src="http://localhost/argo/wp-content/themes/argo\frontend\mov.mp4" type="video/mp4">
+        </video>
+        <div class="content-wrapper">
+            <h1 class="video-title">Video</h1>
+            <div class="buttons">
+                <a href="" class="btn btn-primary">gumb</a>
+                <a href="" class="btn btn-primary">gumb</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 

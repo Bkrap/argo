@@ -3,6 +3,7 @@
     @include fluid('padding-top', 30, 90);
     @include fluid('padding-bottom', 30, 80);
     overflow: hidden;
+    background-color: $grey-light;
     .big-card{
         margin-bottom: 30px;
     }
