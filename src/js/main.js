@@ -240,7 +240,7 @@ var maxNumPagesCounter = 1;
  
      if( jQuery(this).hasClass("load-more-btn") ) {
          maxNumPagesCounter++;
-         offset += 5;
+         offset += 4;
      }
 
  
@@ -250,11 +250,13 @@ var maxNumPagesCounter = 1;
      if( maxNumPagesCounter == jQuery("#video-hub-section").attr("data-max-num-pages") ) {
          jQuery("#load-more-videos").hide();
      }
+
+     var active_slug = jQuery(this).attr("data-active-slug");
  
      /**
       * Load more posts but only within filter scope
       */
-     var activeID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
+    //  var activeID = jQuery(".secondary-nav-category-term.active").attr("data-cat-id");
  
      var formData = {
        action       : 'load_more_videos',
@@ -271,7 +273,7 @@ var maxNumPagesCounter = 1;
        success: function(data) {
          console.log(data);
  
-         jQuery(data).appendTo('.posts-ajax-cards-row');
+         jQuery(data).appendTo('#video-hub-section');
  
          //   var loadingWheel = jQuery('#loading-wheel').hide();
            //Attach the event handler to any element

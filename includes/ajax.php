@@ -130,13 +130,14 @@ function load_more_videos() {
                   'operator'              => 'IN'
               )
           ),
+        'offset'            => $_POST['offset'],
       );
 
     // debug($args);
     
     $query = new WP_Query( $args );
 
-     foreach( $videos->posts as $k_video => $v_video ) { 
+     foreach( $query->posts as $k_video => $v_video ) { 
         $v_video->video_info = get_field('video_hub_info', $v_video->ID);
         
          if( $k_video == 0 ) { 

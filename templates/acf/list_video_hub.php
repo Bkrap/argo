@@ -45,7 +45,7 @@
                     } ?>
                 </div>
                 <div class="button-wrapper d-flex">
-                    <a id="load-more-videos" class="arrow-link btn btn-arrow-link load-more-btn" href="">
+                    <a id="load-more-videos" class="arrow-link btn btn-arrow-link load-more-btn" href="" data-active-slug="<?php echo $v_cat->slug; ?>">
                         <span class="link-text">Load More</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1149_576)">
