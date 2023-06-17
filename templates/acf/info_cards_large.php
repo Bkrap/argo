@@ -25,10 +25,9 @@
                         <div class="card-body d-flex justify-content-between">
                             <h3 class="card-title"><?php echo wyswig_raw( $v['title'] ); ?></h3>
                             <?php if( $v['iterate_cards'] ) { ?>
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="25" cy="25" r="25" fill="white"/>
-                                    <path d="M19.54 33L19.914 30.668H23.412L24.974 20.878L22.158 22.418L21.278 20.262L26.316 17.49H28.318L26.228 30.668H29.506L29.132 33H19.54Z" fill="#208999"/>
-                                </svg>
+                                <div class="circle-number">
+                                    <span class="number"><?php echo $k +1; ?></span>
+                                </div>
                             <?php } ?>
 
                         </div>
