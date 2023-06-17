@@ -3,7 +3,7 @@
     <div class="container position-relative">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="title">We are <span class="bold-text">Responsible</span></h2>
+                <h2 class="title">We are forrrreeeee <span class="bold-text">Responsible Gun Ownership</span></h2>
             </div>
         </div>
         <div class="row">
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <p class="small-title facts-small-title">argo community</p>
                 <h2 class="title"><span class="bold-text">Become a part</span> of the exclusive ARGO community </h2>
             </div>
