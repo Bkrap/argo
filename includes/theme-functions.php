@@ -13,7 +13,6 @@ function my_remove_admin_menus() {
     remove_menu_page( 'edit-comments.php' );
 }
 
-
 /**
  * Returns a string with all HTML tags stripped except <strong>.
  *

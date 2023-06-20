@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <p class="small-title facts-small-title"><?php echo $params['pre_title_label']; ?></p>
-                <h2 class="title"><?php echo wyswig_raw($params['title_community']); ?></h2>
+                <h2 class="title mb-0"><?php echo wyswig_raw($params['title_community']); ?></h2>
             </div>
         </div>
     </div>

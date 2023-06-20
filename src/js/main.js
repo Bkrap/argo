@@ -234,9 +234,16 @@ var maxNumPagesCounter = 1;
  */
  var offset = 0;
  var maxNumPagesCounter = 1;
-  jQuery('#load-more-videos').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
+  jQuery('.load-more-videos').on("click", function(e){ // class of root/inc/magic_login/components/modal/first-step.php button
  
      e.preventDefault();
+     var active_slug          = jQuery(this).attr("data-active-slug");
+     maxNumPagesCounter       = parseInt( jQuery(this).attr("data-max-pages-counter") );
+     offset                   = parseInt( jQuery(this).attr("data-offset") );
+
+     console.log(offset);
+     console.log(maxNumPagesCounter);
+
  
      if( jQuery(this).hasClass("load-more-btn") ) {
          maxNumPagesCounter++;
@@ -247,11 +254,12 @@ var maxNumPagesCounter = 1;
      /**
       * Hide load more button if all posts are loaded
       */
-     if( maxNumPagesCounter == jQuery("#video-hub-section").attr("data-max-num-pages") ) {
-         jQuery("#load-more-videos").hide();
+     if( maxNumPagesCounter == jQuery("#load-more-videos[data-active-slug="+active_slug+"]").attr("data-max-num-pages") ) {
+        console.log("sold!");
+        console.log(jQuery('#load-more-videos'));
+        jQuery('#load-more-videos[data-active-slug="' + active_slug + '"]').hide();
      }
 
-     var active_slug = jQuery(this).attr("data-active-slug");
  
      /**
       * Load more posts but only within filter scope
@@ -271,9 +279,9 @@ var maxNumPagesCounter = 1;
        dataType: 'html',
        data: formData,
        success: function(data) {
-         console.log(data);
+        //  console.log(data);
  
-         jQuery(data).appendTo('#video-hub-section');
+         jQuery(data).appendTo('#video-hub-section-append[data-slug='+active_slug+']');
  
          //   var loadingWheel = jQuery('#loading-wheel').hide();
            //Attach the event handler to any element
@@ -286,7 +294,9 @@ var maxNumPagesCounter = 1;
                //got response so hide the loading image
              //    loadingWheel.hide();
             });
- 
+            
+            jQuery("#load-more-videos[data-active-slug="+active_slug+"]").attr("data-max-pages-counter", maxNumPagesCounter );
+            jQuery("#load-more-videos[data-active-slug="+active_slug+"]").attr("data-offset", offset);
          },
  
          // return data;

@@ -120,7 +120,7 @@ function load_more_videos() {
 
     $args = array(
         'post_type'           => 'video-hub',
-        'posts_per_page'      => $_POST['offset'],
+        'posts_per_page'      => 4,
         'tax_query' => array(
               array(
                   'taxonomy'              => 'video-category',
@@ -137,6 +137,8 @@ function load_more_videos() {
     
     $query = new WP_Query( $args );
 
+    ?>
+    <?php
      foreach( $query->posts as $k_video => $v_video ) { 
         $v_video->video_info = get_field('video_hub_info', $v_video->ID);
         
@@ -146,7 +148,8 @@ function load_more_videos() {
             get_partial('video-hub/card', (array)$v_video);
          } 
     }
-
+    ?>
+    <?php
     die;
 
 

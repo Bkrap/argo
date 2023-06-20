@@ -9,7 +9,7 @@
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 text-wrapper">
+                        <div class="col-lg-8 text-wrapper">
                             <h1 class="heading"><?php echo wyswig_raw( $v['title'] ); ?></h1>
                             <p class="description"><?php echo $v['text']; ?></p>
                             <?php echo get_btn( $v['button_group'] ); ?>

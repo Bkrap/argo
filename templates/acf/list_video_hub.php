@@ -23,7 +23,7 @@
             // debug($videos);
             ?>
 
-            <div class="hub-section" id="video-hub-section" data-max-num-pages="<?php echo $videos->max_num_pages; ?>">
+            <div class="hub-section video-hub-section-attrs" id="video-hub-section" data-slug="<?php echo $v_cat->slug; ?>">
 
                 <div class="row">
                     <div class="col-lg-6">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="video-hub-section-append" data-slug="<?php echo $v_cat->slug; ?>">
                     <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
                     <?php foreach( $videos->posts as $k_video => $v_video ) { 
                         $v_video->video_info = get_field('video_hub_info', $v_video->ID);
@@ -44,8 +44,10 @@
                          } 
                     } ?>
                 </div>
+                <?php //debug(count( $videos->posts )); ?>
+                <?php if( $videos->max_num_pages > 1 ) { ?>
                 <div class="button-wrapper d-flex">
-                    <a id="load-more-videos" class="arrow-link btn btn-arrow-link load-more-btn" href="" data-active-slug="<?php echo $v_cat->slug; ?>">
+                    <a class="arrow-link btn btn-arrow-link load-more-btn load-more-videos" id="load-more-videos" href="" data-active-slug="<?php echo $v_cat->slug; ?>" data-max-num-pages="<?php echo $videos->max_num_pages; ?>" data-offset="0" data-max-pages-counter="1">
                         <span class="link-text">Load More</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1149_576)">
@@ -59,6 +61,7 @@
                         </svg>
                     </a>
                 </div>
+                <?php } ?>
             </div>
 
         <?php } ?>
