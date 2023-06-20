@@ -6,14 +6,13 @@
  */
 function sendMagicLogin( $emailTo, $token, $ServerURL, $redirect_link ) {
 
-    $email_group = "hardcoded in line 10 easy-auth/ajax.php";
-    $mail_text_group = "hardcoded in line 11 easy-auth/ajax.php";
+    $email_group = THEME_OPTIONS['easy_auth']['email_content'];
     // $to = "brunokrapljan97@gmail.com";
 
-    $subject = "hardcoded in line 15 easy-auth/ajax.php";
-    $body =  "{hardcoded in line 16 easy-auth/ajax.php}<a href='$ServerURL/login?token=$token&redirectLink=$redirect_link' target='_blank'>{hardcoded in line 16 easy-auth/ajax.php}</a>{hardcoded in line 16 easy-auth/ajax.php}";
+    $subject = $email_group['subject'];
+    $body =  "{$email_group['body']['body_before_auth_link']}<a href='$ServerURL/login?token=$token&redirectLink=$redirect_link' target='_blank'>{$email_group['body']['auth_link_text']}</a>{$email_group['body']['body_after_auth_link']}";
     $headers = array('Content-Type: text/html; charset=UTF-8');
-	$headers[] = "From: info@web-throne.org <info@web-throne.org>";
+	$headers[] = "From: {$email_group['sender_email']} <{$email_group['sender_email']}>";
 
     wp_mail( $emailTo, $subject, $body, $headers );
     die;

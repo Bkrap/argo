@@ -57,7 +57,7 @@
                                 <ul>
                                     <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                         <?php if( $v_nav['cta'] ) { continue; } //debug($v_nav) ?>
-                                        <li class="page_item page_item_<?php echo $k_nav; ?>">
+                                        <li class="header-nav-links" data-page-id="<?php echo url_to_postid($v_nav['page_link']['url']); ?>" class="page_item page_item_<?php echo $k_nav; ?>">
                                             <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
                                                 <span itemprop="name">
                                                     <?php echo $v_nav['page_link']['title']; ?>
@@ -78,7 +78,7 @@
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_590_1941">
-                                                <rect width="24" height="24" fill="white"/>
+                                                <rect width="24" height="24" fill="black"/>
                                             </clipPath>
                                         </defs>
                                     </svg>
@@ -127,7 +127,7 @@
                                     <ul>
                                         <?php foreach( THEME_OPTIONS['header']['navigation_items'] as $k_nav => $v_nav ) : ?>
                                             <?php if( $v_nav['cta'] ) { break; } ?>
-                                            <li class="page_item page_item_<?php echo $k_nav; ?>">
+                                            <li class="header-nav-links" data-page-id="<?php echo url_to_postid($v_nav['page_link']['url']); ?>" class="page_item page_item_<?php echo $k_nav; ?>">
                                                 <a target="<?php echo $v_nav['page_link']['target']; ?>" href="<?php echo $v_nav['page_link']['url']; ?>">
                                                     <span itemprop="name">
                                                         <?php echo $v_nav['page_link']['title']; ?>

@@ -45,6 +45,33 @@ img2svg('img[src$=".svg"]');
 
 /****************************************************************************** */
 
+function assignActiveHeaderNav() {
+  // assign 'active' class on current nav item
+  const bodyClass = document.body.getAttribute("class");
+  let headerNavLink = document.querySelectorAll(".header-nav-links");
+  // Use regular expression to search for "page-id-{N}" pattern
+  const match = bodyClass.match(/page-id-(\d+)/);
+
+  if (match) {
+      // Extract the page ID from the match object
+      const pageId = match[1];
+      // console.log("Page ID:", pageId);
+      headerNavLink.forEach((link) => {
+          // console.log(link.getAttribute("data-page-id"));
+          if( link.getAttribute("data-page-id") == pageId ) {
+              link.classList.add("active"); 
+          } else {
+              link.classList.remove("active");
+          }
+      });
+  } else {
+      console.log("Page ID not found in body class.");
+  }
+}
+
+assignActiveHeaderNav();
+
+
 /**
  * Filter posts from single post (go to news index page and trigger click for filter)
  */
