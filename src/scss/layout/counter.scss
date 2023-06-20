@@ -6,9 +6,14 @@
         width: 296.87px;
         height: 125px;
         margin-inline-start: auto;
-
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
         img {
             height: 100%;
+            width: 100%;
+        }
+        svg{
             width: 100%;
         }
     }
