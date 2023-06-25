@@ -29,8 +29,10 @@ function generic_theme_scripts() {
 
       // Localized script
     wp_localize_script( 'generic-main-js', 'generic_ajax_object', array(
-        'ajax_url'      => admin_url( 'admin-ajax.php' ),
-        'news_index'    => THEME_OPTIONS['news']['globals']['news_index_page'],
+        'ajax_url'                => admin_url( 'admin-ajax.php' ),
+        'news_index'              => THEME_OPTIONS['news']['globals']['news_index_page'],
+        'membership_register'     => THEME_OPTIONS['globals']['membership']['register_page'],
+        'realPath'                => get_site_url(),
     ));
 }
 

@@ -12,13 +12,14 @@
         color: #ffffff;
     }
     &-primary{
-        background: linear-gradient(90deg, $teal 0%, $primary 100%);
+        background: linear-gradient(90deg, $teal 0%, $primary 100%) !important;
         position: relative;
         z-index: 1;
 
         &:hover{
            &::before {
-            opacity: 1;
+            opacity: 1 !important;
+            width: inherit !important;
           }
         }
         &::before {
@@ -37,11 +38,11 @@
           
     }
     &-secondary{
-        background: $secondary;
-        color: $black;
+        background: $secondary !important;
+        color: $black !important;
         &:hover{
-            color: $black;
-            background: rgba(250, 255, 3, 0.6);
+            color: $black !important;
+            background: rgba(250, 255, 3, 0.6) !important;
         }
     }
     &-white{

@@ -101,12 +101,12 @@
                             "acfe_group_modal": 0,
                             "sub_fields": [
                                 {
-                                    "key": "field_647b4cea75024",
-                                    "label": "Modal",
-                                    "name": "modal",
+                                    "key": "field_6493e79503bdd",
+                                    "label": "Restrict modal",
+                                    "name": "",
                                     "aria-label": "",
-                                    "type": "group",
-                                    "instructions": "Modal warning for locked post content.",
+                                    "type": "tab",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -115,6 +115,26 @@
                                         "id": ""
                                     },
                                     "acfe_field_group_condition": 0,
+                                    "placement": "top",
+                                    "endpoint": 0,
+                                    "no_preference": 0
+                                },
+                                {
+                                    "key": "field_647b4cea75024",
+                                    "label": "Modal",
+                                    "name": "modal",
+                                    "aria-label": "",
+                                    "type": "group",
+                                    "instructions": "Modal warning for locked post content. <br>\r\nInsert this content to any restricted posts\/page with this shortcode: [restrict_access_argo]",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "required_message": "",
                                     "layout": "block",
                                     "acfe_seamless_style": 0,
                                     "acfe_group_modal": 0,
@@ -139,6 +159,27 @@
                                             "acfe_seamless_style": 0,
                                             "acfe_group_modal": 0,
                                             "sub_fields": [
+                                                {
+                                                    "key": "field_6493efcf1978e",
+                                                    "label": "Pill text",
+                                                    "name": "pill_text",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_field_group_condition": 0,
+                                                    "default_value": "-100% OFF",
+                                                    "maxlength": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
                                                 {
                                                     "key": "field_647b4d6775025",
                                                     "label": "Top label",
@@ -305,6 +346,46 @@
                                     "acfe_group_modal_close": 0,
                                     "acfe_group_modal_button": "",
                                     "acfe_group_modal_size": "large"
+                                },
+                                {
+                                    "key": "field_6493e7a003bde",
+                                    "label": "Pages",
+                                    "name": "",
+                                    "aria-label": "",
+                                    "type": "tab",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "placement": "top",
+                                    "endpoint": 0,
+                                    "no_preference": 0
+                                },
+                                {
+                                    "key": "field_6493e77003bdc",
+                                    "label": "Register page",
+                                    "name": "register_page",
+                                    "aria-label": "",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_archives": 1,
+                                    "multiple": 0,
+                                    "allow_null": 0
                                 }
                             ],
                             "acfe_group_modal_close": 0,
@@ -2310,5 +2391,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687291727
+    "modified": 1687416811
 }

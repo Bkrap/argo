@@ -8,6 +8,7 @@ get_header();
     <?php //echo get_current_user_id(); ?>
     <?php //echo do_shortcode( '[easy-auth-login-form]' ); ?>
 </div>
+<?php echo the_content(); ?>
 
 
 <?php

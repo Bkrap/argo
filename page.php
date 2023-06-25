@@ -1,3 +1,8 @@
 <?php get_header(); ?>
-    <?php FlexibleContent('page_builder'); ?>
+    <?php
+    if( FlexibleContent('page_builder') ) {
+    } else {
+        the_content();
+    }
+    ?>
 <?php get_footer(); ?>

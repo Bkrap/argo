@@ -1014,7 +1014,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon"
+                                                                "secondary": "Yellow"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -1653,7 +1653,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon"
+                                                                "secondary": "Yellow"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "",
@@ -2349,7 +2349,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon"
+                                                                "secondary": "Yellow"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -2941,7 +2941,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon"
+                                                                "secondary": "Yellow"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -4388,7 +4388,7 @@
                                                     "acfe_field_group_condition": 0,
                                                     "choices": {
                                                         "primary": "Greenish Blue",
-                                                        "secondary": "Orange Salmon",
+                                                        "secondary": "Yellow",
                                                         "link_primary": "Greenish blue text, no background color"
                                                     },
                                                     "default_value": "link_primary",
@@ -5236,7 +5236,7 @@
                                                     "required_message": "",
                                                     "choices": {
                                                         "primary": "Greenish Blue",
-                                                        "secondary": "Orange Salmon",
+                                                        "secondary": "Yellow",
                                                         "link_primary": "Greenish blue text, no background color"
                                                     },
                                                     "default_value": "link_primary",
@@ -6145,7 +6145,7 @@
                                             "required_message": "",
                                             "choices": {
                                                 "primary": "Greenish Blue",
-                                                "secondary": "Orange Salmon",
+                                                "secondary": "Yellow",
                                                 "link_primary": "Greenish blue text, no background color"
                                             },
                                             "default_value": "link_primary",
@@ -6365,7 +6365,7 @@
                                             "acfe_field_group_condition": 0,
                                             "choices": {
                                                 "primary": "Greenish Blue",
-                                                "secondary": "Orange Salmon",
+                                                "secondary": "Yellow",
                                                 "link_primary": "Greenish blue text, no background color"
                                             },
                                             "default_value": "link_primary",
@@ -7556,7 +7556,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon"
+                                                                "secondary": "Yellow"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",

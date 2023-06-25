@@ -1,3 +1,12 @@
+
+<section class="instagram-feed">
+  <div class="container">
+      <div class="row">
+          <?php echo $params['title']; ?>
+        </div>
+      </div>
+</section>
+
 <!-- 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

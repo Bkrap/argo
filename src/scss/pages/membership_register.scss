@@ -1,0 +1,63 @@
+// main div
+.iump-register-form {
+    margin: auto;
+}
+
+// avatar
+.iump-form-upload_image {
+    display: none;
+}
+
+// register button
+.iump-submit-form {
+    input {
+        @extend .btn;
+        @extend .btn-primary;
+
+        &:hover {
+            width: 60% !important;
+        }
+    }
+}
+
+// apply coupon button
+.ihc-checkout-page-apply-right {
+    .ihc-checkout-page-apply {
+        @extend .btn;
+        @extend .btn-secondary;
+
+        background: white !important;
+    }
+}
+
+//subscription-cards
+.ich_level_wrap {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .ihc-level-item {
+
+        &-content {
+            background-color: $primary;
+        }
+
+        &-title {
+            background-color: $primary;
+        }
+
+        &-wrap {
+            &:hover {
+                top: 0 !important;
+            }
+        }
+    }
+}

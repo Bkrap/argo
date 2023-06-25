@@ -42,7 +42,7 @@ get_partial( 'single-post/hero', $args_arr );
     <div class="container">
         <div class="row">
             <div class="offset-lg-1 col-lg-6 content">
-                <?php echo wpautop( get_the_content() ); ?>
+                <?php echo wpautop( the_content() ); ?>
             </div>
             <?php get_partial( 'single-post/related_posts', $rel_args_arr ); ?>
         </div>

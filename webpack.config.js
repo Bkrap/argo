@@ -55,6 +55,7 @@ module.exports = {
     // Will create "main.js" in "build" dir.
     "main": glob.sync('./src/js/**/*.js'),
     "easy-auth": glob.sync('./src/js/easy-auth/**/*.js'),
+    "membership": glob.sync('./src/js/membership/**/*.js'),
     "bootstrap": glob.sync('./src/vendor/bootstrap/dist/js/**/*.js'),
     "swiper": glob.sync('./src/vendor/swiper/swiper-bundle.min.js'),
 
