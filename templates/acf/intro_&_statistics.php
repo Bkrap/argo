@@ -1,4 +1,4 @@
-<?php debug($params); ?>
+<?php //debug($params); ?>
 <section class="counter">
     <div class="container">
         <div class="row">

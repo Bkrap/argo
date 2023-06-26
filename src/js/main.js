@@ -274,7 +274,7 @@ var maxNumPagesCounter = 1;
  
      if( jQuery(this).hasClass("load-more-btn") ) {
          maxNumPagesCounter++;
-         offset += 4;
+         offset += 3;
      }
 
  

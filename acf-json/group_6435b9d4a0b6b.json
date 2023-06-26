@@ -1796,7 +1796,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Orange Salmon",
+                                                                "secondary": "Yellow",
                                                                 "link_primary": "Greenish blue text, no background color"
                                                             },
                                                             "default_value": "primary",

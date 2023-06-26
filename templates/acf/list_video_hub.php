@@ -7,7 +7,7 @@
         <?php foreach( $params['video_hub_categories'] as $k_cat => $v_cat ) { 
             $args = array(
               'post_type'           => 'video-hub',
-              'posts_per_page'      => 4,
+              'posts_per_page'      => 3,
               'tax_query' => array(
                     array(
                         'taxonomy'              => 'video-category',
@@ -36,12 +36,9 @@
                     <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
                     <?php foreach( $videos->posts as $k_video => $v_video ) { 
                         $v_video->video_info = get_field('video_hub_info', $v_video->ID);
-                        ?>
-                        <?php if( $k_video == 0 ) { 
-                            get_partial('video-hub/card-full', (array)$v_video);
-                        } else {
-                            get_partial('video-hub/card', (array)$v_video);
-                         } 
+                        
+                        get_partial('video-hub/card', (array)$v_video);
+                         
                     } ?>
                 </div>
                 <?php //debug(count( $videos->posts )); ?>

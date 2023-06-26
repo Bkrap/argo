@@ -120,7 +120,7 @@ function load_more_videos() {
 
     $args = array(
         'post_type'           => 'video-hub',
-        'posts_per_page'      => 4,
+        'posts_per_page'      => 3,
         'tax_query' => array(
               array(
                   'taxonomy'              => 'video-category',
@@ -140,13 +140,10 @@ function load_more_videos() {
     ?>
     <?php
      foreach( $query->posts as $k_video => $v_video ) { 
+
         $v_video->video_info = get_field('video_hub_info', $v_video->ID);
-        
-         if( $k_video == 0 ) { 
-            get_partial('video-hub/card-full', (array)$v_video);
-        } else {
-            get_partial('video-hub/card', (array)$v_video);
-         } 
+        get_partial('video-hub/card', (array)$v_video);
+         
     }
     ?>
     <?php

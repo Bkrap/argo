@@ -1,4 +1,4 @@
-;<?php //debug( $params ); ?>
+<?php //debug( $params ); ?>
 
 <section class="link-cards">
     <div class="container">

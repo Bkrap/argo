@@ -27,7 +27,7 @@
             <div class="col-lg-2">
                 <?php foreach( $params['statistics'] as $k => $v ) { ?>
                     <div class="counters d-flex flex-wrap justify-content-between">
-                    <?php if( $k == 2 || $k == 1 ) { continue; } ?>
+                    <?php if( $k == 1 || $k == 0 ) { continue; } ?>
                         <div class="single">
                             <div>
                                 <span><?php echo $v['countup_text']['prenumber']; ?></span><span data-final-value="<?php echo $v['countup_text']['number']; ?>" class="countup">0</span><span><?php echo $v['countup_text']['post-number']; ?></span> 
