@@ -32,6 +32,14 @@
             padding-top: 32px;
             padding-bottom: 32px;
         }
+        .footer-form{
+            input{
+                margin-bottom: 20px;
+                font-size: 16px;
+                padding: 12px 16px;
+                border: 1px solid #BCBDBF;
+            }
+        }
         ul{
             @include media-breakpoint-down(lg){
                 width: 100%;

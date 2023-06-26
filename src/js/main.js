@@ -371,7 +371,7 @@ var swiper = new Swiper(".cta-swiper", {
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 3000,
+        delay: 5000,
     },
     loop: true,
 });
@@ -382,9 +382,16 @@ var swiper = new Swiper(".hero-swiper", {
       prevEl: ".swiper-button-prev-hero",
     },
     autoplay: {
-        delay: 4000,
+        delay: 6000,
     },
     loop: true,
+});
+
+var swiper = new Swiper(".cta-swiper-block", {
+  autoplay: {
+      delay: 5000,
+  },
+  loop: true,
 });
 
 var swiper = new Swiper(".link-card-swiper", {

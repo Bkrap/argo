@@ -61,6 +61,9 @@
                     "acfe_seamless_style": 0,
                     "acfe_group_modal": 0,
                     "acfe_field_group_condition": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
                     "sub_fields": [
                         {
                             "key": "field_647b4ce075023",
@@ -99,6 +102,9 @@
                             "layout": "block",
                             "acfe_seamless_style": 0,
                             "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
                                     "key": "field_6493e79503bdd",
@@ -138,6 +144,9 @@
                                     "layout": "block",
                                     "acfe_seamless_style": 0,
                                     "acfe_group_modal": 0,
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large",
                                     "sub_fields": [
                                         {
                                             "key": "field_647b53187502b",
@@ -158,6 +167,9 @@
                                             "layout": "block",
                                             "acfe_seamless_style": 0,
                                             "acfe_group_modal": 0,
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large",
                                             "sub_fields": [
                                                 {
                                                     "key": "field_6493efcf1978e",
@@ -286,10 +298,7 @@
                                                     "placeholder": "",
                                                     "new_lines": "br"
                                                 }
-                                            ],
-                                            "acfe_group_modal_close": 0,
-                                            "acfe_group_modal_button": "",
-                                            "acfe_group_modal_size": "large"
+                                            ]
                                         },
                                         {
                                             "key": "field_647b4f3075029",
@@ -319,10 +328,7 @@
                                             "preview_size": "medium",
                                             "library": "all"
                                         }
-                                    ],
-                                    "acfe_group_modal_close": 0,
-                                    "acfe_group_modal_button": "",
-                                    "acfe_group_modal_size": "large"
+                                    ]
                                 },
                                 {
                                     "key": "field_647b53a4a7bfb",
@@ -387,15 +393,9 @@
                                     "multiple": 0,
                                     "allow_null": 0
                                 }
-                            ],
-                            "acfe_group_modal_close": 0,
-                            "acfe_group_modal_button": "",
-                            "acfe_group_modal_size": "large"
+                            ]
                         }
-                    ],
-                    "acfe_group_modal_close": 0,
-                    "acfe_group_modal_button": "",
-                    "acfe_group_modal_size": "large"
+                    ]
                 },
                 {
                     "key": "field_6435b9f966dd1",
@@ -1235,6 +1235,9 @@
                             "layout": "block",
                             "acfe_seamless_style": 0,
                             "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
                                     "key": "field_648df4d466196",
@@ -1257,10 +1260,7 @@
                                     "prepend": "",
                                     "append": ""
                                 }
-                            ],
-                            "acfe_group_modal_close": 0,
-                            "acfe_group_modal_button": "",
-                            "acfe_group_modal_size": "large"
+                            ]
                         },
                         {
                             "key": "field_64626c412d818",
@@ -1625,6 +1625,9 @@
                             "layout": "block",
                             "acfe_seamless_style": 0,
                             "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
                                     "key": "field_647afc9d8e444",
@@ -1706,6 +1709,9 @@
                                     "layout": "block",
                                     "acfe_seamless_style": 0,
                                     "acfe_group_modal": 0,
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large",
                                     "sub_fields": [
                                         {
                                             "key": "field_6477923186287",
@@ -1725,6 +1731,9 @@
                                             "layout": "block",
                                             "acfe_seamless_style": 0,
                                             "acfe_group_modal": 0,
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large",
                                             "sub_fields": [
                                                 {
                                                     "key": "field_6477923686288",
@@ -1766,6 +1775,9 @@
                                                     "layout": "block",
                                                     "acfe_seamless_style": 0,
                                                     "acfe_group_modal": 0,
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large",
                                                     "sub_fields": [
                                                         {
                                                             "key": "field_6477927a8628b",
@@ -1794,10 +1806,7 @@
                                                             "layout": "vertical",
                                                             "save_other_choice": 0
                                                         }
-                                                    ],
-                                                    "acfe_group_modal_close": 0,
-                                                    "acfe_group_modal_button": "",
-                                                    "acfe_group_modal_size": "large"
+                                                    ]
                                                 },
                                                 {
                                                     "key": "field_647af89493980",
@@ -1855,20 +1864,11 @@
                                                     "multiple": 0,
                                                     "allow_null": 0
                                                 }
-                                            ],
-                                            "acfe_group_modal_close": 0,
-                                            "acfe_group_modal_button": "",
-                                            "acfe_group_modal_size": "large"
+                                            ]
                                         }
-                                    ],
-                                    "acfe_group_modal_close": 0,
-                                    "acfe_group_modal_button": "",
-                                    "acfe_group_modal_size": "large"
+                                    ]
                                 }
-                            ],
-                            "acfe_group_modal_close": 0,
-                            "acfe_group_modal_button": "",
-                            "acfe_group_modal_size": "large"
+                            ]
                         }
                     ]
                 },
@@ -1997,6 +1997,9 @@
                     "acfe_seamless_style": 0,
                     "acfe_group_modal": 0,
                     "acfe_field_group_condition": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
                     "sub_fields": [
                         {
                             "key": "field_6491eb1af740e",
@@ -2016,6 +2019,9 @@
                             "layout": "block",
                             "acfe_seamless_style": 0,
                             "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
                                     "key": "field_6491eb33f7410",
@@ -2076,6 +2082,9 @@
                                     "layout": "block",
                                     "acfe_seamless_style": 0,
                                     "acfe_group_modal": 0,
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large",
                                     "sub_fields": [
                                         {
                                             "key": "field_6491eb09f740d",
@@ -2170,20 +2179,11 @@
                                             "acfe_wysiwyg_min_height": 300,
                                             "acfe_wysiwyg_toolbar_buttons": []
                                         }
-                                    ],
-                                    "acfe_group_modal_close": 0,
-                                    "acfe_group_modal_button": "",
-                                    "acfe_group_modal_size": "large"
+                                    ]
                                 }
-                            ],
-                            "acfe_group_modal_close": 0,
-                            "acfe_group_modal_button": "",
-                            "acfe_group_modal_size": "large"
+                            ]
                         }
-                    ],
-                    "acfe_group_modal_close": 0,
-                    "acfe_group_modal_button": "",
-                    "acfe_group_modal_size": "large"
+                    ]
                 },
                 {
                     "key": "field_6435ba1266dd6",
@@ -2371,7 +2371,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "global-options"
+                "value": "options"
             }
         ]
     ],
@@ -2384,12 +2384,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+    "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
     "acfe_form": 0,
-    "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687416811
+    "modified": 1687787027
 }

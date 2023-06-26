@@ -17,6 +17,12 @@
                     </div>
                 </div>
                 <div class="footer-body d-flex justify-content-between">
+                    <div class="footer-form">
+                        <form action="">
+                            <input placeholder="Email" type="email" name="" id="">
+                            <button class="btn btn-secondary" type="submit">Submit</button>
+                        </form>
+                    </div>
                     <div class="first-menu">
                         <ul>
                             <?php foreach( $footer['navigation']['navigation_items_secondary_left'] as $k_nav_left => $v_nav_left ) { ?>

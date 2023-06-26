@@ -32,8 +32,9 @@
                     right: 16px;
                 }
             }
-            .text-column{
-                width: 50%;
+            .card-text{
+                margin-top: 30px;
+                margin-bottom: 30px !important;
             }
         }
     }
@@ -44,6 +45,12 @@
                 height: inherit;
             }
         }
+    }
+    .big-wrapper{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
     }
     .card{
         position: relative;
@@ -88,9 +95,10 @@
        
         .card-body{
             .date{
-                padding-bottom: 10px;
+                padding-bottom: 30px;
+                font-weight: 700;
                 font-size: 14px;
-                color: #566F8B;
+                color: $primary;
             }
             .card-title{
                 margin-bottom: 15px;

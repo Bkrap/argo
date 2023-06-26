@@ -6,6 +6,7 @@
 get_header(); // Load the header
 
 // include 'frontend/cta.php';
+include 'frontend/cta_slider.php';
 // include 'frontend/hero.php';
 // include 'frontend/hero3.php';
 // include 'frontend/hero2.php';
@@ -19,10 +20,10 @@ get_header(); // Load the header
 // include 'frontend/cta.php';
 // include 'frontend/link_cards.php';
 
-// // include 'frontend/news_hub_archive.php';
+include 'frontend/news_hub_archive.php';
 // // include 'frontend/video_hub.php';
 
-include 'frontend/single_post.php';
+// include 'frontend/single_post.php';
 
 
 get_footer(); // Load the footer
