@@ -42,7 +42,7 @@ include 'includes/ajax.php';
 include 'includes/easy-auth/ajax.php';
 include 'includes/membership/restrict-access-modal.php';
 
-include 'includes/parse_external_news/parse_external_news.php';
+// include 'includes/parse_external_news/parse_external_news.php';
 // include 'includes/stripe/stripe.php';
 
 /********************************************************************************************************************************************* */

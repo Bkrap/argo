@@ -23,15 +23,17 @@
                             <button class="btn btn-secondary" type="submit">Submit</button>
                         </form>
                     </div>
-                    <div class="first-menu">
+                    <!-- <div class="first-menu">
                         <ul>
+                            <?php /* ?>
                             <?php foreach( $footer['navigation']['navigation_items_secondary_left'] as $k_nav_left => $v_nav_left ) { ?>
                                 <li>
                                     <a target="<?php echo $v_nav_left['page_link']['target']; ?>" href="<?php echo $v_nav_left['page_link']['url']; ?>"><?php echo $v_nav_left['page_link']['title']; ?></a>
                                 </li>
                             <?php } ?>
+                            <?php */ ?>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="second-menu">
                         <ul>
                             <?php foreach( $footer['navigation']['navigation_items_primary_right'] as $k_nav_right => $v_nav_right ) { ?>

@@ -1014,7 +1014,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow"
+                                                                "secondary": "Orange Salmon"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -1653,7 +1653,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow"
+                                                                "secondary": "Orange Salmon"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "",
@@ -1921,13 +1921,13 @@
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_6485ad7d2fe4d",
-                                    "label": "Text",
-                                    "name": "statistic",
+                                    "key": "field_6499b4f709099",
+                                    "label": "Countup text",
+                                    "name": "countup_text",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "group",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -1935,12 +1935,82 @@
                                         "id": ""
                                     },
                                     "acfe_field_group_condition": 0,
-                                    "required_message": "",
-                                    "default_value": "",
-                                    "maxlength": 5,
-                                    "placeholder": "examples: 3K, +86%, 1M ...",
-                                    "prepend": "",
-                                    "append": "",
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6499b4f70909a",
+                                            "label": "Pre-number",
+                                            "name": "prenumber",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "-",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_6499b4f70909b",
+                                            "label": "Number",
+                                            "name": "number",
+                                            "aria-label": "",
+                                            "type": "number",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "default_value": "",
+                                            "min": "",
+                                            "max": "",
+                                            "placeholder": 35,
+                                            "step": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_6499b4f70909c",
+                                            "label": "Post-number",
+                                            "name": "post-number",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "required_message": "",
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "%",
+                                            "prepend": "",
+                                            "append": ""
+                                        }
+                                    ],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large",
                                     "parent_repeater": "field_6485ad7d2fe4c"
                                 },
                                 {
@@ -1953,7 +2023,7 @@
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
@@ -2349,7 +2419,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow"
+                                                                "secondary": "Orange Salmon"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -2941,7 +3011,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow"
+                                                                "secondary": "Orange Salmon"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -4388,7 +4458,7 @@
                                                     "acfe_field_group_condition": 0,
                                                     "choices": {
                                                         "primary": "Greenish Blue",
-                                                        "secondary": "Yellow",
+                                                        "secondary": "Orange Salmon",
                                                         "link_primary": "Greenish blue text, no background color"
                                                     },
                                                     "default_value": "link_primary",
@@ -5236,7 +5306,7 @@
                                                     "required_message": "",
                                                     "choices": {
                                                         "primary": "Greenish Blue",
-                                                        "secondary": "Yellow",
+                                                        "secondary": "Orange Salmon",
                                                         "link_primary": "Greenish blue text, no background color"
                                                     },
                                                     "default_value": "link_primary",
@@ -5937,13 +6007,13 @@
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_64568db780626",
-                                    "label": "Text",
-                                    "name": "statistic",
+                                    "key": "field_6499b45d5fde9",
+                                    "label": "Countup text",
+                                    "name": "countup_text",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "group",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -5951,12 +6021,79 @@
                                         "id": ""
                                     },
                                     "acfe_field_group_condition": 0,
-                                    "required_message": "",
-                                    "default_value": "",
-                                    "maxlength": 5,
-                                    "placeholder": "examples: 3K, +86%, 1M ...",
-                                    "prepend": "",
-                                    "append": "",
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6499b46e5fdea",
+                                            "label": "Pre-number",
+                                            "name": "prenumber",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "-",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_6499b4755fdeb",
+                                            "label": "Number",
+                                            "name": "number",
+                                            "aria-label": "",
+                                            "type": "number",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "min": "",
+                                            "max": "",
+                                            "placeholder": 35,
+                                            "step": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_6499b48b5fdec",
+                                            "label": "Post-number",
+                                            "name": "post-number",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "%",
+                                            "prepend": "",
+                                            "append": ""
+                                        }
+                                    ],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large",
                                     "parent_repeater": "field_64568d8180625"
                                 },
                                 {
@@ -5969,7 +6106,7 @@
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
@@ -6145,7 +6282,7 @@
                                             "required_message": "",
                                             "choices": {
                                                 "primary": "Greenish Blue",
-                                                "secondary": "Yellow",
+                                                "secondary": "Orange Salmon",
                                                 "link_primary": "Greenish blue text, no background color"
                                             },
                                             "default_value": "link_primary",
@@ -6365,7 +6502,7 @@
                                             "acfe_field_group_condition": 0,
                                             "choices": {
                                                 "primary": "Greenish Blue",
-                                                "secondary": "Yellow",
+                                                "secondary": "Orange Salmon",
                                                 "link_primary": "Greenish blue text, no background color"
                                             },
                                             "default_value": "link_primary",
@@ -7556,7 +7693,7 @@
                                                             "required_message": "",
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow"
+                                                                "secondary": "Orange Salmon"
                                                             },
                                                             "default_value": "secondary",
                                                             "return_format": "value",
@@ -8032,5 +8169,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687277779
+    "modified": 1687794964
 }

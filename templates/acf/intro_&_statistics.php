@@ -1,4 +1,4 @@
-<?php // debug($params); ?>
+<?php debug($params); ?>
 <section class="counter">
     <div class="container">
         <div class="row">
@@ -18,7 +18,7 @@
                 <?php foreach( $params['statistics'] as $k => $v ) { ?>
                     <div class="single">
                         <div>
-                            <span class="countusp"><?php echo $v['statistic']; ?></span>
+                            <span><?php echo $v['countup_text']['prenumber']; ?></span><span data-final-value="<?php echo $v['countup_text']['number']; ?>" class="countup">0</span><span><?php echo $v['countup_text']['post-number']; ?></span> 
                         </div>
                         <span class="text"><?php echo $v['label']; ?></span>
                     </div>

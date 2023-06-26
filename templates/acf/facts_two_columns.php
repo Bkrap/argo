@@ -16,7 +16,7 @@
                     <?php if( $k == 2 ) { break; } ?>
                         <div class="single">
                             <div>
-                                <span><?php echo $v['statistic']; ?></span> 
+                                <span><?php echo $v['countup_text']['prenumber']; ?></span><span data-final-value="<?php echo $v['countup_text']['number']; ?>" class="countup">0</span><span><?php echo $v['countup_text']['post-number']; ?></span> 
                             </div>
                             <span class="text"><?php echo $v['label']; ?></span>
                         </div>
@@ -30,7 +30,7 @@
                     <?php if( $k == 2 || $k == 1 ) { continue; } ?>
                         <div class="single">
                             <div>
-                                <span><?php echo $v['statistic']; ?></span> 
+                                <span><?php echo $v['countup_text']['prenumber']; ?></span><span data-final-value="<?php echo $v['countup_text']['number']; ?>" class="countup">0</span><span><?php echo $v['countup_text']['post-number']; ?></span> 
                             </div>
                             <span class="text"><?php echo $v['label']; ?></span>
                         </div>
