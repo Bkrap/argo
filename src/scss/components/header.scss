@@ -37,6 +37,9 @@
                 &.active{
                     a{
                         color: $primary;
+                        @include media-breakpoint-down(xl){
+                            color: $secondary
+                        }
                     }
                 }
                 &+li{
