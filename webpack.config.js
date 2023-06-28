@@ -41,13 +41,13 @@ module.exports = {
     },
   },
 
-  resolve: {
-    extensions: ['.css', '.scss'],
-    alias: {
-      // Provides ability to include node_modules with ~
-      '~': path.resolve(process.cwd(), 'src'),
-    },
-  },
+  // resolve: {
+  //   extensions: ['.css', '.scss'],
+  //   alias: {
+  //     // Provides ability to include node_modules with ~
+  //     '~': path.resolve(process.cwd(), 'src'),
+  //   },
+  // },
 
   entry: {
     // Will create "styles.css" in "build" dir.
@@ -56,6 +56,7 @@ module.exports = {
     "main": glob.sync('./src/js/**/*.js'),
     "easy-auth": glob.sync('./src/js/easy-auth/**/*.js'),
     "membership": glob.sync('./src/js/membership/**/*.js'),
+    "parseExternalNews": glob.sync('./src/js/parseExternalNews/**/*.js'),
     "bootstrap": glob.sync('./src/vendor/bootstrap/dist/js/**/*.js'),
     "swiper": glob.sync('./src/vendor/swiper/swiper-bundle.min.js'),
 

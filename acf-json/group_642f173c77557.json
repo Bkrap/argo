@@ -2839,6 +2839,32 @@
                                     "acfe_field_group_condition": 0,
                                     "sub_fields": [
                                         {
+                                            "key": "field_649a08365e747",
+                                            "label": "Type",
+                                            "name": "type",
+                                            "aria-label": "",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "choices": {
+                                                "button": "Link Lead Button",
+                                                "form": "Subscribe Form"
+                                            },
+                                            "default_value": "button",
+                                            "return_format": "value",
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "layout": "vertical",
+                                            "save_other_choice": 0
+                                        },
+                                        {
                                             "key": "field_642f1b2d96aa5",
                                             "label": "Show button?",
                                             "name": "show_button",
@@ -2846,7 +2872,15 @@
                                             "type": "true_false",
                                             "instructions": "",
                                             "required": 0,
-                                            "conditional_logic": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_649a08365e747",
+                                                        "operator": "==",
+                                                        "value": "button"
+                                                    }
+                                                ]
+                                            ],
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -2874,6 +2908,11 @@
                                                         "field": "field_642f1b2d96aa5",
                                                         "operator": "==",
                                                         "value": "1"
+                                                    },
+                                                    {
+                                                        "field": "field_649a08365e747",
+                                                        "operator": "==",
+                                                        "value": "button"
                                                     }
                                                 ]
                                             ],
@@ -2883,6 +2922,7 @@
                                                 "id": ""
                                             },
                                             "acfe_field_group_condition": 0,
+                                            "required_message": "",
                                             "layout": "block",
                                             "acfe_seamless_style": 0,
                                             "acfe_group_modal": 0,
@@ -3201,6 +3241,35 @@
                                             "acfe_group_modal_close": 0,
                                             "acfe_group_modal_button": "",
                                             "acfe_group_modal_size": "large"
+                                        },
+                                        {
+                                            "key": "field_649a087f5e749",
+                                            "label": "Form shortcode",
+                                            "name": "form_shortcode",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "Paste your form shortcode here.",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_649a08365e747",
+                                                        "operator": "==",
+                                                        "value": "form"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
                                         }
                                     ],
                                     "acfe_group_modal_close": 0,
@@ -8659,5 +8728,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687806584
+    "modified": 1687816359
 }

@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    // console.log("js 1ewfeddssses2");
     /**************************************************************************************************/
+
 
 function img2svg(obj) {
     //  Replace all SVG images with inline SVG 

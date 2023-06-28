@@ -18,10 +18,7 @@
                 </div>
                 <div class="footer-body d-flex justify-content-between">
                     <div class="footer-form">
-                        <form action="">
-                            <input placeholder="Email" type="email" name="" id="">
-                            <button class="btn btn-secondary" type="submit">Submit</button>
-                        </form>
+                        <?php echo do_shortcode( $footer['navigation']['form'] ); ?>
                     </div>
                     <!-- <div class="first-menu">
                         <ul>

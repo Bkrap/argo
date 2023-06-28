@@ -843,7 +843,7 @@
                                     "label": "URL",
                                     "name": "url",
                                     "aria-label": "",
-                                    "type": "url",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -854,7 +854,10 @@
                                     },
                                     "acfe_field_group_condition": 0,
                                     "default_value": "",
+                                    "maxlength": "",
                                     "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
                                     "parent_repeater": "field_6456d66853d73"
                                 }
                             ]
@@ -901,6 +904,27 @@
                             "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
+                                    "key": "field_649a007ebb99e",
+                                    "label": "Form",
+                                    "name": "form",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Paste form shortcode here. <br>\r\nExample: <i>[fluentform id=\"2\"]<\/i>",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
                                     "key": "field_6456d886555ae",
                                     "label": "Navigation items secondary (left)",
                                     "name": "navigation_items_secondary_left",
@@ -908,7 +932,15 @@
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_647b4d6775025",
+                                                "operator": "==",
+                                                "value": "ses"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "50",
                                         "class": "",
@@ -1796,7 +1828,7 @@
                                                             "acfe_field_group_condition": 0,
                                                             "choices": {
                                                                 "primary": "Greenish Blue",
-                                                                "secondary": "Yellow",
+                                                                "secondary": "Orange Salmon",
                                                                 "link_primary": "Greenish blue text, no background color"
                                                             },
                                                             "default_value": "primary",
@@ -2391,5 +2423,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687793179
+    "modified": 1687973159
 }
