@@ -138,6 +138,8 @@ jQuery('.secondary-nav-category-term, #sort-posts').on("click change", function(
       order         : postOrder,
     };
 
+    
+
     jQuery.ajax({
       type      : 'POST',
       url       :  generic_ajax_object.ajax_url,
