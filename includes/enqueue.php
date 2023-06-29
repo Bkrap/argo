@@ -35,6 +35,10 @@ function generic_theme_scripts() {
         'news_index'              => THEME_OPTIONS['news']['globals']['news_index_page'],
         'membership_register'     => THEME_OPTIONS['globals']['membership']['register_page'],
         'realPath'                => get_site_url(),
+        'newsApiKey'              => THEME_OPTIONS['news']['news_api']['api_key'],
+        'fetch_news'              => (bool)THEME_OPTIONS['news']['news_api']['fetch_news'],
+        'fetch_daily'             => (string)THEME_OPTIONS['news']['news_api']['fetch_daily'],
+        'tags'                    => implode(',', THEME_OPTIONS['news']['news_api']['attributes']['tags']),
     ));
 }
 

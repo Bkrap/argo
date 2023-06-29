@@ -228,8 +228,19 @@ function parse_external_news_api() {
                                 wp_update_attachment_metadata( $attachment_id, $attachment_data );
     
                                 set_post_thumbnail( $post_id, $attachment_id );
+                            } else {
+
+                                $attachment_id = THEME_OPTIONS['news']['news_api']['attributes']['featured_image'];
+                                debug( $attachment_id );
+                                set_post_thumbnail( $post_id, $attachment_id );
+
                             }
                         }
+                    } else {
+
+                        $attachment_id = THEME_OPTIONS['news']['news_api']['attributes']['featured_image'];
+                        set_post_thumbnail( $post_id, $attachment_id );
+
                     }
     
                     // Assign category

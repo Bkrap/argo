@@ -1272,6 +1272,28 @@
                             "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
+                                    "key": "field_649dedc19c0d4",
+                                    "label": "Fetch news?",
+                                    "name": "fetch_news",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "<b>ON<\/b> - Fetching news is ACTIVE\/ON\r\n<b>OFF<\/b> - Fetching news is INACTIVE\/OFF",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "message": "",
+                                    "default_value": 0,
+                                    "style": "",
+                                    "ui_on_text": "ON",
+                                    "ui_off_text": "OFF",
+                                    "ui": 1
+                                },
+                                {
                                     "key": "field_648df4d466196",
                                     "label": "API key",
                                     "name": "api_key",
@@ -1281,7 +1303,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -1291,6 +1313,123 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": ""
+                                },
+                                {
+                                    "key": "field_649ded689c0d3",
+                                    "label": "Fetch daily",
+                                    "name": "fetch_daily",
+                                    "aria-label": "",
+                                    "type": "range",
+                                    "instructions": "How many news should be fetched daily? <br>\r\n<b>CAUTION<\/b> More news = More traffic",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "default_value": 30,
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_649debcc9c0d1",
+                                    "label": "Attributes",
+                                    "name": "attributes",
+                                    "aria-label": "",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "layout": "block",
+                                    "acfe_seamless_style": 0,
+                                    "acfe_group_modal": 0,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_649debdc9c0d2",
+                                            "label": "Tags",
+                                            "name": "tags",
+                                            "aria-label": "",
+                                            "type": "checkbox",
+                                            "instructions": "Pick tags for news fetching source.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "choices": {
+                                                "business": "Business",
+                                                "firearms&legislation": "Firearms Legislation",
+                                                "gun%20control": "Gun Control",
+                                                "gun%20violence": "Gun Violence",
+                                                "gun%20safety": "Gun Safety",
+                                                "gun%20ownership": "Gun Ownership",
+                                                "gun%20rights": "Gun Rights",
+                                                "firearm%20regulations": "Firearm Regulations",
+                                                "gun%20laws": "Gun Laws",
+                                                "gun%20policy": "Gun Policy",
+                                                "justice": "Justice",
+                                                "second%20amandment": "Second Amendment"
+                                            },
+                                            "default_value": [
+                                                "justice",
+                                                "gun%20ownership",
+                                                "gun%20rights",
+                                                "gun%20laws"
+                                            ],
+                                            "return_format": "value",
+                                            "min": "",
+                                            "max": "",
+                                            "allow_custom": 0,
+                                            "layout": "vertical",
+                                            "toggle": 0,
+                                            "save_custom": 0
+                                        },
+                                        {
+                                            "key": "field_649df25e2ac1e",
+                                            "label": "Featured image",
+                                            "name": "featured_image",
+                                            "aria-label": "",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_field_group_condition": 0,
+                                            "uploader": "",
+                                            "acfe_thumbnail": 0,
+                                            "return_format": "id",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "preview_size": "medium",
+                                            "library": "all"
+                                        }
+                                    ],
+                                    "acfe_group_modal_close": 0,
+                                    "acfe_group_modal_button": "",
+                                    "acfe_group_modal_size": "large"
                                 }
                             ]
                         },
@@ -1662,6 +1801,27 @@
                             "acfe_group_modal_size": "large",
                             "sub_fields": [
                                 {
+                                    "key": "field_649df90e601e3",
+                                    "label": "Pretitle label",
+                                    "name": "pretitle_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "default_value": "TRAINING RESSOURCES",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
                                     "key": "field_647afc9d8e444",
                                     "label": "Title",
                                     "name": "title",
@@ -1722,6 +1882,28 @@
                                     "media_upload": 0,
                                     "delay": 1,
                                     "acfe_wysiwyg_height": 300
+                                },
+                                {
+                                    "key": "field_649df6deb1029",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "default_value": "Become a member to support the necessary advocacy, knowledge, and discussions for a realistic, moderate change in protecting sensible gun rights and ownership while providing the necessary legal and enforcement framework for a safer environment and a drastic reduction in needless gun violence.",
+                                    "acfe_textarea_code": 0,
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "br"
                                 },
                                 {
                                     "key": "field_6477922386286",
@@ -1899,6 +2081,34 @@
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "key": "field_649df75b6c58d",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "id",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium",
+                                    "library": "all"
                                 }
                             ]
                         }
@@ -2423,5 +2633,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687973159
+    "modified": 1688074581
 }
