@@ -114,3 +114,69 @@
     overflow-y: auto !important;
     padding-right: 0 !important;
 }
+
+
+#shopPopup{
+    color: $white;
+    .modal-dialog{
+        max-width: 962px;
+        @include media-breakpoint-down(lg){
+            max-width: 90%;
+        }
+    }
+    .modal-content{
+        min-height: 500px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-size: cover;
+        @include media-breakpoint-down(lg){
+            min-height: 400px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .modal-body{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .modal-title{
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+        .small-wrapper{
+            display: flex;
+            align-items: center;
+            .pill{
+                font-size: 12px;
+                background-color: $secondary;
+                padding: 6px 8px;
+                border-radius: 8px;
+                color: $black;
+            }
+            .short-description{
+                margin-bottom: 0;
+                font-size: 14px;
+                margin-left: 12px;
+                color: $white;
+            }
+        }
+        .close-button{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: none;
+            z-index: 99;
+        }
+        .btn{
+            span{
+                color: $secondary;
+            }
+            svg{
+                path{
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+}
