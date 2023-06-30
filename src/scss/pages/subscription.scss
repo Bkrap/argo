@@ -1,4 +1,5 @@
 .ich_level_wrap{
+    align-items: self-end;
     .ihc-level-item{
         .ihc-level-item-wrap{
             text-align: center !important;
@@ -96,6 +97,85 @@
                 opacity: 0;
                 border-radius: 40px;
                 }
+        }
+    }
+}
+
+
+.iump-register-form{
+    font-family: $font-family !important;
+    padding-bottom: 60px;
+    .ihc-tos-wrap{
+        a{
+            color: $primary;
+        }
+    }
+    .iump-labels-register{
+        font-family: $font-family !important;
+    }
+    .iump-submit-form{
+        padding-bottom: 30px;
+        input[type=submit]{
+            padding: 8px 34px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-family: $font-family !important;
+            border: none;
+            font-weight: 700;
+            // font-style: italic;
+            // text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1.625;
+            transition: $transition;
+            background: $secondary !important;
+            color: $black !important;
+            &:hover{
+                color: $black !important;
+                background: rgba(250, 255, 3, 0.6) !important;
+                width: 100% !important;
+            }
+            &:hover, &:target, &:focus-visible{
+                color: #ffffff;
+            }
+        }
+        .ihc-login-link{
+            border-radius: 40px;
+            border: none;
+            transition: $transition;
+            &:hover, &:target, &:focus-visible{
+                color: #ffffff;
+            }
+            background: linear-gradient(90deg, $teal 0%, $primary 100%) !important;
+            position: relative;
+            z-index: 1;
+    
+            &:hover{
+                color: #ffffff !important;
+                &::before {
+                opacity: 1 !important;
+                width: inherit !important;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(90deg, $teal 100%, $primary 0%);
+                z-index: -1;
+                transition: opacity 0.5s linear;
+                opacity: 0;
+                border-radius: 40px;
+            }
+            a{
+                font-size: 16px;
+                font-weight: 700;
+                color: #ffffff;
+                line-height: 1.625;
+                text-decoration: none;
+            }
         }
     }
 }
