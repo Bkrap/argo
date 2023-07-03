@@ -116,7 +116,7 @@
 }
 
 
-#shopPopup{
+#shopPopup, .shop-module{
     color: $white;
     .modal-dialog{
         max-width: 962px;
@@ -124,7 +124,7 @@
             max-width: 90%;
         }
     }
-    .modal-content{
+    .modal-content, .big-wrapper{
         min-height: 500px;
         padding-left: 100px;
         padding-right: 100px;
@@ -178,5 +178,18 @@
                 }
             }
         }
+    }
+}
+
+.shop-module{
+    background-size: cover;
+    .big-wrapper{
+        min-height: 600px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

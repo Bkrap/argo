@@ -16,7 +16,7 @@
                         <?php } ?>
                     </div>
                 </div>
-                <div class="footer-body d-flex justify-content-between">
+                <div class="footer-body align-items-end d-flex justify-content-between">
                     <div class="footer-form">
                         <?php echo do_shortcode( $footer['navigation']['form'] ); ?>
                     </div>
