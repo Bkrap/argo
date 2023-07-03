@@ -236,3 +236,73 @@ if( function_exists( get_fields() ) ) {
 
 
 /********************************************************************************* */
+
+
+
+	add_action('wp_footer', 'shop_popup', 999);
+function shop_popup() {
+
+    global $wp_query;
+
+    $post_id = $wp_query->get_queried_object_id();
+
+	$fields = get_fields('option')['global_options']['popups']['store'];
+	$bg_img = wp_get_attachment_image_src( $fields['background_image'], 'full' )[0];
+	$show_popup = false;
+	// debug($fields);
+	
+	foreach( $fields['popup_page'] as $k => $page ) {
+		if( get_queried_object_id() == url_to_postid( $page ) ) {
+			$show_popup = true;
+		}
+	}
+
+	if( $show_popup ) { ?>
+		<div class="modal fade" id="shopPopup" tabindex="-1" aria-labelledby="shopPopupLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="background-image: url('<?php echo $bg_img; ?>')">
+				<button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1523_6168)">
+					<path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="white"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_1523_6168">
+					<rect width="24" height="24" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+				</button>
+				<div class="modal-body">
+					<div class="small-wrapper">
+						<div class="pill">
+							<span><strong><?php echo $fields['pretitle_label_pill_text']; ?></strong></span>
+						</div>
+						<p class="short-description"><?php echo $fields['pretitle_label']; ?></p>
+					</div>
+					<h2 class="modal-title"><?php echo wyswig_raw( $fields['title'] ); ?></h2>
+					<p><?php echo $fields['description']; ?></p>
+					<a href="<?php echo $fields['link']['url'] ?>" target="<?php echo $fields['link']['target']; ?>" class="btn btn-link_primary">
+						<span><?php echo $fields['link']['title']; ?></span>
+						<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_204_1799)">
+							<path d="M7.99984 3.16669L7.05984 4.10669L10.7798 7.83335H2.6665V9.16669H10.7798L7.05984 12.8934L7.99984 13.8334L13.3332 8.50002L7.99984 3.16669Z" fill="#2A807F"></path>
+							</g>
+							<defs>
+							<clipPath id="clip0_204_1799">
+							<rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+							</clipPath>
+							</defs>
+						</svg>
+					</a>
+
+				</div>
+
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+
+<?php
+
+}

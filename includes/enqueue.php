@@ -8,6 +8,7 @@
 
  
 add_action( 'wp_enqueue_scripts', 'generic_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'cronjob_news' );
 
 function generic_theme_scripts() {
   //cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
@@ -16,8 +17,7 @@ function generic_theme_scripts() {
     wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0', true );
     wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', array(), '3.6.0', true );
     wp_enqueue_script( 'readability-js', BK_STARTER_THEME_PATH . '/build/vendors-node_modules_mozilla_readability_index_js.js', array(), $the_theme->get( 'Version' ), true );
-    // wp_enqueue_script( 'parseExternalNews-js', BK_STARTER_THEME_PATH . '/build/parseExternalNews.js', array(), $the_theme->get( 'Version' ), true );
-  
+      
     // wp_enqueue_script( 'bootstrap-js', BK_STARTER_THEME_PATH . '/build/bootstrap.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'swiper-js', BK_STARTER_THEME_PATH . '/build/swiper.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array(), $the_theme->get( 'Version' ), true );
@@ -41,6 +41,14 @@ function generic_theme_scripts() {
         'tags'                    => implode(',', THEME_OPTIONS['news']['news_api']['attributes']['tags']),
     ));
 }
+
+function cronjob_news() {
+  $the_theme = wp_get_theme();
+
+  wp_enqueue_script( 'parseExternalNews-js', BK_STARTER_THEME_PATH . '/build/parseExternalNews.js', array(), $the_theme->get( 'Version' ), true );
+}
+
+add_image_size( 'card-slider', 350, 380 );
 
 /***** */
 

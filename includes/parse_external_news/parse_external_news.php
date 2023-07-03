@@ -48,3 +48,11 @@ function parseExternalNews() {
 }
 
 // parseExternalNews();
+
+// Schedule the custom cron job to run once every 1 minute
+if (!wp_next_scheduled('cronjob_news')) {
+    wp_schedule_event(time(), 'interval', 'cronjob_news', array());
+}
+
+// Hook the custom cron job function to the scheduled event
+add_action('cronjob_news', 'my_custom_cron_job');

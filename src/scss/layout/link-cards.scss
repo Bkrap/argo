@@ -17,6 +17,8 @@
             @include media-breakpoint-down(lg){
                 width: 100%;
             }
+
+            height: auto !important;
         }
     }
     .swiper-button-disabled{

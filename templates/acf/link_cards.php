@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <p class="card-text italic mb-0"><?php echo $v['text']; ?></p>
-                                    <span class="read-more">Read more</span>
+                                    <span class="read-more"><?php echo $v['link_label']; ?></span>
                                 </div>
                                 <a <?php echo $v['link_type'] == 'external' ? 'target="_blank"' : ''; ?> href="<?php echo $v[$v['link_type']]; ?>" class="stretched-link"></a>
                                 <div class="overlay"></div>

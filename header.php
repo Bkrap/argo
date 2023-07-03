@@ -48,7 +48,6 @@
             <div class="container-fluid header-wrapper d-flex justify-content-between">
                 <a href="<?php echo get_home_url(); ?>" class="logo d-flex align-items-center">
                     <img class="logo-black" src="<?php echo THEME_OPTIONS['header']['logo']['desktop']['url']; ?>" alt="logo">
-                    <!-- <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo"> -->
                 </a>
                 <div class="navigation d-flex align-items-center">
                     <div class="d-xl-flex d-none align-items-center">
@@ -101,7 +100,7 @@
                 <div class="offcanvas offcanvas-start d-xl-none d-flex" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <a href="<?php echo get_home_url(); ?>" class="logo d-flex align-items-center">
-                            <img class="logo-black d-md-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
+                            <img class="logo-black d-xl-none" src="<?php echo THEME_OPTIONS['header']['logo']['mobile']['url']; ?>" alt="logo">
                         </a>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
                             <span></span>

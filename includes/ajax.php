@@ -258,3 +258,39 @@ function parse_external_news_api() {
 
 
 }
+
+/**************************************************************************************************/
+
+/**
+ * Parse external News
+ */
+
+add_action('wp_ajax_requestToNewsApi', 'requestToNewsApi');
+add_action('wp_ajax_nopriv_requestToNewsApi', 'requestToNewsApi');
+
+function requestToNewsApi() {
+
+    // debug($_POST['news_url']);
+
+    $url = $_POST['news_url'];
+    
+    $ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'User-Agent: Your-Application-Name/1.0',  // Replace with your application name and version
+    ));
+
+	$response = curl_exec($ch);
+	curl_close($ch);
+	// debug($url);
+	
+    // debug($response);
+
+	$articles = json_decode($response, true)['articles'];
+	// debug($articles);
+
+    return $articles;
+
+    die;
+
+}

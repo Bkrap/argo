@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     /**************************************************************************************************/
 
-
 function img2svg(obj) {
     //  Replace all SVG images with inline SVG 
     jQuery(obj).each(function() {
@@ -350,6 +349,10 @@ var maxNumPagesCounter = 1;
  });
  
 /****************************************************************** */
+
+if( jQuery('#shopPopup').length > 0 ){
+  jQuery('#shopPopup').modal('show');
+}
 
 });
 

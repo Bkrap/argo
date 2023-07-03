@@ -1,6 +1,4 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shopPopup">
-  Launch demo modal
-</button>
+
 
 
 
