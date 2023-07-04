@@ -61,3 +61,23 @@
         }
     }
 }
+
+.ihc-login-form-wrap {
+    input[type=submit]{
+        @extend .btn;
+        @extend .btn-secondary;
+    }
+}
+
+.impu-form-submit{
+    input[type=submit]{
+        @extend .btn;
+        @extend .btn-secondary;
+    }
+}
+
+.ihc-account-page-wrapp{
+    .ihc-user-page-top-ap-background{
+        background: $gradient;
+    }
+}
