@@ -1,6 +1,8 @@
 
 
-
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shopPopup">
+  Launch static backdrop modal
+</button>
 
 <div class="modal fade" id="shopPopup" tabindex="-1" aria-labelledby="shopPopupLabel" aria-hidden="true">
   <div class="modal-dialog">

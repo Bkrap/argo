@@ -119,15 +119,15 @@
 #shopPopup, .shop-module{
     color: $white;
     .modal-dialog{
-        max-width: 962px;
+        max-width: 500px;
         @include media-breakpoint-down(lg){
             max-width: 90%;
         }
     }
     .modal-content, .big-wrapper{
-        min-height: 500px;
-        padding-left: 100px;
-        padding-right: 100px;
+        min-height: 300px;
+        // padding-left: 100px;
+        // padding-right: 100px;
         background-size: cover;
         @include media-breakpoint-down(lg){
             min-height: 400px;
