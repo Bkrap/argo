@@ -2,18 +2,21 @@ const { Readability } = require('@mozilla/readability');
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  if( generic_ajax_object.fetch_news ) {
 
     let finalResults = []
     let category = generic_ajax_object.tags;
-    console.log(category);
+    // console.log(category);
 
     // Build the URL we are going to request. This will get articles related to Apple and sort them newest first
-    let url = 'https://newsapi.org/v2/everything?' +
-        'q=' + category + '&' +
+    let url = 'https://newsapi.org/v2/top-headlines?' +
+        'country=us&' +
+        category +'&' +
         'sortBy=publishedAt&' +
         'pageSize='+ generic_ajax_object.fetch_daily +'&' +
         'apiKey=' + generic_ajax_object.newsApiKey;
+
+    // console.log(url);
+    if( generic_ajax_object.fetch_news ) {
 
     // Make the request with jQuery's ajax() function
     jQuery.ajax({
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title           : result.title,
                 url             : result.url,
                 urlToImage      : result.urlToImage,
-                content         : articleContentRaw.replace(/\n/g, '\n\n'),
+                content         : articleContentRaw.replace(/\n/g, '\n\n') + '\n\n' + 'SOURCE: ' + '<a href='+ result.url + ' target="_blank">' + result.source.name + '</a>',
             });
 
         }).catch(function(error) {

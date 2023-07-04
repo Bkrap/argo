@@ -51,38 +51,38 @@ get_partial( 'single-post/hero', $args_arr );
 
 <?php 
 
-$video_block    = get_field( 'post_info', get_the_ID() )['video_block'];
+// $video_block    = get_field( 'post_info', get_the_ID() )['video_block'];
 
-if( $video_block['video_source'] == 'video_hub' ) {
+// if( $video_block['video_source'] == 'video_hub' ) {
 
-    if( $video_block['video_hub'] ) {
+//     if( $video_block['video_hub'] ) {
 
-        $top_label      = get_the_terms( $video_block['video_hub'][0]->ID, "video-category" )[0]->name;
-        $text           = $video_block['video_hub'][0]->post_title; 
-        $title          = wyswig_raw( THEME_OPTIONS['news']['video_block']['title'] );
-        $button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
-        $image          = wp_get_img_focus_element( get_post_thumbnail_id( $video_block['video_hub'][0]->ID ), 0, 0, 'logo' );
-        $video          = "";
+//         $top_label      = get_the_terms( $video_block['video_hub'][0]->ID, "video-category" )[0]->name;
+//         $text           = $video_block['video_hub'][0]->post_title; 
+//         $title          = wyswig_raw( THEME_OPTIONS['news']['video_block']['title'] );
+//         $button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
+//         $image          = wp_get_img_focus_element( get_post_thumbnail_id( $video_block['video_hub'][0]->ID ), 0, 0, 'logo' );
+//         $video          = "";
 
-    } else {
+//     } else {
 
-        $top_label      = THEME_OPTIONS['video_block']['top_label'];
-        $text           = THEME_OPTIONS['video_block']['text'];
-        $title          = wyswig_raw( $video_block['external']['title'] );
-        $image          = wp_get_img_focus_element( THEME_OPTIONS['video_block']['image'] , '50', '50', 'logo' );
-        $button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
+//         $top_label      = THEME_OPTIONS['video_block']['top_label'];
+//         $text           = THEME_OPTIONS['video_block']['text'];
+//         $title          = wyswig_raw( $video_block['external']['title'] );
+//         $image          = wp_get_img_focus_element( THEME_OPTIONS['video_block']['image'] , '50', '50', 'logo' );
+//         $button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
 
-    }
+//     }
 
-} elseif( $video_block['video_source'] == 'external_youtube_video' ) {
+// } elseif( $video_block['video_source'] == 'external_youtube_video' ) {
 
-    $top_label      = $video_block['external']['small_title'];
-    $text           = $video_block['external']['excerpt'];
-    $title          = wyswig_raw( $video_block['external']['title'] );
-    $image          = wp_get_img_focus_element( $video_block['external']['image']['id'] , $video_block['external']['image']['left'], $video_block['external']['image']['top'], 'logo' );
-    $button         = $video_block['external']['button_group']['button'];
+//     $top_label      = $video_block['external']['small_title'];
+//     $text           = $video_block['external']['excerpt'];
+//     $title          = wyswig_raw( $video_block['external']['title'] );
+//     $image          = wp_get_img_focus_element( $video_block['external']['image']['id'] , $video_block['external']['image']['left'], $video_block['external']['image']['top'], 'logo' );
+//     $button         = $video_block['external']['button_group']['button'];
 
-} else {
+// } else {
 
     $top_label      = THEME_OPTIONS['news']['video_block']['pretitle_label'];
     $text           = THEME_OPTIONS['news']['video_block']['text'];
@@ -90,7 +90,7 @@ if( $video_block['video_source'] == 'video_hub' ) {
     $image          = wp_get_img_focus_element( THEME_OPTIONS['news']['video_block']['image'] , '50', '50', 'logo' );
     $button         = THEME_OPTIONS['news']['video_block']['button_group']['button'];
 
-}
+// }
 
 // debug( $video_block );
 
@@ -114,9 +114,6 @@ $video_args = array(
 get_component_template( 'argo_on_youtube', (array)$video_args );
 ?>
 
-<?php if( $post_info['subscription'] !== 'free' ) { 
-$membership_group = THEME_OPTIONS['globals']['membership']['modal']; 
-?>
     <div class="modal fade" id="closedContentModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="closedContentModalLabel" aria-hidden="false">
         <div class="modal-dialog container">
             <div class="row align-items-center no-slider">
@@ -139,6 +136,5 @@ $membership_group = THEME_OPTIONS['globals']['membership']['modal'];
             </div>
         </div>
     </div>
-<?php } ?>
 	
 <?php get_footer(); ?>

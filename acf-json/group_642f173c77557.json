@@ -8095,6 +8095,196 @@
                     "acfe_layout_col": "auto",
                     "acfe_layout_allowed_col": false
                 },
+                "layout_64a328b84ce1d": {
+                    "key": "layout_64a328b84ce1d",
+                    "name": "shop_teaser",
+                    "label": "Shop teaser",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64a328e24ce20",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "focuspoint",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": 1,
+                            "mime_types": "jpg, jpeg, webp",
+                            "required_message": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_64a328f44ce21",
+                            "label": "Pill label",
+                            "name": "pill_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "NEW",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_64a329014ce22",
+                            "label": "Top label",
+                            "name": "top_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "ARGO MERCH",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_64a328cd4ce1f",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Shop the merch!",
+                            "acfe_wysiwyg_min_height": 50,
+                            "acfe_wysiwyg_max_height": "",
+                            "acfe_wysiwyg_valid_elements": "",
+                            "acfe_wysiwyg_custom_style": "",
+                            "acfe_wysiwyg_disable_wp_style": 1,
+                            "acfe_wysiwyg_autoresize": 1,
+                            "acfe_wysiwyg_disable_resize": 0,
+                            "acfe_wysiwyg_remove_path": 0,
+                            "acfe_wysiwyg_menubar": 0,
+                            "acfe_wysiwyg_transparent": 0,
+                            "acfe_wysiwyg_merge_toolbar": 0,
+                            "acfe_wysiwyg_custom_toolbar": 1,
+                            "acfe_wysiwyg_toolbar_buttons": {
+                                "acfe_wysiwyg_toolbar_1": {
+                                    "1": {
+                                        "acfe_wysiwyg_toolbar_row": "bold"
+                                    },
+                                    "11": {
+                                        "acfe_wysiwyg_toolbar_row": "spellchecker"
+                                    }
+                                },
+                                "acfe_wysiwyg_toolbar_2": {
+                                    "3": {
+                                        "acfe_wysiwyg_toolbar_row": "pastetext"
+                                    },
+                                    "8": {
+                                        "acfe_wysiwyg_toolbar_row": "undo"
+                                    },
+                                    "9": {
+                                        "acfe_wysiwyg_toolbar_row": "redo"
+                                    },
+                                    "10": {
+                                        "acfe_wysiwyg_toolbar_row": "wp_help"
+                                    }
+                                },
+                                "acfe_wysiwyg_toolbar_3": "",
+                                "acfe_wysiwyg_toolbar_4": ""
+                            },
+                            "required_message": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0,
+                            "acfe_field_group_condition": 0,
+                            "acfe_wysiwyg_auto_init": 0,
+                            "acfe_wysiwyg_height": 300
+                        },
+                        {
+                            "key": "field_64a329194ce23",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Lorem ipsum.",
+                            "acfe_textarea_code": 0,
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": "br",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_64a329254ce24",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "acfe_field_group_condition": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_layout_locations": [],
+                    "acfe_flexible_category": false,
+                    "acfe_layout_col": "auto",
+                    "acfe_layout_allowed_col": false
+                },
                 "layout_647b6d3c04091": {
                     "key": "layout_647b6d3c04091",
                     "name": "vertical_card_listing",
@@ -8872,5 +9062,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688198196
+    "modified": 1688414866
 }

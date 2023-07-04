@@ -170,6 +170,7 @@ function parse_external_news_api() {
         foreach ( $articles as $article ) {
             // debug($article, true);
             if( $article['title'] ) {
+
                 $title      = $article['title'];
                 $content    = $article['content'];
                 $excerpt    = $article['description'];
@@ -178,7 +179,7 @@ function parse_external_news_api() {
                 // Check if post with the same title already exists
                 $existing_post = get_page_by_title( $title, OBJECT, 'post' );
     
-                if ( $existing_post ) {
+                if ( is_countable( $existing_post ) ) {
                     echo "Post with the title '{$title}' already exists. Skipping import.";
                     continue;
                 }
@@ -251,6 +252,7 @@ function parse_external_news_api() {
                     echo "Success";
                 }
             }
+            
         }
     }
 

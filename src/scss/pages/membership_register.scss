@@ -67,6 +67,10 @@
         @extend .btn;
         @extend .btn-secondary;
     }
+
+    a {
+        color: $dark-green !important;
+    }
 }
 
 .impu-form-submit{
