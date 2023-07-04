@@ -28,6 +28,16 @@ function generic_theme_scripts() {
    
     wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css', array(), $the_theme->get( 'Version' ), 'all' );
     wp_enqueue_style( 'generic-styles-css', BK_STARTER_THEME_PATH . '/build/styles.css', array(), $the_theme->get( 'Version' ), 'all' );
+    
+    $tags = THEME_OPTIONS['news']['news_api']['attributes']['tags'];
+    $queryString = '';
+    foreach ($tags as $tag) {
+        $queryString .= 'q=' . $tag . '&';
+    }
+    $queryString = "elon%20musk";
+  
+    // debug( $queryString );
+    // debug($tagsWithAmpersand);
 
       // Localized script
     wp_localize_script( 'generic-main-js', 'generic_ajax_object', array(
@@ -38,17 +48,18 @@ function generic_theme_scripts() {
         'newsApiKey'              => THEME_OPTIONS['news']['news_api']['api_key'],
         'fetch_news'              => (bool)THEME_OPTIONS['news']['news_api']['fetch_news'],
         'fetch_daily'             => (string)THEME_OPTIONS['news']['news_api']['fetch_daily'],
-        'tags'                    => implode(',', THEME_OPTIONS['news']['news_api']['attributes']['tags']),
+        'tags'                    => $queryString,
     ));
 }
 
 function cronjob_news() {
   $the_theme = wp_get_theme();
 
-  wp_enqueue_script( 'parseExternalNews-js', BK_STARTER_THEME_PATH . '/build/parseExternalNews.js', array(), $the_theme->get( 'Version' ), true );
+  // wp_enqueue_script( 'parseExternalNews-js', BK_STARTER_THEME_PATH . '/build/parseExternalNews.js', array(), $the_theme->get( 'Version' ), true );
 }
 
 add_image_size( 'card-slider', 350, 380 );
+
 
 /***** */
 

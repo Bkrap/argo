@@ -621,8 +621,51 @@
                                     "ui_off_text": "No",
                                     "ui": 1,
                                     "parent_repeater": "field_6452bfde02f7a"
+                                },
+                                {
+                                    "key": "field_64a32c76d27eb",
+                                    "label": "Login link",
+                                    "name": "login_link",
+                                    "aria-label": "",
+                                    "type": "page_link",
+                                    "instructions": "This will e applied to login icon in header & footer.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_archives": 1,
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "parent_repeater": "field_6452bfde02f7a"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_64a32d008e877",
+                            "label": "Login link",
+                            "name": "login_link",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "This link will be leading point for login icon on header & footer.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_field_group_condition": 0,
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_archives": 1,
+                            "multiple": 0,
+                            "allow_null": 0
                         }
                     ]
                 },
@@ -1371,15 +1414,14 @@
                                             },
                                             "acfe_field_group_condition": 0,
                                             "choices": {
-                                                "business": "Business",
-                                                "firearms&legislation": "Firearms Legislation",
+                                                "firearms%20legislation": "Firearms Legislation",
                                                 "gun%20control": "Gun Control",
-                                                "gun%20violence": "Gun Violence",
+                                                "shooting": "Gun Violence",
                                                 "gun%20safety": "Gun Safety",
                                                 "gun%20ownership": "Gun Ownership",
                                                 "gun%20rights": "Gun Rights",
                                                 "firearm%20regulations": "Firearm Regulations",
-                                                "gun%20laws": "Gun Laws",
+                                                "gun%20law": "Gun Laws",
                                                 "gun%20policy": "Gun Policy",
                                                 "justice": "Justice",
                                                 "second%20amandment": "Second Amendment"
@@ -1388,7 +1430,7 @@
                                                 "justice",
                                                 "gun%20ownership",
                                                 "gun%20rights",
-                                                "gun%20laws"
+                                                "gun%20law"
                                             ],
                                             "return_format": "value",
                                             "min": "",
@@ -3135,5 +3177,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688195337
+    "modified": 1688488761
 }
