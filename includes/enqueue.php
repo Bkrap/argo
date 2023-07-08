@@ -34,7 +34,6 @@ function generic_theme_scripts() {
     foreach ($tags as $tag) {
         $queryString .= 'q=' . $tag . '&';
     }
-    $queryString = "elon%20musk";
   
     // debug( $queryString );
     // debug($tagsWithAmpersand);

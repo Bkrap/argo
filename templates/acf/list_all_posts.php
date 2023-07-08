@@ -3,19 +3,35 @@
  * Post WP Query
  */
 
- $args = array(
-    'post_type'         => 'post',
-    'posts_per_page'    => get_option('posts_per_page'),
-    'post_status'       => 'publish',
-    'offset'            => 0
- );
- $query = new WP_Query( $args );
+global $wpdb;
+
+$query = "
+    SELECT *
+    FROM {$wpdb->prefix}posts
+    WHERE post_type = 'post'
+    AND post_status = 'publish'
+    ORDER BY post_date DESC
+    LIMIT " . get_option('posts_per_page') . " OFFSET 0
+";
+
+$results = $wpdb->get_results($query);
+
+// Query to count the total number of posts
+$count_query = "
+    SELECT COUNT(*)
+    FROM {$wpdb->prefix}posts
+    WHERE post_type = 'post'
+    AND post_status = 'publish'
+";
+
+$total_posts = $wpdb->get_var($count_query);
+$max_num_pages = ceil($total_posts / get_option('posts_per_page'));
 
 //  debug($query);
 ?>
 <?php get_partial('news_filter'); ?>
 
-<section class="news-hub" id="news-hub-wrap" data-max-num-pages="<?php echo $query->max_num_pages; ?>" data-posts-per-page="<?php echo get_option('posts_per_page'); ?>">
+<section class="news-hub" id="news-hub-wrap" data-max-num-pages="<?php echo $max_num_pages; ?>" data-posts-per-page="<?php echo get_option('posts_per_page'); ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -29,7 +45,7 @@
             $counter = 0; 
             $iteration = 1;
             ?>
-            <?php foreach( $query->posts as $k => $v ) {
+            <?php foreach( $results as $k => $v ) {
                 $v->primary_category = get_the_category( $v->ID )[0]->name;
                 $v->category_id      = get_the_category( $v->ID )[0]->term_id;
                 

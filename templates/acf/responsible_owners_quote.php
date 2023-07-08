@@ -1,4 +1,4 @@
-<section class="facts-and-cards no-bg">
+<section class="facts-and-cards no-bg <?php echo $params['reduce_padding_bottom']; ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

@@ -88,6 +88,11 @@
                 padding-left: 28px;
                 margin-left: 28px;
                 border-left: 1px solid rgba(255, 255, 255, 0.103);
+
+                div {
+                    display: flex;
+                    align-items: center;
+                }
                 .btn{
                     margin-left: 28px;
                 }

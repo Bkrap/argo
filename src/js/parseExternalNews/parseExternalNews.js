@@ -1,105 +1,94 @@
 const { Readability } = require('@mozilla/readability');
 
 document.addEventListener('DOMContentLoaded', function() {
+  let finalResults = [];
+  let category = generic_ajax_object.tags;
 
+  let url = 'https://newsapi.org/v2/top-headlines?' +
+      'country=us&' +
+      category +
+      'sortBy=publishedAt&' +
+      'pageSize='+ generic_ajax_object.fetch_daily +'&' +
+      'apiKey=' + generic_ajax_object.newsApiKey;
 
-    let finalResults = []
-    let category = generic_ajax_object.tags;
-    // console.log(category);
+  // console.log(url);
 
-    // Build the URL we are going to request. This will get articles related to Apple and sort them newest first
-    let url = 'https://newsapi.org/v2/top-headlines?' +
-        'country=us&' +
-        category +'&' +
-        'sortBy=publishedAt&' +
-        'pageSize='+ generic_ajax_object.fetch_daily +'&' +
-        'apiKey=' + generic_ajax_object.newsApiKey;
+  if (generic_ajax_object.fetch_news) {
+    async function fetchArticles() {
+      try {
+        const r1 = await jQuery.ajax({
+          url: url,
+          method: 'GET',
+        });
 
-    // console.log(url);
-    if( generic_ajax_object.fetch_news ) {
-
-    // Make the request with jQuery's ajax() function
-    jQuery.ajax({
-        url: url,
-        method: "GET",
-    }).then(function(r1) {
         let results = r1.articles;
 
-        // Create an array of AJAX promises for individual article requests
-        let promises = results.map(function(result) {
-        return jQuery.ajax({
-            url: result.url,
-            method: "GET"
-        }).then(function(r2) {
-            // We now have the article HTML, create a jQuery object from it
+        await Promise.all(results.map(async (result) => {
+          try {
+            const r2 = await jQuery.ajax({
+              url: result.url,
+              method: 'GET',
+            });
+
             let $article = jQuery(r2);
 
-            // Create a DOM document from the HTML string
             const domParser = new DOMParser();
             const doc = domParser.parseFromString(r2, 'text/html');
 
-            // Use jQuery to locate the article content
             let articleContent = new Readability(doc).parse();
             let articleContentRaw = articleContent.textContent;
 
             finalResults.push({
-                description     : result.description,
-                publishedAt     : result.publishedAt,
-                title           : result.title,
-                url             : result.url,
-                urlToImage      : result.urlToImage,
-                content         : articleContentRaw.replace(/\n/g, '\n\n') + '\n\n' + 'SOURCE: ' + '<a href='+ result.url + ' target="_blank">' + result.source.name + '</a>',
+              description: result.description,
+              publishedAt: result.publishedAt,
+              title: result.title,
+              url: result.url,
+              urlToImage: result.urlToImage,
+              content: articleContentRaw.replace(/\n/g, '\n\n') + '\n\n' + 'SOURCE: ' + '<a href='+ result.url + ' target="_blank">' + result.source.name + '</a>',
             });
-
-        }).catch(function(error) {
+          } catch (error) {
             if (error.status === 403) {
-            console.log('Skipped article due to 403 error:', result.url);
+              console.log('Skipped article due to 403 error:', result.url);
             } else {
-            console.log('Error fetching article:', error);
+              console.log('Error fetching article:', error);
             }
-            // Return a resolved promise to skip the error and continue with the next article
-            return Promise.resolve();
-        });
-        });
+          }
+        }));
 
-        // Wait for all promises to resolve
-        return Promise.all(promises);
-
-    }).then(function() {
-        console.log(finalResults);
+        // console.log(finalResults);
 
         var formData = {
-        action: 'parse_external_news_api',
-        finalResults: finalResults,
+          action: 'parse_external_news_api',
+          finalResults: finalResults,
         };
 
-        // Push that bitch to ajax PHP
         jQuery.ajax({
-        type: 'POST',
-        url: generic_ajax_object.ajax_url,
-        data: formData,
-        success: function(data) {
+          type: 'POST',
+          url: generic_ajax_object.ajax_url,
+          data: formData,
+          async: false, // Make the request synchronous
+          success: function(data) {
             jQuery(document)
-            .ajaxStart(function () {
+              .ajaxStart(function () {
                 //ajax request went so show the loading image
                 // loadingWheel.show();
-            })
-            .ajaxStop(function () {
+              })
+              .ajaxStop(function () {
                 //got response so hide the loading image
                 //    loadingWheel.hide();
-            });
-        },
-        error: function(request, status, error) {
+              });
+          },
+          error: function(request, status, error) {
             console.log(request);
             console.log(error);
             alert(status);
-        }
+          }
         });
-
-    }).catch(function(error) {
+      } catch (error) {
         console.log('Error fetching articles:', error);
-    });
+      }
+    }
 
+    fetchArticles();
   }
-
 });

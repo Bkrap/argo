@@ -119,7 +119,7 @@
 #shopPopup, .shop-module{
     color: $white;
     .modal-dialog{
-        max-width: 500px;
+        max-width: 600px;
         @include media-breakpoint-down(lg){
             max-width: 90%;
         }

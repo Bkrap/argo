@@ -172,15 +172,21 @@ function parse_external_news_api() {
             if( $article['title'] ) {
 
                 $title      = $article['title'];
+                $title_checker = stripslashes( $title );
                 $content    = $article['content'];
                 $excerpt    = $article['description'];
                 $date       = date( 'Y-m-d H:i:s', strtotime( $article['publishedAt'] ) );
     
                 // Check if post with the same title already exists
-                $existing_post = get_page_by_title( $title, OBJECT, 'post' );
+                $existing_post = get_page_by_title( $title_checker, OBJECT, 'post' );
+
+
+                // debug($title);
+                // debug($title_checker);
+                // debug($existing_post->post_title);
     
-                if ( is_countable( $existing_post ) ) {
-                    echo "Post with the title '{$title}' already exists. Skipping import.";
+                if ( $existing_post ) {
+                    echo "Post with the title '{$title_checker}' already exists. Skipping import.";
                     continue;
                 }
     

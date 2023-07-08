@@ -25,15 +25,33 @@
         <div class="row">
             <!-- Razlika između kartice pune širine i obične su klase col-lg-12 i full-width-card, i dolje ovaj div text-column d-flex flex-column -->
             <?php 
+
+            global $wpdb;
+
+            $query = "
+                SELECT *
+                FROM {$wpdb->prefix}posts
+                WHERE post_type = 'post'
+                AND post_status = 'publish'
+                ORDER BY post_date DESC
+                LIMIT 4
+            ";
+
+            $results = $wpdb->get_results($query);
+
+            // debug($results);
+
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 4,
+                'posts_per_page' => -1,
                 'orderby' => 'date',
+                'suppress_filters' => true, // Bypass Ultimate Membership Pro restriction
                 'order' => 'DESC',
             );
             $query = new WP_Query( $args );
+            // debug($query);
             ?>
-            <?php foreach( $query->posts as $k => $v ) { 
+            <?php foreach( $results as $k => $v ) { 
                 // echo "halo?";
                 // debug($v->ID );
                 $card_arr = array(

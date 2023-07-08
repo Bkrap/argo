@@ -1,4 +1,9 @@
 .facts-and-cards{
+
+    &.reduce-padding {
+        padding-bottom:  0 !important;
+    }
+
     padding-top: 60px;
     background-size: cover;
     // min-height: 855px;
